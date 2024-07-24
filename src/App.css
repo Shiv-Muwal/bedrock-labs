@@ -35,70 +35,68 @@ ul {
 
 /* Add your CSS styles here */
 
-.bg-black {
-  background-color: black;
-}
 
-.menu {
-  cursor: pointer;
-}
+@media (max-width:576px) {
 
-.cross span {
-  background: white;
-}
 
-.cross span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+  .menu {
+    cursor: pointer;
+  }
 
-.cross span:nth-child(2) {
-  opacity: 0;
-}
+  .cross span {
+    background: white;
+  }
 
-.cross span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+  .cross span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
 
-.z_9 {
-  z-index: 9;
-}
 
-.pt_200 {
-  padding-top: 200px;
-}
+  .cross span:nth-child(2) {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
 
-.menu span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background: white;
-  transition: all 0.3s;
-}
+  .z_9 {
+    z-index: 9;
+  }
 
-.navbar-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: black;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
+  .pt_200 {
+    padding-top: 200px;
+  }
 
-.navbar-nav.show {
-  transform: translateX(0);
-}
+  .menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
+    transition: all 0.3s;
+  }
 
-.navbar-nav.hide {
-  transform: translateX(100%);
-}
+  .navbar-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
 
-.overflow_hidden {
-  overflow: hidden;
+  .navbar-nav.show {
+    transform: translateX(0);
+  }
+
+  .navbar-nav.hide {
+    transform: translateX(100%);
+  }
+
+  .overflow_hidden {
+    overflow: hidden;
+  }
 }

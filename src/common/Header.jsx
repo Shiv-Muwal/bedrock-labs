@@ -17,16 +17,18 @@ function Header() {
 
   return (
     <>
-      <header className="bg-black pt_200 px-4">
+      <header className=" pt_200 px-4">
         <div className="container-fluid d-flex justify-content-between align-items-center">
+          <div className="d-block d-sm-none text-center">
+            <img src={logo_nav} alt="nav_logo" />
+          </div>
           <div
             onClick={toggleMenu}
             className={`menu d-block d-lg-none me-3 z_9 ${
               first ? "cross" : ""
             }`}
           >
-            <span></span>
-            <span className="my-2"></span>
+            <span className=" mb-2"></span>
             <span></span>
           </div>
           <ul
@@ -79,9 +81,6 @@ function Header() {
               </a>
             </li>
           </ul>
-          <div className="d-block d-sm-none text-center">
-            <img src={logo_nav} alt="nav_logo" className="w-50" />
-          </div>
         </div>
       </header>
     </>
