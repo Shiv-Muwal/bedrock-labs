@@ -7,10 +7,12 @@ import Future from "./components/Future"
 
 
 
+
 function App() {
   return (
     <div className="App">
-      <Future/>
+      <Future />
+
 
       <BrowserRouter>
         <Routes>

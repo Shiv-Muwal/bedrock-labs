@@ -1,18 +1,19 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import logo_nav from "../assets/images/svg/logo_nav.svg";
+import Header from "../common/Header";
 
 function Future() {
   return (
     <>
       <div className=" bg-black min-vh-100">
-        <Container>
-          <img src={logo_nav} alt="logo_nav" />
-          <div className=" ">
+        <Container className="d-flex flex-column flex-grow-1 justify-content-center ">
+          
+          <div className=" paragraph_future_max_w text-center ">
             <h1 className=" mb-0  font_Gilroy_SemiBoldItalic   fw-normal fst-italic  text_32 lh_38 text-white ">
               Forging the Future of Crypto
             </h1>
-            <div className=" d-flex align-items-center mt-4 gap-4">
+            <div className=" d-flex align-items-center justify-content-center mt-4 gap-4">
               <p className=" mb-0  font_Gilroy_SemiBoldItalic  fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
                 Product Strategy
               </p>
@@ -36,6 +37,7 @@ function Future() {
               venture studio dedicated to realizing the full potential of this
               revolutionary technology.
             </p>
+            <Header />
           </div>
         </Container>
       </div>
