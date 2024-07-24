@@ -23,6 +23,10 @@
   line-height: 32px;
 }
 
+.lh_38 {
+  line-height: 38.4px;
+}
+
 .lh_42 {
   line-height: 42px;
 }
@@ -33,6 +37,10 @@
 
 .lh_100 {
   line-height: 100px;
+}
+
+.lh_14 {
+  line-height: 14.4px;
 }
 
 .text_12 {
@@ -64,17 +72,19 @@
 }
 
 @font-face {
-  font-family:"Acumin_Pro_Wide" ;
-  src: url(./assets/fonts/Acumin_Pro_Wide.otf);
+  font-family: "Acumin_Pro_Wide";
+  src: url("./assets/fonts/Acumin\ Pro\ Condensed.ttf");
 }
-@font-face {
-  font-family:"Gilroy_SemiBoldItalic" ;
-  src: url(./assets/fonts/Gilroy-SemiBoldItalic.ttf);
-  }
 
-  .font_Acumin_Pro_Wide{
-    font-family: "Acumin_Pro_Wide" ;
-  }
-  .font_Gilroy_SemiBoldItalic{
-    font-family: "Gilroy_SemiBoldItalic" ;
-  }
+@font-face {
+  font-family: "Gilroy_SemiBoldItalic";
+  src: url("./assets/fonts/FontsFree-Net-Gilroy-ExtraBold.ttf");
+}
+
+.font_Acumin_Pro_Wide {
+  font-family: "Acumin_Pro_Wide";
+}
+
+.font_Gilroy_SemiBoldItalic {
+  font-family: "Gilroy_SemiBoldItalic";
+}
