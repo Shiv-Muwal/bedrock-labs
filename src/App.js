@@ -2,16 +2,17 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutUs from "./components/AboutUs";
-import Contact from "./components/Contact";
+import Future from "./components/Future"
 
 function App() {
   return (
     <div className="App">
+      <Future/>
+
       <BrowserRouter>
         <Routes>
-          <Route exact path="/about" element={<AboutUs />} />
-          <Route exact path="/contact" element={<Contact />} />
+          {/* <Route exact path="/about" element={<VideoBackground />} />
+          <Route exact path="/contact" element={<Contact />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
