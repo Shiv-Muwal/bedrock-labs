@@ -2,7 +2,7 @@
   --fs-sm: 12px;
   --fs-md: 16px;
   --fs-lg: 24px;
-  --fs-xl: 32px;
+  --fs-xl: 24px;
   --fs-2xl: 42px;
   --fs-3xl: 80px;
 }
@@ -24,7 +24,7 @@
 }
 
 .lh_38 {
-  line-height: 38.4px;
+  line-height: 28.8px;
 }
 
 .lh_42 {
@@ -87,4 +87,54 @@
 
 .font_Gilroy_SemiBoldItalic {
   font-family: "Gilroy_SemiBoldItalic";
+}
+
+@media (min-width:576px) {
+
+  :root {
+    --fs-sm: 12px;
+    --fs-md: 16px;
+    --fs-lg: 24px;
+    --fs-xl: 32px;
+    --fs-2xl: 42px;
+    --fs-3xl: 80px;
+  }
+
+  .lh_12 {
+    line-height: 12px;
+  }
+
+  .lh_16 {
+    line-height: 16px;
+  }
+
+  .lh_24 {
+    line-height: 24px;
+  }
+
+  .lh_32 {
+    line-height: 32px;
+  }
+
+  .lh_38 {
+    line-height: 38.4px;
+  }
+
+  .lh_42 {
+    line-height: 42px;
+  }
+
+  .lh_80 {
+    line-height: 80px;
+  }
+
+  .lh_100 {
+    line-height: 100px;
+  }
+
+  .lh_14 {
+    line-height: 14.4px;
+  }
+
+
 }
