@@ -1,0 +1,9 @@
+.divider_line {
+  width: 2px;
+  height: 12px;
+  border: 1px solid #FFFFFF4D;
+}
+
+.paragraph_future_max_w {
+  max-width: 640px;
+}
