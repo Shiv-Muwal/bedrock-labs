@@ -64,17 +64,19 @@
 }
 
 @font-face {
-  font-family:"Acumin_Pro_Wide" ;
+  font-family: "Acumin_Pro_Wide";
   src: url(./assets/fonts/Acumin_Pro_Wide.otf);
 }
-@font-face {
-  font-family:"Gilroy_SemiBoldItalic" ;
-  src: url(./assets/fonts/Gilroy-SemiBoldItalic.ttf);
-  }
 
-  .font_Acumin_Pro_Wide{
-    font-family: "Acumin_Pro_Wide" ;
-  }
-  .font_Gilroy_SemiBoldItalic{
-    font-family: "Gilroy_SemiBoldItalic" ;
-  }
+@font-face {
+  font-family: "Gilroy_SemiBoldItalic";
+  src: url(./assets/fonts/Gilroy-SemiBoldItalic.ttf);
+}
+
+.font_Acumin_Pro_Wide {
+  font-family: "Acumin_Pro_Wide";
+}
+
+.font_Gilroy_SemiBoldItalic {
+  font-family: "Gilroy_SemiBoldItalic";
+}
