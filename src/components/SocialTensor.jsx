@@ -10,11 +10,11 @@ const SocialTensor = () => {
         </div>
         <div className="flex-grow-1 d-flex align-items-end justify-content-center">
           <div className="d-flex flex-column gap-4">
-            <h1 className='mb-0 text-center text-white text_80 font_Gilroy_SemiBoldItalic lh_100'>SocialTensor</h1>
-            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>Aperture</p>
-            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>Aperture</p>
-            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>NicheTensor</p>
-            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>THELASTONE</p>
+            <h1 className='mb-0 text-center text-white text_80 font_Gilroy_SemiBoldItalic lh_100 fst-italic tensor_heading'>SocialTensor</h1>
+            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25 fst-italic'>Aperture</p>
+            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25 fst-italic'>Aperture</p>
+            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25 fst-italic'>NicheTensor</p>
+            <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25 fst-italic'>THELASTONE</p>
             {/* <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>INFINI</p>
             <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>TourGame</p>
             <p className='mb-0 text_42 lh_52 text-center text-white font_Gilroy_SemiBoldItalic opacity-25'>CyberConnect</p> */}

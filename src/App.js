@@ -4,12 +4,14 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Future from "./components/Future"
 import SocialTensor from './components/SocialTensor';
+import BedRockIcons from './components/BedRockIcons';
 
 function App() {
   return (
     <div className="App">
-      <Future/>
-      <SocialTensor />
+      {/* <Future/> */}
+      {/* <SocialTensor /> */}
+      <BedRockIcons/>
       <BrowserRouter>
         <Routes>
           {/* <Route exact path="/about" element={<VideoBackground />} />

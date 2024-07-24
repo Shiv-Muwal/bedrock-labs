@@ -1,0 +1,17 @@
+.pt_40{
+    padding-top: 40px;
+}
+.gap_32{
+    gap: 32px;
+}
+.social_links img{
+    transition: all 400ms linear;
+}
+.social_links:hover img{
+    scale: 1.4;
+}
+@media (min-width:576px) {
+    .gap_40{
+        gap: 40px;
+    }
+}
