@@ -9,7 +9,11 @@
 .divider_line {
   width: 2px;
   height: 12px;
-  border: 1px solid #FFFFFF4D;
+  background-color: #FFFFFF4D;
+}
+
+.rotate_divide_line {
+  transform: rotate(9deg);
 }
 
 .paragraph_future_max_w {
@@ -58,7 +62,6 @@ ul {
   scale: 1.4;
 }
 
-/* Add your CSS styles here */
 @media (min-width:576px) {
   .gap_32 {
     gap: 40px;
@@ -97,7 +100,6 @@ ul {
     display: block;
     width: 22px;
     height: 2px;
-    /* margin: 5px auto; */
     background: white;
     transition: all 0.3s;
   }
@@ -122,14 +124,14 @@ ul {
     right: 0;
   }
 
-@media (min-width:576px) {
+  @media (min-width:576px) {
     .gap_40 {
-        gap: 40px;
+      gap: 40px;
     }
 
-}
+  }
 
-@media (max-width:576px) {}
+  @media (max-width:576px) {}
 
   .overflow_hidden {
     overflow: hidden;

@@ -20,7 +20,7 @@ function Future() {
             <p className=" mb-0  font_Gilroy_SemiBoldItalic  fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
               Product Strategy
             </p>
-            <div className="divider_line d-none d-sm-block"></div>
+            <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
             <p className=" mb-0  font_Gilroy_SemiBoldItalic  fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
               Branding Design
             </p>
