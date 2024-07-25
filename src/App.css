@@ -51,7 +51,7 @@ ul {
 }
 
 .social_links:hover {
-    scale: 1.4;
+    scale: 1.2;
 }
 
 @media (min-width:576px) {
@@ -65,16 +65,23 @@ ul {
         cursor: pointer;
     }
 
+    .px_30 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     .cross span {
         background: white;
     }
 
     .cross span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(7px, 9px);
+        margin-bottom: 9px;
     }
 
     .cross span:nth-child(2) {
-        transform: rotate(-53deg) translate(1px, -2px);
+        transform: rotate(-45deg) translate(-2px);
+        margin-bottom: 9px;
     }
 
     .z_9 {
