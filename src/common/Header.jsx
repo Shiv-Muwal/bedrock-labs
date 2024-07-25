@@ -20,7 +20,7 @@ function Header() {
   return (
     <div className="container w-100 d-flex pb-sm-5 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
       <div>
-        <a href="#">
+        <a href="/">
           <img
             className={`d-block d-sm-none text-center ${
               location.pathname === "/" ? "d-none" : ""

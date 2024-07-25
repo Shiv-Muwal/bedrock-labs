@@ -26,7 +26,7 @@ const SocialTensor = () => {
     <div className='bg-black'>
       <Container className='d-flex flex-column min-vh-100 px_30'>
         <div className="pt_40">
-          <a href='#'>
+          <a href='/'>
             <img src={logo_nav} alt="logo_nav" />
           </a>
         </div>

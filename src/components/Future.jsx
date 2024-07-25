@@ -7,7 +7,7 @@ function Future() {
   return (
     <div className=" bg-black d-flex flex-column min-vh-100 ">
       <div className=" d-none pl_40 d-sm-block pt_40">
-        <a href="#">
+        <a href="/">
           <img src={logo_nav} alt="nav_logo" />
         </a>
       </div>
