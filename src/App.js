@@ -4,12 +4,14 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Future from "./components/Future";
 import Branding from "./components/Branding"
+import BedRockIcons from "./components/BedRockIcons";
 
 function App() {
   return (
     <div className="App">
       {/* <Future /> */}
-      <Branding/>
+      {/* <Branding/> */}
+<BedRockIcons/>
       <BrowserRouter>
         <Routes>
 

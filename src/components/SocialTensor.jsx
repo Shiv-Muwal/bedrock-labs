@@ -5,9 +5,9 @@ const SocialTensor = () => {
   return (
     <div className='bg-black'>
       <Container className='d-flex flex-column  min-vh-100'>
-        <div className="pt_40">
+        <a href='#' className="pt_40">
           <img src={logo_nav} alt="logo_nav" />
-        </div>
+        </a>
         <div className="flex-grow-1 d-flex align-items-end justify-content-center">
           <div className="d-flex flex-column gap-4">
             <h1 className='mb-0 text-center text-white text_80 font_Gilroy_SemiBoldItalic lh_100 fst-italic tensor_heading'>SocialTensor</h1>

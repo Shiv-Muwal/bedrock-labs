@@ -5,7 +5,18 @@
     list-style-type: none !important;
     text-decoration: none !important;
 }
-
+.pt_40{
+    padding-top: 40px;
+}
+.gap_32{
+    gap: 32px;
+}
+.social_links{
+    transition: all 400ms linear;
+}
+.social_links:hover{
+    scale: 1.4;
+}
 /* color */
 .grey {
     background: #252525;
@@ -69,7 +80,12 @@ height: 32px;
 .gap_12 {
     gap: 12px;
 }
-
+@media (min-width:576px) {
+.gap_40{
+    gap: 40px;
+}
+    
+}
 
 
 @media (min-width:992px) {}
