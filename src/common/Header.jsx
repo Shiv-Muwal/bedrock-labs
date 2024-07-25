@@ -17,10 +17,12 @@ function Header() {
 
   return (
     <>
-      <header className=" pt_200 px-4">
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+      <header >
+        <div className="container-fluid d-flex justify-content-sm-center justify-content-between  align-items-center">
           <div className="d-block d-sm-none text-center">
-            <img src={logo_nav} alt="nav_logo" />
+            <a href="#">
+              <img src={logo_nav} alt="nav_logo" />
+            </a>
           </div>
           <div
             onClick={toggleMenu}
@@ -34,7 +36,7 @@ function Header() {
           <ul
             className={`navbar-nav ${
               show ? "show" : "hide"
-            } d-flex flex-column justify-content-center mb-0`}
+            } d-flex flex-column flex-sm-row gap_32 mb-0`}
           >
             <li>
               <a

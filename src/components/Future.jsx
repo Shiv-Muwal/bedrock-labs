@@ -6,17 +6,19 @@ import Header from "../common/Header";
 function Future() {
   return (
     <>
-      <div className=" bg-black  d-flex flex-column min-vh-100 ">
-        <Container className="d-flex flex-column px-4 flex-grow-1">
+      <div className=" bg-black  d-flex  flex-column  min-vh-100 ">
+        <Container className="d-flex flex-column md:flex-row px-4 px-sm-0 flex-grow-1">
           <div className=" d-none d-sm-block pt_40">
-            <img src={logo_nav} alt="nav_logo" />
+            <a href="#">
+              <img src={logo_nav} alt="nav_logo" />
+            </a>
           </div>
           <div className="d-flex   flex-grow-1  justify-content-center align-items-center ">
             <div className=" paragraph_future_max_w text-center ">
               <h1 className=" mb-0  font_Gilroy_SemiBoldItalic   fw-normal fst-italic  text_32 lh_38 text-white ">
                 Forging the Future of Crypto
               </h1>
-              <div className=" d-flex   flex-sm-wrap  flex-column  align-items-center justify-content-center mt-4 gap-sm-4 gap-2">
+              <div className=" d-flex flex-sm-wrap flex-sm-row   flex-column  align-items-center justify-content-center mt-4 gap-sm-4 gap-2">
                 <p className=" mb-0  font_Gilroy_SemiBoldItalic  fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
                   Product Strategy
                 </p>
@@ -40,7 +42,9 @@ function Future() {
                 product-driven venture studio dedicated to realizing the full
                 potential of this revolutionary technology.
               </p>
-              <Header />
+              <div className=" pt_200  ">
+                <Header />
+              </div>
             </div>
           </div>
         </Container>
