@@ -5,6 +5,7 @@ import social_tensor from "../assets/images/webp/social_tensor.webp";
 import social_sensor_responsive from "../assets/images/webp/social_sensor_responsive.webp";
 import Icons from "../common/Icons";
 import { useState } from "react";
+import Header from "../common/Header";
 
 const Branding = () => {
   const [show, setShow] = useState(false);
@@ -14,7 +15,7 @@ const Branding = () => {
 
   return (
     <div className=" overflow-hidden vh-100 bg-black d-flex flex-column branding_padding position-relative ">
-      <div>
+      <div className=" d-sm-block d-none">
         <img src={logo} alt="logo" />
       </div>
       <div className="d-xl-flex d-none gap_20">
@@ -41,11 +42,11 @@ const Branding = () => {
           />
         </div>
       </div>
-      <div className=" d-flex d-xl-none flex-column flex-grow-1 justify-content-center align-items-center">
+      <div className=" d-flex  flex-column flex-grow-1 justify-content-end align-items-center">
         <div
           className={`${
             show ? "d-none" : "d-block"
-          } d-flex flex-column align-items-end`}
+          } d-flex d-xl-none mt_153 flex-column align-items-end`}
         >
           <div
             onClick={HANDLE_SHOW}
@@ -81,6 +82,8 @@ const Branding = () => {
             </div>
           </div>
         </div>
+
+        <Header />
       </div>
     </div>
   );
