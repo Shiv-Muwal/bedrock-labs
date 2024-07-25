@@ -60,7 +60,7 @@ function Header() {
             ABOUT
           </a>
         </li>
-        <li className=" ms-4 ps-2 ms-sm-0 lts_1 ps-sm-0">
+        <li className="ms-4 ps-2 ms-sm-0 lts_1 ps-sm-0">
           <a
             onClick={toggleMenu}
             className="font_Acumin_Pro_Wide nav-link position-relative fw-bold lts_1 text_16 lh_16 text-white"
@@ -69,7 +69,7 @@ function Header() {
             CASES
           </a>
         </li>
-        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+        <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
             className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
@@ -78,7 +78,7 @@ function Header() {
             MEDIA
           </a>
         </li>
-        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+        <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
             href="#contact"

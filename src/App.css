@@ -1,231 +1,236 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none !important;
+}
+
+.letter_space {
+    letter-spacing: 0.5px;
 }
 
 /* Navbar */
 .nav-link::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  border-radius: 10px;
-  left: 0;
-  background-color: white;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    border-radius: 10px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .divider_line {
-  width: 2px;
-  height: 12px;
-  background-color: #FFFFFF4D;
+    width: 2px;
+    height: 12px;
+    background-color: #FFFFFF4D;
 }
 
 .rotate_divide_line {
-  transform: rotate(9deg);
+    transform: rotate(9deg);
 }
 
 .paragraph_future_max_w {
-  max-width: 640px;
+    max-width: 640px;
 }
 
 .pl_40 {
-  padding-left: 40px;
-}
-
-
-
-ol,
-ul {
-  padding-left: 0px !important;
-}
-
-
-.pt_40 {
-  padding-top: 40px;
-}
-
-.gap_32 {
-  gap: 32px;
-}
-
-@media (min-width:576px) {
-  .gap_32 {
-    gap: 40px;
-  }
-}
-
-@media (max-width:576px) {
-  .menu {
-    cursor: pointer;
-  }
-
-  .px_30 {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .cross span {
-    background: white;
-  }
-
-  .cross span:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 9px);
-    margin-bottom: 9px;
-  }
-
-  .cross span:nth-child(2) {
-    transform: rotate(-45deg) translate(-2px);
-    margin-bottom: 9px;
-  }
-
-  .z_9 {
-    z-index: 9;
-  }
-
-  .pt_200 {
-    padding-top: 200px;
-  }
-
-  .menu span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: white;
-    transition: all 0.3s;
-  }
-
-  .navbar-nav {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    position: fixed;
-    right: -100%;
-    top: 0;
-    padding-top: 40px;
-    z-index: 2;
-    transition: all 300ms linear;
-  }
-
-  .overflow_hidden {
-    overflow: hidden;
-  }
-
-  .navbar-nav.show {
-    right: 0;
-  }
-
-  @media (min-width:576px) {
-    .gap_40 {
-      gap: 40px;
-    }
-  }
-}
-
-/* ------------------------------shiv---css------------------------ */
-.social_links {
-  transition: all 400ms linear;
+    padding-left: 40px;
 }
 
 .gap_40 {
   gap: 40px;
 }
 
+ol,
+ul {
+    padding-left: 0px !important;
+}
+
+.pt_253 {
+  padding-top: 253px;
+}
+
+.pt_40 {
+    padding-top: 40px;
+}
+
+.gap_32 {
+    gap: 32px;
+}
+
+/* shiv---css */
+.social_links {
+  transition: all 400ms linear;
+}
+
+@media (min-width:1400px) {
+    .common_box {
+        width: 583px;
+    }
+}
+
+/* shiv----css */
 .vertical-slider .slick-slide {
-  height: auto;
+    height: auto;
 }
 
 .vertical-slider .slick-slide {
-  transform: scale(0.8);
-  transition: transform 0.3s ease-in-out;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
 }
 
 .vertical-slider .slick-center {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 .vertical-slider .slick-center p {
-  font-size: 46px;
-  color: #FFFFFF !important;
-  opacity: 1 !important;
+    font-size: 46px;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
 }
 
 .vertical-slider .slick-slide p {
-  font-size: 32px;
-  color: #FFFFFF;
-  opacity: 0.25;
+    font-size: 32px;
+    color: #FFFFFF;
+    opacity: 0.25;
 }
 
 .social_links:hover {
   scale: 1.2;
 }
 
-/* --------------------vishal_code -----------------------*/
-/* --------------------vishal_code -----------------------*/
-@media (min-width: 1400px) {
-  .common_box {
-    width: 583px;
-  }
+@media (min-width:576px) {
+    .gap_32 {
+        gap: 40px;
+    }
 }
 
-@media (min-width: 1200px) {
+@media (max-width:576px) {
+    .menu {
+        cursor: pointer;
+    }
+
+    .px_30 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .cross span {
+        background: white;
+    }
+
+    .cross span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 9px);
+        margin-bottom: 9px;
+    }
+
+    .cross span:nth-child(2) {
+        transform: rotate(-45deg) translate(-2px);
+        margin-bottom: 9px;
+    }
+
+    .z_9 {
+        z-index: 9;
+    }
+
+    .pt_200 {
+        padding-top: 200px;
+    }
+
+    .menu span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: white;
+        transition: all 0.3s;
+    }
+
+    .navbar-nav {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        padding-top: 40px;
+        z-index: 2;
+        transition: all 300ms linear;
+    }
+
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    .navbar-nav.show {
+        right: 0;
+    }
+
+    @media (min-width:576px) {
+        .gap_40 {
+            gap: 40px;
+        }
+    }
+}
+
+@media (min-width:1200px) {
   .common_box {
     width: 480px;
   }
 
   .common_box_position {
     top: -100%;
-    transition: top 0.5s ease-in-out;
   }
 
- .vertical-slider .slick-slide p:hover .common_box_position {
-    top: -100%;
-  }
-
-    .vertical-slider .slick-slide p:hover.common_box_position {
+  .branding_padding:hover .common_box_position {
     top: 20px;
     right: 20px;
   }
 }
 
+@media (min-width:1400px) {
+  .common_box {
+    width: 583px;
+  }
+}
+
 .vertical-slider .slick-slide {
-  transform: scale(0.8);
-  transition: transform 0.3s ease-in-out;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
 }
 
 .vertical-slider .slick-center {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 .vertical-slider .slick-slide p {
-  font-size: 42px;
-  color: #FFFFFF;
-  opacity: 0.25;
+    font-size: 42px;
+    color: #FFFFFF;
+    opacity: 0.25;
 }
 
 .vertical-slider .slick-center p {
-  font-size: 80px;
-  color: #FFFFFF !important;
-  opacity: 1 !important;
+    font-size: 80px;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
 }
 
 .vertical-slider .slick-center p:hover {
-  text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
 .grey {
@@ -317,30 +322,32 @@ ul {
     width: 480px;
   }
 
-  .common_box_position {
-    top: -100%;
-  }
+    .common_box_position {
+        top: -100%;
+    }
 
-  .vertical-slider .slick-slide p:hover .common_box_position {
-    top: 20px;
-    right: 20px;
-    transition: all ease-in-out 500ms !important;
-  }
+    .slick-track:hover .common_box_position {
+        top: 20px;
+        right: 20px;
+        transition: all ease-in-out 500ms !important;
 
-  .social_sensor_img_w {
-    max-width: 416.75px;
-    width: 100%;
-  }
+    }
+
+    .social_sensor_img_w {
+        max-width: 416.75px;
+        width: 100%;
+    }
 
   .common_box_position_transform_1 {
     transform: translate(-104%, 0%);
     transition: all ease-out 5000ms;
   }
 
-  .vertical-slider .slick-slide p:hover .common_box_position_transform_1 {
-    transform: translate(-104%, 0%);
-    transition: all ease-out 1000ms !important;
-  }
+    body:hover .common_box_position_transform_1 {
+        transform: translate(-104%, 0%);
+        transition: all ease-out 1000ms !important;
+    }
+
 }
 
 @media (min-width: 1400px) {
@@ -349,24 +356,26 @@ ul {
   }
 }
 
-@media (min-width: 576px) {
-  .gap_32 {
-    gap: 40px;
-  }
+
+
+@media (min-width:576px) {
+    .gap_32 {
+        gap: 40px;
+    }
 
   .branding_padding {
     padding: 40px 0px 0px 40px;
   }
 
-  .vertical-slider .slick-center p {
-    font-size: 80px;
-    color: #FFFFFF !important;
-    opacity: 1 !important;
-  }
+    .vertical-slider .slick-center p {
+        font-size: 80px;
+        color: #FFFFFF !important;
+        opacity: 1 !important;
+    }
 
-  .vertical-slider .slick-slide p {
-    font-size: 42px;
-    color: #FFFFFF;
-    opacity: 0.25;
+    .vertical-slider .slick-slide p {
+        font-size: 42px;
+        color: #FFFFFF;
+        opacity: 0.25;
+    }
   }
-}
