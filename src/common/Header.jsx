@@ -45,7 +45,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
             href="#"
           >
             BEDROCK LABS
@@ -54,7 +54,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
             href="#about"
           >
             ABOUT
@@ -63,7 +63,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 lts_1 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide fw-bold lts_1 text_16 lh_16 text-white"
+            className="font_Acumin_Pro_Wide nav-link position-relative fw-bold lts_1 text_16 lh_16 text-white"
             href="#cases"
           >
             CASES
@@ -72,7 +72,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
             href="#media"
           >
             MEDIA
@@ -80,7 +80,7 @@ function Header() {
         </li>
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            className="font_Acumin_Pro_Wide lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
             href="#contact"
           >
             CONTACT
