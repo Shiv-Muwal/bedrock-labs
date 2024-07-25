@@ -318,7 +318,7 @@ ul {
 }
 
 .social_tensor_transition_2 {
-  transition: all ease-out 1000ms !important;
+  transition: all linear 1000ms !important;
 }
 
 .gap_12 {
@@ -359,13 +359,12 @@ ul {
 
   .common_box_position {
     top: -100%;
-    transition: top 0.5s 0.2s cubic-bezier(0.4, 0, 0.2, 1), right 0.5s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .vertical-slider .slick-slide p:hover .common_box_position {
     top: 20px;
     right: 20px;
-    transition: all ease-in-out 500ms !important;
+    transition: all ease-out 1200ms !important;
   }
 
   .common_box_position.hovered {
@@ -380,12 +379,11 @@ ul {
 
   .common_box_position_transform_1 {
     transform: translate(-104%, 0%);
-    transition: all ease-out 5000ms;
+    transition: ease-in 800ms !important;
   }
 
   .vertical-slider .slick-slide p:hover+.common_box_position_transform_1 {
     transform: translate(-104%, 0%);
-    transition: all ease-out 1000ms !important;
   }
 
 }

@@ -152,8 +152,12 @@ const Branding = () => {
             </p>
           </div>
         </Slider>
-        <div className={`common_box_position ${isHovered ? "hovered" : ""}`}>
-          <div className="common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between">
+        <div className={` `}>
+          <div
+            className={`${
+              isHovered ? "hovered" : ""
+            } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+          >
             <p className="common_text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
               UI UX
             </p>
@@ -164,7 +168,11 @@ const Branding = () => {
               alt="social_sensor"
             />
           </div>
-          <div className="common_box bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between">
+          <div
+            className={`${
+              isHovered ? "hovered" : ""
+            } common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}
+          >
             <p className="common_text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
               Branding
             </p>
