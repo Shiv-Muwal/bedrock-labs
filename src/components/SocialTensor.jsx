@@ -4,6 +4,7 @@ import logo_nav from '../assets/images/svg/logo_nav.svg'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Header from '../common/Header';
 const SocialTensor = () => {
   var settings = {
     dots: false,
@@ -49,6 +50,7 @@ const SocialTensor = () => {
           </Slider>
         </div>
       </div>
+      <Header/>
     </Container>
   </div>
   )
