@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/images/svg/logo_nav.svg";
 import Icons from "../common/Icons";
+import Header from "../common/Header";
 
 const Labs = () => {
   return (
@@ -16,6 +17,7 @@ const Labs = () => {
             <Icons icon="Circle_Icon" />
           </div>
         </div>
+        <Header/>
       </div>
     </>
   );

@@ -2,14 +2,14 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Labs from "./components/Labs";
 // import Future from "./components/Future";
+import Branding from "./components/Branding"
 
 function App() {
   return (
     <div className="App">
       {/* <Future /> */}
-      <Labs/>
+      <Branding/>
       <BrowserRouter>
         <Routes>
           {/* <Route exact path="/about" element={<VideoBackground />} />
