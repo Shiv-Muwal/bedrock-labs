@@ -129,7 +129,7 @@ img[alt="responsive_social_tensor"] {
 }
 
 .vertical-slider .slick-slide {
-    height: auto;
+    height: 100%;
 }
 
 .vertical-slider .slick-slide {

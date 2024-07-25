@@ -10,10 +10,12 @@ const SocialTensor = () => {
     dots: false,
     arrows: false,
     speed: 500,
-    slidesToShow: 7,
-    slidesToScroll: 1,
+    slidesToShow: 8,
+    slidesToScroll: 2,
     vertical: true,
+    pauseOnHover:false,
     speed: 2000,
+    autoplaySpeed:0,
     autoplay: true,
     infinite: true,
     centerMode: true,
@@ -28,7 +30,7 @@ const SocialTensor = () => {
             <img src={logo_nav} alt="logo_nav" />
           </a>
         </div>
-        <div className="flex-grow-1 d-flex align-items-start justify-content-center">
+        <div className="flex-grow-1 d-flex align-items-center justify-content-center">
           <div className="d-flex flex-column gap-4">
             <Slider {...settings} className="vertical-slider">
               <div>
