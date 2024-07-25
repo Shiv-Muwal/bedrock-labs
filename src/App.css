@@ -17,6 +17,9 @@
 .social_links:hover{
     scale: 1.4;
 }
+.pb_60{
+    padding-bottom: 60px;
+}
 /* color */
 .grey {
     background: #252525;
@@ -84,6 +87,9 @@ height: 32px;
 .gap_40{
     gap: 40px;
 }
+    
+}
+@media (max-width:576px) {
     
 }
 

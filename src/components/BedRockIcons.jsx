@@ -5,6 +5,7 @@ import discord from '../assets/images/svg/Discord.svg'
 import twitter from '../assets/images/svg/Twitter.svg'
 import exclude from '../assets/images/svg/Exclude.svg'
 import logo_nav from '../assets/images/svg/logo_nav.svg'
+import Header from '../common/Header'
 const BedRockIcons = () => {
   return (
     <div className="bg-black">
@@ -20,6 +21,7 @@ const BedRockIcons = () => {
                     <li><a href="https://medium.com/" target='_blank'><img className='social_links' src={exclude} alt="exclude" /></a></li>
                 </ul>
         </div>
+        <Header/>
       </Container>
     </div>
   )
