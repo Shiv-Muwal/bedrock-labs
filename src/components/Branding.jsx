@@ -33,7 +33,7 @@ const Branding = () => {
           <img src={social_tensor} alt="social_tensor" />
         </div>
       </div>
-      <div className=" d-flex flex-column flex-grow-1 justify-content-center align-items-center  ">
+      <div className=" d-flex d-xl-none flex-column flex-grow-1 justify-content-center align-items-center  ">
         <div className=" d-flex flex-column align-items-end">
           <div
             onClick={HANDLE_SHOW}
