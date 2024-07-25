@@ -11,15 +11,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Branding = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovered(false);
-  };
+  const [isHovered, setIsHovered] = useState(false); 
+ 
+  const handleMouseOver = () => { 
+    setIsHovered(true); 
+    document.querySelector('.common_box_position1').classList.add('common_box_position2');
+  }; 
+ 
+  const handleMouseOut = () => { 
+    setIsHovered(false); 
+    document.querySelector('.common_box_position1').classList.remove('common_box_position2');
+  }; 
   const [show, setShow] = useState(false);
   function HANDLE_SHOW() {
     setShow(!show);
@@ -57,7 +59,7 @@ const Branding = () => {
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
+            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver} 
             onMouseOut={handleMouseOut}>
               Aperture
             </p>
@@ -117,8 +119,8 @@ const Branding = () => {
             </p>
           </div>
         </Slider>
-        <div    className={`common_box_position ${isHovered ? 'hovered' : ''}`}>
-        <div className="common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between">
+        <div    className={`common_box_position1 common_box_position2 ${isHovered ? 'hovered' : ''}`}>
+        <div className="common_box bg-black common_box_position common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between">
           <p className="common_text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
             UI UX
           </p>
@@ -129,7 +131,7 @@ const Branding = () => {
             alt="social_sensor"
           />
         </div>
-        <div className="common_box bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between">
+        <div className="common_box bg-black common_box_position common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between">
           <p className="common_text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
             Branding
           </p>
