@@ -9,7 +9,7 @@ import Header from '../common/Header'
 const BedRockIcons = () => {
 return (
     <div className="bg-black">
-        <Container className='d-flex flex-column align-items-start min-vh-100'>
+        <Container className='d-flex flex-column align-items-start min-vh-100 px_30'>
         <a href='#' className="pt_40 d-none d-sm-block">
           <img src={logo_nav} alt="logo_nav" />
         </a>
