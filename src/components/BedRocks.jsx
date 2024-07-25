@@ -6,7 +6,7 @@ import bedrockVideo from "../assets/video/bedrock.mp4";
 function BedRocks() {
   return (
     <div className="bg-black d-flex flex-column px-4 px-sm-0 min-vh-100">
-      <Container className="d-flex flex-column justify-content-center align-items-center  flex-grow-1">
+      <Container className="d-flex flex-column justify-content-center align-items-center flex-grow-1">
         <div className="">
           <video
             autoPlay

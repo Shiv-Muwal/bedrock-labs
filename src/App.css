@@ -5,7 +5,9 @@
   list-style-type: none;
   text-decoration: none !important;
 }
-
+.letter_space{
+    letter-spacing: 0.5px;
+}
 /* Navbar */
 .nav-link::before {
   content: '';
