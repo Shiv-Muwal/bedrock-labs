@@ -64,9 +64,8 @@ const Branding = () => {
         <div className="responsive_box_pos">
           {" "}
           <div
-            className={`${
-              show ? "d-none" : "d-block"
-            } d-flex d-xl-none mt_153 flex-column align-items-end`}
+            className={`${show ? "d-none" : "d-block"
+              } d-flex d-xl-none mt_153 flex-column align-items-end`}
           >
             <div
               onClick={HANDLE_SHOW}
@@ -110,32 +109,32 @@ const Branding = () => {
       >
         <Slider {...settings} className="vertical-slider">
           <div>
-            <p className="mb-0 text-center text_42 font_Gilroy_SemiBoldItalic lh_52 fst-italic">
+            <p className="mb-0 show_box text-center text_42 font_Gilroy_SemiBoldItalic lh_52 fst-italic">
               SocialTensor
             </p>
           </div>
           <div>
-            <p className="mb-0 text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
+            <p className="mb-0 show_box text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
               Aperture
             </p>
           </div>
           <div>
-            <p className="mb-0 text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
+            <p className="mb-0 show_box text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
               Aperture
             </p>
           </div>
           <div>
-            <p className="mb-0 text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
+            <p className="mb-0 show_box text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
               NicheTensor
             </p>
           </div>
           <div>
-            <p className="mb-0 text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
+            <p className="mb-0 show_box text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
               THELASTONE
             </p>
           </div>
           <div>
-            <p className="mb-0 text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
+            <p className="mb-0 show_box text_42 lh_52 text-center font_Gilroy_SemiBoldItalic fst-italic">
               INFINI
             </p>
           </div>

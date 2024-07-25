@@ -165,7 +165,7 @@ ul {
         top: -100%;
     }
 
-    .branding_padding:hover .common_box_position {
+    .vertical-slider .slick-slide p:hover .common_box_position {
         top: 20px;
         right: 20px;
     }
@@ -197,8 +197,9 @@ ul {
     color: #FFFFFF !important;
     opacity: 1 !important;
 }
+
 .vertical-slider .slick-center p:hover {
-  text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
 .grey {
@@ -304,7 +305,7 @@ ul {
         top: -100%;
     }
 
-    .slick-track:hover .common_box_position {
+    .vertical-slider .slick-slide p:hover .common_box_position {
         top: 20px;
         right: 20px;
         transition: all ease-in-out 500ms !important;
@@ -321,7 +322,7 @@ ul {
         transition: all ease-out 5000ms;
     }
 
-    body:hover .common_box_position_transform_1 {
+    .vertical-slider .slick-slide p:hover .common_box_position_transform_1 {
         transform: translate(-104%, 0%);
         transition: all ease-out 1000ms !important;
     }
@@ -333,8 +334,6 @@ ul {
         width: 583px;
     }
 }
-
-
 
 @media (min-width:576px) {
     .gap_32 {
