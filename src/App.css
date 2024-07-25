@@ -1,49 +1,51 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none !important;
 }
-.letter_space{
+
+.letter_space {
     letter-spacing: 0.5px;
 }
+
 /* Navbar */
 .nav-link::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  border-radius: 10px;
-  left: 0;
-  background-color: white;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    border-radius: 10px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .divider_line {
-  width: 2px;
-  height: 12px;
-  background-color: #FFFFFF4D;
+    width: 2px;
+    height: 12px;
+    background-color: #FFFFFF4D;
 }
 
 .rotate_divide_line {
-  transform: rotate(9deg);
+    transform: rotate(9deg);
 }
 
 .paragraph_future_max_w {
-  max-width: 640px;
+    max-width: 640px;
 }
 
 .pl_40 {
-  padding-left: 40px;
+    padding-left: 40px;
 }
 
 .gap_40 {
@@ -52,7 +54,7 @@
 
 ol,
 ul {
-  padding-left: 0px !important;
+    padding-left: 0px !important;
 }
 
 .pt_253 {
@@ -60,11 +62,11 @@ ul {
 }
 
 .pt_40 {
-  padding-top: 40px;
+    padding-top: 40px;
 }
 
 .gap_32 {
-  gap: 32px;
+    gap: 32px;
 }
 
 /* shiv---css */
@@ -109,80 +111,80 @@ ul {
 }
 
 @media (min-width:576px) {
-  .gap_32 {
-    gap: 40px;
-  }
+    .gap_32 {
+        gap: 40px;
+    }
 }
 
 @media (max-width:576px) {
-  .menu {
-    cursor: pointer;
-  }
-
-  .px_30 {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .cross span {
-    background: white;
-  }
-
-  .cross span:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 9px);
-    margin-bottom: 9px;
-  }
-
-  .cross span:nth-child(2) {
-    transform: rotate(-45deg) translate(-2px);
-    margin-bottom: 9px;
-  }
-
-  .z_9 {
-    z-index: 9;
-  }
-
-  .pt_200 {
-    padding-top: 200px;
-  }
-
-  .menu span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: white;
-    transition: all 0.3s;
-  }
-
-  .navbar-nav {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    position: fixed;
-    right: -100%;
-    top: 0;
-    padding-top: 40px;
-    z-index: 2;
-    transition: all 300ms linear;
-  }
-
-  .overflow_hidden {
-    overflow: hidden;
-  }
-
-  .navbar-nav.show {
-    right: 0;
-  }
-
-  @media (min-width:576px) {
-    .gap_40 {
-      gap: 40px;
+    .menu {
+        cursor: pointer;
     }
-  }
+
+    .px_30 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .cross span {
+        background: white;
+    }
+
+    .cross span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 9px);
+        margin-bottom: 9px;
+    }
+
+    .cross span:nth-child(2) {
+        transform: rotate(-45deg) translate(-2px);
+        margin-bottom: 9px;
+    }
+
+    .z_9 {
+        z-index: 9;
+    }
+
+    .pt_200 {
+        padding-top: 200px;
+    }
+
+    .menu span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: white;
+        transition: all 0.3s;
+    }
+
+    .navbar-nav {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        padding-top: 40px;
+        z-index: 2;
+        transition: all 300ms linear;
+    }
+
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    .navbar-nav.show {
+        right: 0;
+    }
+
+    @media (min-width:576px) {
+        .gap_40 {
+            gap: 40px;
+        }
+    }
 }
 
 @media (min-width:1200px) {
@@ -198,10 +200,6 @@ ul {
     top: 20px;
     right: 20px;
   }
-    .vertical-slider .slick-slide p:hover .common_box_position {
-        top: 20px;
-        right: 20px;
-    }
 }
 
 @media (min-width:1400px) {
@@ -211,24 +209,21 @@ ul {
 }
 
 .vertical-slider .slick-slide {
-  transform: scale(0.8);
-  transition: transform 0.3s ease-in-out;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
 }
 
 .vertical-slider .slick-center {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 .vertical-slider .slick-slide p {
-  font-size: 42px;
-  color: #FFFFFF;
-  opacity: 0.25;
+    font-size: 42px;
+    color: #FFFFFF;
+    opacity: 0.25;
 }
 
 .vertical-slider .slick-center p {
-  font-size: 80px;
-  color: #FFFFFF !important;
-  opacity: 1 !important;
     font-size: 80px;
     color: #FFFFFF !important;
     opacity: 1 !important;
@@ -239,109 +234,99 @@ ul {
 }
 
 .grey {
-    background: #252525;
+  background: #252525;
 }
 
 .common_box {
-    width: 583px;
-    padding: 10px;
-    border: 1px solid #3A3A3A;
+  width: 583px;
+  padding: 10px;
+  border: 1px solid #3A3A3A;
 }
 
 .paragraph_future_max_w {
-    max-width: 640px;
+  max-width: 640px;
 }
 
 .common_text_transform {
-    transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .gap_40 {
-    gap: 40px;
+  gap: 40px;
 }
 
 .branding_logo_padding {
-    padding: 40px;
+  padding: 40px;
 }
 
 .common_box_position {
-    position: absolute;
-    right: 20px;
+  position: absolute;
+  right: 20px;
 }
 
 .responsive_box {
-    width: 335px;
-    padding: 12px;
+  width: 335px;
+  padding: 12px;
 }
 
 .responsive_box_pos {
-    position: absolute;
-    top: 20%;
-    transform: translateY(21%);
+  position: absolute;
+  top: 20%;
+  transform: translateY(21%);
 }
 
 .social_sensor_img_w {
-    max-width: 284px;
-    width: 100%;
+  max-width: 284px;
+  width: 100%;
 }
 
 .social_tensor_img_w {
-    max-width: 401.02px;
-    width: 100%;
+  max-width: 401.02px;
+  width: 100%;
 }
 
 .cross_icon_box {
-    width: 32px;
-    height: 32px;
-    background: #252525;
-
+  width: 32px;
+  height: 32px;
+  background: #252525;
 }
 
 .social_tensor_transition_2 {
-    transition: all ease-out 1000ms !important;
+  transition: all ease-out 1000ms !important;
 }
 
 .gap_12 {
-    gap: 12px;
+  gap: 12px;
 }
 
 .mt_20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .branding_text_transform {
-    transform: rotate(270deg);
-    position: absolute;
-    left: -19px;
-    bottom: 20px;
-
+  transform: rotate(270deg);
+  position: absolute;
+  left: -19px;
+  bottom: 20px;
 }
-
 
 .ui_ux_text_transform {
-    transform: rotate(270deg);
-    position: absolute;
-    left: -7px;
-    bottom: 8px;
+  transform: rotate(270deg);
+  position: absolute;
+  left: -7px;
+  bottom: 8px;
 }
 
-.gap_32 {
-    gap: 32px;
-}
-
-
-
-@media (min-width:1200px) {
-    .common_box {
-        width: 480px;
-
-    }
+@media (min-width: 1200px) {
+  .common_box {
+    width: 480px;
+  }
 
     .common_box_position {
         top: -100%;
     }
 
-    .vertical-slider .slick-slide p:hover .common_box_position {
+    .slick-track:hover .common_box_position {
         top: 20px;
         right: 20px;
         transition: all ease-in-out 500ms !important;
@@ -353,32 +338,34 @@ ul {
         width: 100%;
     }
 
-    .common_box_position_transform_1 {
-        transform: translate(-104%, 0%);
-        transition: all ease-out 5000ms;
-    }
+  .common_box_position_transform_1 {
+    transform: translate(-104%, 0%);
+    transition: all ease-out 5000ms;
+  }
 
-    .vertical-slider .slick-slide p:hover .common_box_position_transform_1 {
+    body:hover .common_box_position_transform_1 {
         transform: translate(-104%, 0%);
         transition: all ease-out 1000ms !important;
     }
 
 }
 
-@media (min-width:1400px) {
-    .common_box {
-        width: 583px;
-    }
+@media (min-width: 1400px) {
+  .common_box {
+    width: 583px;
+  }
 }
+
+
 
 @media (min-width:576px) {
     .gap_32 {
         gap: 40px;
     }
 
-    .branding_padding {
-        padding: 40px 0px 0px 40px;
-    }
+  .branding_padding {
+    padding: 40px 0px 0px 40px;
+  }
 
     .vertical-slider .slick-center p {
         font-size: 80px;
@@ -391,4 +378,4 @@ ul {
         color: #FFFFFF;
         opacity: 0.25;
     }
-}
+  }
