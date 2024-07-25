@@ -32,13 +32,13 @@ const Branding = () => {
     verticalSwiping: true,
   };
   return (
-    <div  className=" overflow-hidden branding_padding vh-100 bg-black d-flex flex-column branding_padding position-relative ">
+    <div className=" overflow-hidden branding_padding vh-100 bg-black d-flex flex-column branding_padding position-relative ">
       <div className=" d-sm-block d-none">
         <img src={logo} alt="logo" />
       </div>
       <div className="d-xl-flex d-none gap_20">
         <div className="common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between">
-          <p className="text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
+          <p className="common_text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
             UI UX
           </p>
 
@@ -49,7 +49,7 @@ const Branding = () => {
           />
         </div>
         <div className="common_box bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between">
-          <p className="text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
+          <p className="common_text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
             Branding
           </p>
 
@@ -104,11 +104,11 @@ const Branding = () => {
           </div>
         </div>
       </div>
-      <div onClick={HANDLE_SHOW} className=" d-flex  flex-column flex-grow-1 justify-content-end align-items-center">
-        <Slider
-          {...settings}
-          className="vertical-slider"
-        >
+      <div
+        onClick={HANDLE_SHOW}
+        className=" d-flex  flex-column flex-grow-1 justify-content-end align-items-center"
+      >
+        <Slider {...settings} className="vertical-slider">
           <div>
             <p className="mb-0 text-center text_42 font_Gilroy_SemiBoldItalic lh_52 fst-italic">
               SocialTensor

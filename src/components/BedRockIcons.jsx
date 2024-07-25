@@ -7,7 +7,7 @@ import exclude from '../assets/images/svg/Exclude.svg'
 import logo_nav from '../assets/images/svg/logo_nav.svg'
 import Header from '../common/Header'
 const BedRockIcons = () => {
-  return (
+return (
     <div className="bg-black">
         <Container className='d-flex flex-column align-items-start min-vh-100'>
         <a href='#' className="pt_40 d-none d-sm-block">

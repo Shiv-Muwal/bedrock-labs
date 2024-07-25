@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import logo_nav from "../assets/images/svg/logo_nav.svg";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [show, setShow] = useState(false);
   const [first, setFirst] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setShow(!show);
@@ -20,7 +22,9 @@ function Header() {
       <div>
         <a href="#">
           <img
-            className="d-block d-sm-none text-center"
+            className={`d-block d-sm-none text-center ${
+              location.pathname === "/" ? "d-none" : ""
+            }`}
             src={logo_nav}
             alt="nav_logo"
           />
@@ -28,7 +32,7 @@ function Header() {
       </div>
       <div
         onClick={toggleMenu}
-        className={`menu d-block d-lg-none  z_9 ${first ? "cross" : ""}`}
+        className={`menu d-block d-lg-none z_9 ${first ? "cross" : ""}`}
       >
         <span className=" mb-2"></span>
         <span></span>
@@ -41,7 +45,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            className="font_Acumin_Pro_Wide fw-bold text_16 lh_16 text-white"
             href="#"
           >
             BEDROCK LABS
@@ -50,7 +54,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            className="font_Acumin_Pro_Wide fw-bold text_16 lh_16 text-white"
             href="#about"
           >
             ABOUT
@@ -59,7 +63,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            className="font_Acumin_Pro_Wide fw-bold text_16 lh_16 text-white"
             href="#cases"
           >
             CASES
@@ -68,7 +72,7 @@ function Header() {
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            className="font_Acumin_Pro_Wide fw-bold text_16 lh_16 text-white"
             href="#media"
           >
             MEDIA
@@ -76,7 +80,7 @@ function Header() {
         </li>
         <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            className="font_Acumin_Pro_Wide fw-bold text_16 lh_16 text-white"
             href="#contact"
           >
             CONTACT
