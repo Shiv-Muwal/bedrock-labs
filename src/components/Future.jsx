@@ -13,23 +13,23 @@ function Future() {
       </div>
       <Container className="d-flex flex-grow-1 flex-column justify-content-center   align-items-sm-center ">
         <div className=" paragraph_future_max_w text-center ">
-          <h1 className=" mb-0 font_Gilroy_SemiBoldItalic fw-normal fst-italic  text_32 lh_38 text-white ">
+          <h1 className=" mb-0 font_Gilroy_SemiBoldItalic  text-uppercase fw-normal fst-italic  text_32 lh_38 text-white ">
             Forging the Future of Crypto
           </h1>
           <div className=" d-flex flex-sm-wrap flex-sm-row flex-column align-items-center justify-content-center mt-4 gap-sm-4 gap-2">
-            <p className=" mb-0 font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
+            <p className=" mb-0 font_Gilroy_SemiBoldItalic text-uppercase fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
               Product Strategy
             </p>
             <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
-            <p className=" mb-0  font_Gilroy_SemiBoldItalic  fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
+            <p className=" mb-0  font_Gilroy_SemiBoldItalic text-uppercase  fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
               Branding Design
             </p>
-            <div className="divider_line d-none d-sm-block"></div>
-            <p className=" mb-0 font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
+            <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
+            <p className=" mb-0 font_Gilroy_SemiBoldItalic text-uppercase fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
               UI UX Design
             </p>
-            <div className="divider_line d-none d-sm-block"></div>
-            <p className=" mb-0 font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
+            <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
+            <p className=" mb-0 font_Gilroy_SemiBoldItalic text-uppercase fw-normal fst-italic text_12 lh_12  text-white opacity-75 ">
               Software Development
             </p>
           </div>

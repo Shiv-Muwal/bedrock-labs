@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BedRockIcons from "./components/BedRockIcons";
 import Future from "./components/Future";
-import Branding from "./components/Branding";
+// import Branding from "./components/Branding";
 import BedRocks from "./components/BedRocks";
 import SocialTensor from "./components/SocialTensor"
 
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<BedRocks />} />
           <Route exact path="/Future" element={<Future />} />
-          <Route exact path="/Branding" element={<Branding />} />
+          {/* <Route exact path="/Branding" element={<Branding />} /> */}
           <Route exact path="/BedRockIcons" element={<BedRockIcons />} /> 
           <Route exact path="/SocialTensor" element={<SocialTensor />} /> 
         </Routes>

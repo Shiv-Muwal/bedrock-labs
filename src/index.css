@@ -7,6 +7,10 @@
   --fs-3xl: 80px;
 }
 
+.lts_1 {
+  letter-spacing: 1px;
+}
+
 .lh_12 {
   line-height: 12px;
 }
