@@ -5,13 +5,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Future from "./components/Future";
 import Branding from "./components/Branding"
 import BedRockIcons from "./components/BedRockIcons";
+import SocialTensor from "./components/SocialTensor";
 
 function App() {
   return (
     <div className="App">
       {/* <Future /> */}
       {/* <Branding/> */}
-<BedRockIcons/>
+{/* <BedRockIcons/> */}
+<SocialTensor/>
       <BrowserRouter>
         <Routes>
 
