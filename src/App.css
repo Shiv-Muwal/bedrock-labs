@@ -122,8 +122,42 @@ ul {
     right: 0;
   }
 
+@media (min-width:576px) {
+    .gap_40 {
+        gap: 40px;
+    }
+
+}
+
+@media (max-width:576px) {}
 
   .overflow_hidden {
     overflow: hidden;
   }
+}
+
+/* shiv----css */
+.vertical-slider .slick-slide {
+  height: auto;
+}
+
+.vertical-slider .slick-slide {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.vertical-slider .slick-center {
+  transform: scale(1);
+}
+
+.vertical-slider .slick-slide p {
+  font-size: 42px;
+  color: #FFFFFF;
+  opacity: 0.25;
+}
+
+.vertical-slider .slick-center p {
+  font-size: 80px;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
 }

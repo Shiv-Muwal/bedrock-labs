@@ -6,6 +6,7 @@ import Future from "./components/Future";
 import Branding from "./components/Branding"
 import BedRockIcons from "./components/BedRockIcons"
 import BedRocks from "./components/BedRocks"
+import SocialTensor from "./components/SocialTensor"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/Future" element={<Future />} />
           <Route exact path="/Branding" element={<Branding />} />
           <Route exact path="/BedRockIcons" element={<BedRockIcons />} /> 
+          <Route exact path="/SocialTensor" element={<SocialTensor />} /> 
 
         </Routes>
       </BrowserRouter>
