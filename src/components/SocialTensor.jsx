@@ -1,7 +1,7 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import logo_nav from '../assets/images/svg/logo_nav.svg'
-import Slider from 'react-slick'
+import React from "react";
+import { Container } from "react-bootstrap";
+import logo_nav from "../assets/images/svg/logo_nav.svg";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from '../common/Header';
@@ -19,7 +19,7 @@ const SocialTensor = () => {
     autoplay: true,
     infinite: true,
     centerMode: true,
-    centerPadding: '0px',
+    centerPadding: "0px",
     verticalSwiping: true,
   };
   return (
@@ -60,4 +60,4 @@ const SocialTensor = () => {
   )
 }
 
-export default SocialTensor
+export default SocialTensor;

@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import Header from "../common/Header";
 import bedrockVideo from "../assets/video/bedrock.mp4";
 
-
 function BedRocks() {
   return (
     <div className="bg-black d-flex flex-column px-4 px-sm-0 min-vh-100">
