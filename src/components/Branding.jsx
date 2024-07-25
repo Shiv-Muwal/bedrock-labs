@@ -33,7 +33,7 @@ const Branding = () => {
     slidesToScroll: 1,
     vertical: true,
     speed: 2000,
-    pauseOnHover:false,
+    pauseOnHover: false,
     autoplay: true,
     infinite: true,
     centerMode: true,
@@ -53,144 +53,177 @@ const Branding = () => {
       >
         <Slider {...settings} className="vertical-slider">
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text-center slider_text text_42 d-inline-block font_Gilroy_SemiBoldItalic lh_52 fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text-center slider_text text_42 d-inline-block font_Gilroy_SemiBoldItalic lh_52 fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               SocialTensor
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               Aperture
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               Aperture
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               NicheTensor
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               THELASTONE
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               INFINI
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               INFINI
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               INFINI
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               INFINI
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               INFINI
             </p>
           </div>
           <div className=" d-flex align-items-center justify-content-center">
-            <p className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic" onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
+            <p
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               INFINI
             </p>
           </div>
         </Slider>
-        <div    className={`common_box_position ${isHovered ? 'hovered' : ''}`}>
-        <div className="common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between">
-          <p className="common_text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
-            UI UX
-          </p>
+        <div className={`common_box_position ${isHovered ? "hovered" : ""}`}>
+          <div className="common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between">
+            <p className="common_text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
+              UI UX
+            </p>
 
-          <img
-          className="social_sensor_img_w"
-            src={social_sensor}
-            alt="social_sensor"
-          />
-        </div>
-        <div className="common_box bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between">
-          <p className="common_text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
-            Branding
-          </p>
+            <img
+              className="social_sensor_img_w"
+              src={social_sensor}
+              alt="social_sensor"
+            />
+          </div>
+          <div className="common_box bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between">
+            <p className="common_text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
+              Branding
+            </p>
 
-          <img
-            className="social_tensor_img_w"
-            src={social_tensor}
-            alt="social_tensor"
-          />
+            <img
+              className="social_tensor_img_w"
+              src={social_tensor}
+              alt="social_tensor"
+            />
+          </div>
         </div>
-      </div>
-      <div className=" d-flex justify-content-center">
-        <div className="responsive_box_pos">
-          {" "}
-          <div
-            className={`${show ? "d-none" : "d-block"
-              } d-flex d-xl-none mt_153 flex-column align-items-end`}
-          >
+        <div className=" d-flex justify-content-center">
+          <div className="responsive_box_pos">
+            {" "}
             <div
-              onClick={HANDLE_SHOW}
-              className="cross_icon_box d-flex justify-content-center align-items-center"
+              className={`${
+                show ? "d-none" : "d-block"
+              } d-flex d-xl-none mt_153 flex-column align-items-end`}
             >
-              <Icons icon="Cross_Icon" />
-            </div>
-            <div className="responsive_box grey">
-              <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                <p className="ui_ux_text_transform mb-0 text-nowrap text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
-                  UI UX
-                </p>
-                <div>
-                  <img
-                    className="social_sensor_img_w"
-                    src={social_sensor_responsive}
-                    alt="sensor"
-                  />
-                </div>
+              <div
+                onClick={HANDLE_SHOW}
+                className="cross_icon_box d-flex justify-content-center align-items-center"
+              >
+                <Icons icon="Cross_Icon" />
               </div>
-              <div className=" mt_20 position-relative justify-content-end d-flex gap_12 w-100">
-                <p className="branding_text_transform text-nowrap mb-0  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
-                  Branding
-                </p>
+              <div className="responsive_box grey">
+                <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
+                    UI UX
+                  </p>
+                  <div>
+                    <img
+                      className="social_sensor_img_w"
+                      src={social_sensor_responsive}
+                      alt="sensor"
+                    />
+                  </div>
+                </div>
+                <div className=" mt_20 position-relative justify-content-end d-flex gap_12 w-100">
+                  <p className="branding_text_transform text-nowrap mb-0  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
+                    Branding
+                  </p>
 
-                <div>
-                  <img
-                    className="social_sensor_img_w"
-                    src={social_tensor}
-                    alt="tensor"
-                  />
+                  <div>
+                    <img
+                      className="social_sensor_img_w"
+                      src={social_tensor}
+                      alt="tensor"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
       <div className=" position-absolute bottom-0 z-3 flex-column w-100 justify-content-center slidergradient">
-      <Header/>
+        <Header />
       </div>
-      
     </div>
   );
 };
