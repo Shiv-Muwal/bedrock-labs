@@ -16,78 +16,74 @@ function Header() {
   };
 
   return (
-    <>
-      <header>
-        <div className="container d-flex pb-sm-5 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
-          <div>
-            <a href="#">
-              <img
-                className="d-block d-sm-none text-center"
-                src={logo_nav}
-                alt="nav_logo"
-              />
-            </a>
-          </div>
-          <div
+    <div className="container w-100 d-flex pb-sm-5 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
+      <div>
+        <a href="#">
+          <img
+            className="d-block d-sm-none text-center"
+            src={logo_nav}
+            alt="nav_logo"
+          />
+        </a>
+      </div>
+      <div
+        onClick={toggleMenu}
+        className={`menu d-block d-lg-none  z_9 ${first ? "cross" : ""}`}
+      >
+        <span className=" mb-2"></span>
+        <span></span>
+      </div>
+      <ul
+        className={`navbar-nav ${
+          show ? "show" : "hide"
+        } d-flex flex-column flex-sm-row gap_32 mb-0`}
+      >
+        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+          <a
             onClick={toggleMenu}
-            className={`menu d-block d-lg-none  z_9 ${first ? "cross" : ""}`}
+            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            href="#"
           >
-            <span className=" mb-2"></span>
-            <span></span>
-          </div>
-          <ul
-            className={`navbar-nav ${
-              show ? "show" : "hide"
-            } d-flex flex-column flex-sm-row gap_32 mb-0`}
+            BEDROCK LABS
+          </a>
+        </li>
+        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+          <a
+            onClick={toggleMenu}
+            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            href="#about"
           >
-            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
-              <a
-                onClick={toggleMenu}
-                className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
-                href="#"
-              >
-                BEDROCK LABS
-              </a>
-            </li>
-            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
-              <a
-                onClick={toggleMenu}
-                className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
-                href="#about"
-              >
-                ABOUT
-              </a>
-            </li>
-            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
-              <a
-                onClick={toggleMenu}
-                className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
-                href="#cases"
-              >
-                CASES
-              </a>
-            </li>
-            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
-              <a
-                onClick={toggleMenu}
-                className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
-                href="#media"
-              >
-                MEDIA
-              </a>
-            </li>
-            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
-              <a
-                className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
-                href="#contact"
-              >
-                CONTACT
-              </a>
-            </li>
-          </ul>
-        </div>
-      </header>
-    </>
+            ABOUT
+          </a>
+        </li>
+        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+          <a
+            onClick={toggleMenu}
+            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            href="#cases"
+          >
+            CASES
+          </a>
+        </li>
+        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+          <a
+            onClick={toggleMenu}
+            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            href="#media"
+          >
+            MEDIA
+          </a>
+        </li>
+        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+          <a
+            className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
+            href="#contact"
+          >
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 }
 
