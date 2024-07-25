@@ -17,18 +17,20 @@ function Header() {
 
   return (
     <>
-      <header >
-        <div className="container-fluid d-flex justify-content-sm-center justify-content-between  align-items-center">
-          <div className="d-block d-sm-none text-center">
+      <header>
+        <div className="container d-flex pb-sm-5 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
+          <div>
             <a href="#">
-              <img src={logo_nav} alt="nav_logo" />
+              <img
+                className="d-block d-sm-none text-center"
+                src={logo_nav}
+                alt="nav_logo"
+              />
             </a>
           </div>
           <div
             onClick={toggleMenu}
-            className={`menu d-block d-lg-none me-3 z_9 ${
-              first ? "cross" : ""
-            }`}
+            className={`menu d-block d-lg-none  z_9 ${first ? "cross" : ""}`}
           >
             <span className=" mb-2"></span>
             <span></span>
@@ -38,7 +40,7 @@ function Header() {
               show ? "show" : "hide"
             } d-flex flex-column flex-sm-row gap_32 mb-0`}
           >
-            <li>
+            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
               <a
                 onClick={toggleMenu}
                 className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
@@ -47,7 +49,7 @@ function Header() {
                 BEDROCK LABS
               </a>
             </li>
-            <li>
+            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
               <a
                 onClick={toggleMenu}
                 className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
@@ -56,7 +58,7 @@ function Header() {
                 ABOUT
               </a>
             </li>
-            <li>
+            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
               <a
                 onClick={toggleMenu}
                 className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
@@ -65,7 +67,7 @@ function Header() {
                 CASES
               </a>
             </li>
-            <li>
+            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
               <a
                 onClick={toggleMenu}
                 className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
@@ -74,7 +76,7 @@ function Header() {
                 MEDIA
               </a>
             </li>
-            <li>
+            <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
               <a
                 className="font_Acumin_Pro_Wide fw-bold text_12 lh_14 text-white"
                 href="#contact"
