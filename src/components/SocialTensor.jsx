@@ -12,6 +12,21 @@ import "slick-carousel/slick/slick-theme.css";
 import { items } from "../common/Helper";
 
 const SocialTensor = () => {
+  var settings = {
+    centerMode: true,
+    slidesToShow: 12,
+    centerPadding: "0px",
+    verticalSwiping: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    infinite: true,
+    dots: false,
+    arrows: false,
+    slidesToScroll: 1,
+    vertical: true,
+    speed: 2000,
+    pauseOnHover: false,
+  };
   const [isHovered, setIsHovered] = useState(false);
   const HANDLE_MOUSE_OVER = (e) => {
     const centerSlide = e.target.closest(".slick-center p");
@@ -37,46 +52,6 @@ const SocialTensor = () => {
   }
 
   // slick-slider
-  var settings = {
-    dots: false,
-    arrows: false,
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    vertical: true,
-    speed: 2000,
-    pauseOnHover: false,
-    autoplay: true,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "0px",
-    verticalSwiping: true,
-    responsive: [
-      {
-        breakpoint: 1920,
-        settings: {
-          slidesToShow: 11,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 1
-        }
-      }
-      
-    ]
-  };
   return (
     <div className="overflow-hidden branding_padding vh-100 bg-black d-flex flex-column position-relative ">
       <div className="d-sm-block d-none">
@@ -84,7 +59,7 @@ const SocialTensor = () => {
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className="d-flex flex-column flex-grow-1 justify-content-end align-items-center">
+      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
         <Slider {...settings} className="vertical_slider">
           {items.map((item, index) => (
             <div
@@ -102,11 +77,10 @@ const SocialTensor = () => {
             </div>
           ))}
         </Slider>
-        <div>
+        <div className=" d-none d-xl-block">
           <div
-            className={`${
-              isHovered ? "hovered" : ""
-            } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+            className={`${isHovered ? "hovered" : ""
+              } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
           >
             <p className="common_text_transform  text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
               UI UX
@@ -119,9 +93,8 @@ const SocialTensor = () => {
             />
           </div>
           <div
-            className={`${
-              isHovered ? "hovered" : ""
-            } common_box common_box_position bg-black common_box_position social_tensor_transition_2`}
+            className={`${isHovered ? "hovered" : ""
+              } common_box common_box_position bg-black common_box_position social_tensor_transition_2`}
           >
             <div className="position-relative d-flex justify-content-end">
               <p className="common_text_transform branding_text_pos mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
@@ -139,15 +112,14 @@ const SocialTensor = () => {
         <div className="d-flex justify-content-center">
           <div className="responsive_box_pos">
             <div
-              className={`${
-                show ? "d-none" : "d-block"
-              } d-flex d-xl-none mt_153 flex-column align-items-end`}
+              className={`${show ? "d-none" : "d-block"
+                } d-flex d-xl-none mt_153 flex-column align-items-end`}
             >
               <div
                 onClick={HANDLE_HIDE}
                 className="d-flex justify-content-center cross_icon_box align-items-center"
               >
-                <Icons icon="Cross_Icon" />
+                <Icons icon="Cross_Icon" className="cursor_pointer" />
               </div>
               <div className="responsive_box grey">
                 <div className="position-relative justify-content-end d-flex gap_12 w-100">

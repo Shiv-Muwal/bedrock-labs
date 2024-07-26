@@ -10,12 +10,12 @@
   letter-spacing: 0.5px;
 }
 
-.nav-link::before {
+.nav_link::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: 0;
+  bottom: -3px;
   border-radius: 10px;
   left: 0;
   background-color: white;
@@ -24,7 +24,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.nav-link:hover::before {
+.nav_link:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -213,14 +213,6 @@ ul {
   gap: 32px;
 }
 
-.vertical_slider {
-  height: 90vh !important;
-}
-
-.slick-list {
-  height: 80vh !important;
-}
-
 .branding_text_pos {
   position: absolute;
   left: -11px;
@@ -235,6 +227,15 @@ ul {
 
 .slick-slide.slick-active.slick-center.slick-current p {
   font-size: 42px !important;
+}
+
+.hovered.common_box {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.cursor_pointer {
+  cursor: pointer;
 }
 
 @media (min-width:576px) {
@@ -297,11 +298,6 @@ ul {
     transition: all ease-out 1400ms !important;
   }
 
-  .common_box_position.hovered {
-    top: 20px !important;
-    right: 20px !important;
-  }
-
   .social_sensor_img_w {
     max-width: 416.75px;
     width: 100%;
@@ -331,6 +327,11 @@ ul {
 
   .menu_bar {
     cursor: pointer;
+  }
+
+  .common_box_position.hovered {
+    top: 20px !important;
+    right: 20px !important;
   }
 
   .px_30 {

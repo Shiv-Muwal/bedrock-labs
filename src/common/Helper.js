@@ -10,4 +10,4 @@ export const items = [
     "INFINI",
     "Aperture",
     "INFINI"
-  ];
+];
