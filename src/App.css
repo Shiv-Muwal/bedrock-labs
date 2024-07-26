@@ -262,9 +262,6 @@ ul {
   text-decoration: underline !important;
 }
 
-.grey {
-  background: #252525;
-}
 
 .common_box {
   width: 583px;
@@ -317,7 +314,7 @@ ul {
 .cross_icon_box {
   width: 32px;
   height: 32px;
-  background: #252525;
+  background: var(--color-grey);
 
 }
 

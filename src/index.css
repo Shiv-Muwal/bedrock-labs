@@ -5,6 +5,11 @@
   --fs-xl: 24px;
   --fs-2xl: 42px;
   --fs-3xl: 80px;
+  /* ----color- */
+  --color-grey:#252525;
+}
+.grey{
+  background-color: var(--color-grey);
 }
 
 .lts_1 {
