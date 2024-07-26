@@ -13,27 +13,27 @@ function Future() {
       </div>
       <Container className="d-flex flex-grow-1 flex-column justify-content-center px_30 align-items-sm-center">
         <div className="paragraph_future_max_w text-center">
-          <h1 className="mb-0 font_gilroy_semibold_italic letter_space text-uppercase fw-normal fst-italic text_32 lh_38 text-white">
+          <h1 className="mb-0 letter_space text-uppercase fw-normal fst-italic text_lg lh_38 text-white">
             Forging the Future of Crypto
           </h1>
           <div className="d-flex flex-sm-wrap flex-sm-row flex-column align-items-center justify-content-center mt-4 gap-sm-4 gap-2">
-            <p className="mb-0 font_gilroy_semibold_italic letter_space text-uppercase fw-normal fst-italic text_12 lh_12 text-white opacity-75">
+            <p className="mb-0 letter_space text-uppercase fw-normal fst-italic text_sm lh_12 text-white opacity-75">
               Product Strategy
             </p>
             <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
-            <p className="mb-0 font_gilroy_semibold_italic letter_space text-uppercase fw-normal fst-italic text_12 lh_12 text-white opacity-75">
+            <p className="mb-0 letter_space text-uppercase fw-normal fst-italic text_sm lh_12 text-white opacity-75">
               Branding Design
             </p>
             <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
-            <p className="mb-0 font_gilroy_semibold_italic letter_space text-uppercase fw-normal fst-italic text_12 lh_12 text-white opacity-75">
+            <p className="mb-0 letter_space text-uppercase fw-normal fst-italic text_sm lh_12 text-white opacity-75">
               UI UX Design
             </p>
             <div className="divider_line d-none rotate_divide_line d-sm-block"></div>
-            <p className="mb-0 font_gilroy_semibold_italic letter_space text-uppercase fw-normal fst-italic text_12 lh_12 text-white opacity-75">
+            <p className="mb-0 letter_space text-uppercase fw-normal fst-italic text_sm lh_12 text-white opacity-75">
               Software Development
             </p>
           </div>
-          <p className="mb-0 fw-bold font_acumin_pro_wide text_12 lh_14 text-white opacity-50 mt-4 paragraph_future_max_w">
+          <p className="mb-0 fw-bold font_acumin_pro_wide text_sm lh_14 text-white opacity-50 mt-4 paragraph_future_max_w">
             The rise of blockchain technology has ushered in a new era of
             digital sovereignty, enabling individuals to reclaim control over
             their financial assets. Bedrock Labs is a premier product-driven

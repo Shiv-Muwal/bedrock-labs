@@ -21,7 +21,7 @@ function Header() {
     <div className="container w-100 d-flex pb-sm-5  px_30 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
       <a href="/">
         <img
-          className={`d-block d-sm-none text-center ${location.pathname === "/" ? "d-none" : ""
+          className={`d-block d-sm-none text-center ${location.pathname === "/" && "d-none"
             }`}
           src={logo_nav}
           alt="nav_logo"
@@ -29,7 +29,7 @@ function Header() {
       </a>
       <div
         onClick={TOGGLE_MENU}
-        className={`menu_bar d-block d-lg-none z_9 ${first ? "cross" : ""}`}
+        className={`menu_bar d-block d-lg-none z_9 ${first && "cross"}`}
       >
         <span className="mb-2"></span>
         <span></span>
@@ -41,7 +41,7 @@ function Header() {
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={TOGGLE_MENU}
-            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
             href="#"
           >
             BEDROCK LABS
@@ -50,7 +50,7 @@ function Header() {
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={TOGGLE_MENU}
-            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
             href="#about"
           >
             ABOUT
@@ -59,7 +59,7 @@ function Header() {
         <li className="ms-4 ps-2 ms-sm-0 lts_1 ps-sm-0">
           <a
             onClick={TOGGLE_MENU}
-            className="font_acumin_pro_wide nav_link position-relative fw-bold lts_1 text_16 lh_16 text-white"
+            className="font_acumin_pro_wide nav_link position-relative fw-bold lts_1 text_md lh_16 text-white"
             href="#cases"
           >
             CASES
@@ -68,7 +68,7 @@ function Header() {
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
             onClick={TOGGLE_MENU}
-            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
             href="#media"
           >
             MEDIA
@@ -76,7 +76,7 @@ function Header() {
         </li>
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
             href="#contact"
           >
             CONTACT
