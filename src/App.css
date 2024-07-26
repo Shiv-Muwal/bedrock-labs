@@ -114,6 +114,7 @@ ul {
 .social_links:hover {
   scale: 1.2;
 }
+
 .vertical_slider .slick-slide {
   transform: scale(0.8);
   transition: transform 0.3s ease-in-out;
@@ -236,6 +237,12 @@ ul {
   height: 100% !important;
 }
 
+.branding_text_pos {
+    position: absolute;
+      left: -11px;
+      bottom: 2px;
+}
+
 @media (min-width:576px) {
   .gap_32 {
     gap: 40px;
@@ -295,6 +302,7 @@ ul {
   }
 
 }
+
 @media (min-width:1400px) {
   .common_box {
     width: 583px;

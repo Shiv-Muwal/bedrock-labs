@@ -172,8 +172,9 @@ const SocialTensor = () => {
         </Slider>
         <div>
           <div
-            className={`${isHovered ? "hovered" : ""
-              } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+            className={`${
+              isHovered ? "hovered" : ""
+            } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
           >
             <p className="common_text_transform  text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
               UI UX
@@ -186,25 +187,29 @@ const SocialTensor = () => {
             />
           </div>
           <div
-            className={`${isHovered ? "hovered" : ""
-              } common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}
+            className={`${
+              isHovered ? "hovered" : ""
+            } common_box common_box_position bg-black common_box_position social_tensor_transition_2`}
           >
-            <p className="common_text_transform mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
-              Branding
-            </p>
+            <div className="position-relative d-flex justify-content-end">
+              <p className="common_text_transform branding_text_pos mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
+                Branding
+              </p>
 
-            <img
-              className="social_tensor_img_w"
-              src={social_tensor}
-              alt="social_tensor"
-            />
+              <img
+                className="social_tensor_img_w"
+                src={social_tensor}
+                alt="social_tensor"
+              />
+            </div>
           </div>
         </div>
         <div className="d-flex justify-content-center">
           <div className="responsive_box_pos">
             <div
-              className={`${show ? "d-none" : "d-block"
-                } d-flex d-xl-none mt_153 flex-column align-items-end`}
+              className={`${
+                show ? "d-none" : "d-block"
+              } d-flex d-xl-none mt_153 flex-column align-items-end`}
             >
               <div
                 onClick={HANDLE_HIDE}
