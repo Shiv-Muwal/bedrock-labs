@@ -61,7 +61,7 @@ const SocialTensor = () => {
         <Slider {...settings} className="vertical_slider">
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text-center slider_text text_42 d-inline-block font_gilroy_semibolditalic lh_52 fst-italic"
+              className="mb-0 show_box text-center slider_text text_42 d-inline-block font_gilroy_semibold_italic lh_52 fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -71,7 +71,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -81,7 +81,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -91,7 +91,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -101,7 +101,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -111,7 +111,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -121,7 +121,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -131,7 +131,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -141,7 +141,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -151,7 +151,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -161,7 +161,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibolditalic fst-italic"
+              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
               onMouseOver={HANDLE_MOUSE_OVER}
               onMouseOut={HANDLE_MOUSE_OUT}
               onClick={HANDLE_SHOW}
@@ -172,11 +172,10 @@ const SocialTensor = () => {
         </Slider>
         <div>
           <div
-            className={`${
-              isHovered ? "hovered" : ""
-            } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+            className={`${isHovered ? "hovered" : ""
+              } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
           >
-            <p className="common_text_transform  text-white font_gilroy_semibolditalic fw-normal fst-italic text_12 lh_16 ">
+            <p className="common_text_transform  text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
               UI UX
             </p>
 
@@ -187,11 +186,10 @@ const SocialTensor = () => {
             />
           </div>
           <div
-            className={`${
-              isHovered ? "hovered" : ""
-            } common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}
+            className={`${isHovered ? "hovered" : ""
+              } common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}
           >
-            <p className="common_text_transform mb-4 text-white font_gilroy_semibolditalic fw-normal fst-italic text_12 lh_16 ">
+            <p className="common_text_transform mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
               Branding
             </p>
 
@@ -205,9 +203,8 @@ const SocialTensor = () => {
         <div className="d-flex justify-content-center">
           <div className="responsive_box_pos">
             <div
-              className={`${
-                show ? "d-none" : "d-block"
-              } d-flex d-xl-none mt_153 flex-column align-items-end`}
+              className={`${show ? "d-none" : "d-block"
+                } d-flex d-xl-none mt_153 flex-column align-items-end`}
             >
               <div
                 onClick={HANDLE_HIDE}
@@ -217,7 +214,7 @@ const SocialTensor = () => {
               </div>
               <div className="responsive_box grey">
                 <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white font_gilroy_semibolditalic fw-normal fst-italic text_12 lh_16 ">
+                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
                     UI UX
                   </p>
                   <div>
@@ -229,7 +226,7 @@ const SocialTensor = () => {
                   </div>
                 </div>
                 <div className="mt_20 position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="branding_text_transform text-nowrap mb-0 text-white font_gilroy_semibolditalic fw-normal fst-italic text_12 lh_16 ">
+                  <p className="branding_text_transform text-nowrap mb-0 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
                     Branding
                   </p>
 

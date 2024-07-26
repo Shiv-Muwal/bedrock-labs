@@ -32,7 +32,7 @@ function Header() {
         onClick={TOGGLE_MENU}
         className={`menu_bar d-block d-lg-none z_9 ${first ? "cross" : ""}`}
       >
-        <span className=" mb-2"></span>
+        <span className="mb-2"></span>
         <span></span>
       </div>
       <ul

@@ -48,10 +48,6 @@
   padding-left: 40px;
 }
 
-.gap_40 {
-  gap: 40px;
-}
-
 ol,
 ul {
   padding-left: 0px !important;
@@ -69,7 +65,6 @@ ul {
   gap: 32px;
 }
 
-/* shiv---css */
 .social_links {
   transition: all 400ms linear;
 }
@@ -91,7 +86,6 @@ ul {
   }
 }
 
-/* shiv----css */
 .vertical_slider .slick-slide {
   height: auto;
 }
@@ -199,12 +193,6 @@ ul {
 
   .navbar_nav.show {
     right: 0;
-  }
-
-  @media (min-width:576px) {
-    .gap_40 {
-      gap: 40px;
-    }
   }
 }
 
