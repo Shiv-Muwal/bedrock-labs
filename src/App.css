@@ -68,20 +68,11 @@ ul {
   transition: all 400ms linear;
 }
 
-.slider_gradient {
-  background: linear-gradient(0deg, #000000 26.23%, rgba(0, 0, 0, 0) 100%);
-}
-
 .vertical_slider .slick-center p {
   font-size: 46px !important;
   color: #FFFFFF !important;
   opacity: 1 !important;
   cursor: pointer;
-}
-
-
-.vertical_slider .slick-slide {
-  height: auto;
 }
 
 .vertical_slider .slick-slide p {
@@ -221,9 +212,11 @@ ul {
 .gap_32 {
   gap: 32px;
 }
-
-.slick-list {
+.vertical_slider{
   height: 90vh !important;
+}
+.slick-list {
+  height: 80vh !important;
 }
 
 .branding_text_pos {
@@ -247,6 +240,10 @@ ul {
     font-size: 32px !important;
     color: #FFFFFF;
     opacity: 0.25;
+  }
+
+  .slider_gradient {
+    background: linear-gradient(0deg, #000000 26.23%, rgba(0, 0, 0, 0) 100%);
   }
 
   .slick-slide.slick-active.slick-center.slick-current p {
@@ -295,7 +292,7 @@ ul {
   .vertical_slider .slick-slide p:hover .common_box_position {
     top: 20px;
     right: 20px;
-    transition: all ease-out 1200ms !important;
+    transition: all ease-out 1400ms !important;
   }
 
   .common_box_position.hovered {
@@ -310,7 +307,7 @@ ul {
 
   .common_box_position_transform_1 {
     transform: translate(-104%, 0%);
-    transition: ease-in 800ms !important;
+    transition: ease-in 900ms !important;
   }
 
   .vertical_slider .slick-slide p:hover+.common_box_position_transform_1 {

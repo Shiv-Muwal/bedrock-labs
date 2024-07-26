@@ -4,12 +4,12 @@ import social_sensor from "../assets/images/webp/social-sensor.webp";
 import social_tensor from "../assets/images/webp/social-tensor.webp";
 import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
-import { items } from "../common/Helper";
 import { useState } from "react";
 import Header from "../common/Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { items } from "../common/Helper";
 
 const SocialTensor = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -47,36 +47,66 @@ const SocialTensor = () => {
     pauseOnHover: false,
     autoplay: true,
     infinite: true,
-    centerMode: true,  
-    centerPadding: '0',
+    centerMode: true,
+    centerPadding: "0px",
+    verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 11,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1
+        }
+      }
+      
+    ]
   };
   return (
-    <div className="overflow-hidden branding_padding min-vh-100 bg-black d-flex flex-column position-relative">
+    <div className="overflow-hidden branding_padding vh-100 bg-black d-flex flex-column position-relative ">
       <div className="d-sm-block d-none">
         <a href="/">
           <img src={logo} alt="logo" />
         </a>
       </div>
-   <div className="d-flex align-items-center flex-column flex-grow-1 justify-content-center">
-   <div className="d-flex flex-column justify-content-center align-items-center">
+      <div className="d-flex flex-column flex-grow-1 justify-content-end align-items-center">
         <Slider {...settings} className="vertical_slider">
-        {items.map((item, index) => (
-      <div className="d-flex align-items-center justify-content-center slide" key={index}>
-        <p
-          className="mb-0 show_box text-center slider_text d-inline-block font_gilroy_semibold_italic lh_52 fst-italic"
-          onMouseOver={HANDLE_MOUSE_OVER}
-          onMouseOut={HANDLE_MOUSE_OUT}
-          onClick={HANDLE_SHOW}
-        >
-          {item}
-        </p>
-      </div>
-    ))}
+          {items.map((item, index) => (
+            <div
+              className="d-flex align-items-center justify-content-center"
+              key={index}
+            >
+              <p
+                className="mb-0 show_box text-center slider_text d-inline-block font_gilroy_semibold_italic lh_52 fst-italic"
+                onMouseOver={HANDLE_MOUSE_OVER}
+                onMouseOut={HANDLE_MOUSE_OUT}
+                onClick={HANDLE_SHOW}
+              >
+                {item}
+              </p>
+            </div>
+          ))}
         </Slider>
         <div>
           <div
-            className={`${isHovered ? "hovered" : ""
-              } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+            className={`${
+              isHovered ? "hovered" : ""
+            } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
           >
             <p className="common_text_transform  text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
               UI UX
@@ -89,25 +119,29 @@ const SocialTensor = () => {
             />
           </div>
           <div
-            className={`${isHovered ? "hovered" : ""
-              } common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}
+            className={`${
+              isHovered ? "hovered" : ""
+            } common_box common_box_position bg-black common_box_position social_tensor_transition_2`}
           >
-            <p className="common_text_transform mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
-              Branding
-            </p>
+            <div className="position-relative d-flex justify-content-end">
+              <p className="common_text_transform branding_text_pos mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
+                Branding
+              </p>
 
-            <img
-              className="social_tensor_img_w"
-              src={social_tensor}
-              alt="social_tensor"
-            />
+              <img
+                className="social_tensor_img_w"
+                src={social_tensor}
+                alt="social_tensor"
+              />
+            </div>
           </div>
         </div>
         <div className="d-flex justify-content-center">
           <div className="responsive_box_pos">
             <div
-              className={`${show ? "d-none" : "d-block"
-                } d-flex d-xl-none mt_153 flex-column align-items-end`}
+              className={`${
+                show ? "d-none" : "d-block"
+              } d-flex d-xl-none mt_153 flex-column align-items-end`}
             >
               <div
                 onClick={HANDLE_HIDE}
@@ -146,7 +180,6 @@ const SocialTensor = () => {
           </div>
         </div>
       </div>
-   </div>
       <div className="position-absolute bottom-0 z-3 flex-column w-100 justify-content-center slider_gradient">
         <Header />
       </div>
