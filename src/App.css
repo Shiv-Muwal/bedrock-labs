@@ -163,7 +163,6 @@ ul {
 .responsive_box_pos {
   position: absolute;
   top: 20%;
-  transform: translateY(21%);
 }
 
 .social_sensor_img_w {
