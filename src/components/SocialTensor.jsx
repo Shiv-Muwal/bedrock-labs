@@ -12,6 +12,21 @@ import "slick-carousel/slick/slick-theme.css";
 import { items } from "../common/Helper";
 
 const SocialTensor = () => {
+  var settings = {
+    centerMode: true,
+    slidesToShow: 12,
+    centerPadding: "0px",
+    verticalSwiping: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    infinite: true,
+    dots: false,
+    arrows: false,
+    slidesToScroll: 1,
+    vertical: true,
+    speed: 2000,
+    pauseOnHover: false,
+  };
   const [isHovered, setIsHovered] = useState(false);
   const HANDLE_MOUSE_OVER = (e) => {
     const centerSlide = e.target.closest(".slick-center p");
@@ -37,46 +52,6 @@ const SocialTensor = () => {
   }
 
   // slick-slider
-  var settings = {
-    dots: false,
-    arrows: false,
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    vertical: true,
-    speed: 2000,
-    pauseOnHover: false,
-    autoplay: true,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "0px",
-    verticalSwiping: true,
-    responsive: [
-      {
-        breakpoint: 1920,
-        settings: {
-          slidesToShow: 11,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 1
-        }
-      }
-      
-    ]
-  };
   return (
     <div className="overflow-hidden branding_padding vh-100 bg-black d-flex flex-column position-relative ">
       <div className="d-sm-block d-none">
@@ -84,7 +59,7 @@ const SocialTensor = () => {
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className="d-flex flex-column flex-grow-1 justify-content-end align-items-center">
+      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
         <Slider {...settings} className="vertical_slider">
           {items.map((item, index) => (
             <div
@@ -102,7 +77,7 @@ const SocialTensor = () => {
             </div>
           ))}
         </Slider>
-        <div>
+        <div className=" d-none d-xl-block">
           <div
             className={`${
               isHovered ? "hovered" : ""

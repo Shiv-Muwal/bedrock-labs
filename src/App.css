@@ -212,12 +212,6 @@ ul {
 .gap_32 {
   gap: 32px;
 }
-.vertical_slider{
-  height: 90vh !important;
-}
-.slick-list {
-  height: 80vh !important;
-}
 
 .branding_text_pos {
   position: absolute;
@@ -234,7 +228,10 @@ ul {
 .slick-slide.slick-active.slick-center.slick-current p {
   font-size: 42px !important;
 }
-
+.hovered.common_box{
+  top: 20px !important;
+  right: 20px !important;
+}
 @media (min-width:576px) {
   .vertical_slider .slick-slide p {
     font-size: 32px !important;
@@ -295,11 +292,6 @@ ul {
     transition: all ease-out 1400ms !important;
   }
 
-  .common_box_position.hovered {
-    top: 20px !important;
-    right: 20px !important;
-  }
-
   .social_sensor_img_w {
     max-width: 416.75px;
     width: 100%;
@@ -330,7 +322,10 @@ ul {
   .menu_bar {
     cursor: pointer;
   }
-
+  .common_box_position.hovered {
+    top: 20px !important;
+    right: 20px !important;
+  }
   .px_30 {
     padding-left: 30px !important;
     padding-right: 30px !important;

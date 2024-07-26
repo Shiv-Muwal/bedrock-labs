@@ -139,3 +139,8 @@
     line-height: 14.4px;
   }
 }
+.slick-slide .slick-track {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
