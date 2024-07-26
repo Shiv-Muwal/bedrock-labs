@@ -13,16 +13,26 @@ import "slick-carousel/slick/slick-theme.css";
 const Branding = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseOver = () => {
-    setIsHovered(true);
+  const handleMouseOver = (e) => {
+    const centerSlide = e.target.closest('.slick-center p');
+    if (centerSlide) {
+      setIsHovered(true);
+    }
   };
 
-  const handleMouseOut = () => {
-    setIsHovered(false);
+
+  const handleMouseOut = (e) => {
+    const centerSlide = e.target.closest('.slick-center p');
+    if (centerSlide) {
+      setIsHovered(false);
+    }
   };
   const [show, setShow] = useState(false);
-  function HANDLE_SHOW() {
-    setShow(!show);
+  function HANDLE_SHOW(e) {
+    const centerSlide = e.target.closest('.slick-center p');
+    if (centerSlide) {
+      setShow(!show);
+    }
   }
 
   // slick-slider
@@ -48,7 +58,7 @@ const Branding = () => {
         </a>
       </div>
       <div
-        onClick={HANDLE_SHOW}
+
         className=" d-flex  flex-column flex-grow-1 justify-content-end align-items-center"
       >
         <Slider {...settings} className="vertical-slider">
@@ -57,6 +67,7 @@ const Branding = () => {
               className="mb-0 show_box text-center slider_text text_42 d-inline-block font_Gilroy_SemiBoldItalic lh_52 fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               SocialTensor
             </p>
@@ -66,6 +77,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               Aperture
             </p>
@@ -75,6 +87,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               Aperture
             </p>
@@ -84,6 +97,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               NicheTensor
             </p>
@@ -93,6 +107,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               THELASTONE
             </p>
@@ -102,6 +117,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               INFINI
             </p>
@@ -111,6 +127,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               INFINI
             </p>
@@ -120,6 +137,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               INFINI
             </p>
@@ -129,6 +147,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               INFINI
             </p>
@@ -138,6 +157,7 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               INFINI
             </p>
@@ -147,17 +167,14 @@ const Branding = () => {
               className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_Gilroy_SemiBoldItalic fst-italic"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={HANDLE_SHOW}
             >
               INFINI
             </p>
           </div>
         </Slider>
-        <div className={` `}>
-          <div
-            className={`${
-              isHovered ? "hovered" : ""
-            } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
-          >
+        <div>
+          <div className={`${isHovered ? "hovered" : ""} common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}>
             <p className="common_text_transform  text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
               UI UX
             </p>
@@ -168,11 +185,7 @@ const Branding = () => {
               alt="social_sensor"
             />
           </div>
-          <div
-            className={`${
-              isHovered ? "hovered" : ""
-            } common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}
-          >
+          <div className={`${isHovered ? "hovered" : ""} common_box common_box_position bg-black common_box_position social_tensor_transition_2 d-flex align-items-end justify-content-between`}>
             <p className="common_text_transform   text-white font_Gilroy_SemiBoldItalic fw-normal fst-italic text_12 lh_16 ">
               Branding
             </p>
@@ -188,13 +201,13 @@ const Branding = () => {
           <div className="responsive_box_pos">
             {" "}
             <div
-              className={`${
-                show ? "d-none" : "d-block"
-              } d-flex d-xl-none mt_153 flex-column align-items-end`}
+              className={`${show ? "d-none" : "d-block"
+                } d-flex d-xl-none mt_153 flex-column align-items-end`}
             >
               <div
-                onClick={HANDLE_SHOW}
-                className="cross_icon_box d-flex justify-content-center align-items-center"
+                onClick={() => setShow(false)}
+                className="
+                 d-flex justify-content-center align-items-center"
               >
                 <Icons icon="Cross_Icon" />
               </div>
