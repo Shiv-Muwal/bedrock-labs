@@ -5,21 +5,21 @@ import bedrockVideo from "../assets/video/bedrock.mp4";
 
 function BedRocks() {
   return (
-    <div className="bg-black d-flex flex-column px-4 px-sm-0 min-vh-100">
-      <Container className="d-flex flex-column justify-content-center align-items-center flex-grow-1">
-        <div className="">
-          <video
-            autoPlay
-            loop
-            muted
-            className="w-100"
-            style={{ maxWidth: "396px" }}
-          >
-            <source src={bedrockVideo} type="video/mp4" />
-          </video>
-        </div>
+    <div className="bg-black d-flex flex-column min-vh-100">
+      <Container className="d-flex flex-column justify-content-center px_30 align-items-center flex-grow-1">
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-100"
+          style={{ maxWidth: "396px" }}
+        >
+          <source src={bedrockVideo} type="video/mp4" />
+        </video>
       </Container>
-      <Header />
+      <div className="pb_30">
+        <Header />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo_nav from "../assets/images/svg/logo_nav.svg";
+import logo_nav from "../assets/images/svg/logo-nav.svg";
 import { useLocation } from "react-router-dom";
 
 function Header() {
@@ -7,7 +7,7 @@ function Header() {
   const [first, setFirst] = useState(false);
   const location = useLocation();
 
-  const toggleMenu = () => {
+  const TOGGLE_MENU = () => {
     setShow(!show);
     setFirst(!first);
     if (!show) {
@@ -18,43 +18,41 @@ function Header() {
   };
 
   return (
-    <div className="container w-100 d-flex pb-sm-5 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
-      <div>
-        <a href="/">
-          <img
-            className={`d-block d-sm-none text-center ${
-              location.pathname === "/" ? "d-none" : ""
-            }`}
-            src={logo_nav}
-            alt="nav_logo"
-          />
-        </a>
-      </div>
+    <div className="container w-100 d-flex pb-sm-5  px_30 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
+      <a href="/">
+        <img
+          className={`d-block d-sm-none text-center ${
+            location.pathname === "/" ? "d-none" : ""
+          }`}
+          src={logo_nav}
+          alt="nav_logo"
+        />
+      </a>
       <div
-        onClick={toggleMenu}
-        className={`menu d-block d-lg-none z_9 ${first ? "cross" : ""}`}
+        onClick={TOGGLE_MENU}
+        className={`menu_bar d-block d-lg-none z_9 ${first ? "cross" : ""}`}
       >
         <span className=" mb-2"></span>
         <span></span>
       </div>
       <ul
-        className={`navbar-nav ${
+        className={`navbar_nav ${
           show ? "show" : "hide"
         } d-flex flex-column flex-sm-row gap_32 mb-0`}
       >
-        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+        <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            onClick={TOGGLE_MENU}
+            className="font_acumin_pro_wide nav-link position-relative lts_1 fw-bold text_12 lh_16 text-white"
             href="#"
           >
             BEDROCK LABS
           </a>
         </li>
-        <li className=" ms-4 ps-2 ms-sm-0 ps-sm-0">
+        <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            onClick={TOGGLE_MENU}
+            className="font_acumin_pro_wide nav-link position-relative lts_1 fw-bold text_12 lh_16 text-white"
             href="#about"
           >
             ABOUT
@@ -62,8 +60,8 @@ function Header() {
         </li>
         <li className="ms-4 ps-2 ms-sm-0 lts_1 ps-sm-0">
           <a
-            onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide nav-link position-relative fw-bold lts_1 text_16 lh_16 text-white"
+            onClick={TOGGLE_MENU}
+            className="font_acumin_pro_wide nav-link position-relative fw-bold lts_1 text_12 lh_16 text-white"
             href="#cases"
           >
             CASES
@@ -71,8 +69,8 @@ function Header() {
         </li>
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            onClick={toggleMenu}
-            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            onClick={TOGGLE_MENU}
+            className="font_acumin_pro_wide nav-link position-relative lts_1 fw-bold text_12 lh_16 text-white"
             href="#media"
           >
             MEDIA
@@ -80,7 +78,7 @@ function Header() {
         </li>
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            className="font_Acumin_Pro_Wide nav-link position-relative lts_1 fw-bold text_16 lh_16 text-white"
+            className="font_acumin_pro_wide nav-link position-relative lts_1 fw-bold text_12 lh_16 text-white"
             href="#contact"
           >
             CONTACT

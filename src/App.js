@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BedRockIcons from "./components/BedRockIcons";
 import Future from "./components/Future";
 import BedRocks from "./components/BedRocks";
-import Branding from "./components/Branding";
+import SocialTensor from "./components/SocialTensor";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<BedRocks />} />
           <Route exact path="/future" element={<Future />} />
-          <Route exact path="/social-tensor" element={<Branding />} />
+          <Route exact path="/social-tensor" element={<SocialTensor />} />
           <Route exact path="/bedrock-icon" element={<BedRockIcons />} />
         </Routes>
       </BrowserRouter>
