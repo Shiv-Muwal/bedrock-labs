@@ -9,6 +9,7 @@ import Header from "../common/Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { items } from "../common/Helper";
 
 const SocialTensor = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +40,7 @@ const SocialTensor = () => {
   var settings = {
     dots: false,
     arrows: false,
-    slidesToShow: 11,
+    slidesToShow: 9,
     slidesToScroll: 1,
     vertical: true,
     speed: 2000,
@@ -59,116 +60,21 @@ const SocialTensor = () => {
       </div>
       <div className="d-flex flex-column flex-grow-1 justify-content-end align-items-center">
         <Slider {...settings} className="vertical_slider">
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text-center slider_text text_42 d-inline-block font_gilroy_semibold_italic lh_52 fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
+          {items.map((item, index) => (
+            <div
+              className="d-flex align-items-center justify-content-center"
+              key={index}
             >
-              SocialTensor
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              Aperture
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              Aperture
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              NicheTensor
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              THELASTONE
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
+              <p
+                className="mb-0 show_box text-center slider_text d-inline-block font_gilroy_semibold_italic lh_52 fst-italic"
+                onMouseOver={HANDLE_MOUSE_OVER}
+                onMouseOut={HANDLE_MOUSE_OUT}
+                onClick={HANDLE_SHOW}
+              >
+                {item}
+              </p>
+            </div>
+          ))}
         </Slider>
         <div>
           <div

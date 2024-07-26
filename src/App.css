@@ -15,7 +15,7 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: 0;
+  bottom: -7px;
   border-radius: 10px;
   left: 0;
   background-color: white;
@@ -124,17 +124,11 @@ ul {
   transform: scale(1);
 }
 
-.vertical_slider .slick-slide p {
-  font-size: 32px !important;
-  color: #FFFFFF;
-  opacity: 0.25;
-}
 
 .vertical_slider .slick-center p {
   font-size: 80px;
   color: #FFFFFF !important;
   opacity: 1 !important;
-  font-size: 80px;
   color: #FFFFFF !important;
   opacity: 1 !important;
 }
@@ -228,22 +222,37 @@ ul {
   gap: 32px;
 }
 
-.slick-slider.vertical_slider.slick-vertical.slick-initialized {
-  height: 100%;
-}
-
 .slick-list {
-  display: flex !important;
-  height: 100% !important;
+  height: 90vh !important;
 }
 
 .branding_text_pos {
-    position: absolute;
-      left: -11px;
-      bottom: 2px;
+  position: absolute;
+  left: -11px;
+  bottom: 2px;
+}
+
+.vertical_slider .slick-slide p {
+  font-size: 32px !important;
+  color: #FFFFFF;
+  opacity: 0.25;
+}
+
+.slick-slide.slick-active.slick-center.slick-current p {
+  font-size: 42px !important;
 }
 
 @media (min-width:576px) {
+  .vertical_slider .slick-slide p {
+    font-size: 32px !important;
+    color: #FFFFFF;
+    opacity: 0.25;
+  }
+
+  .slick-slide.slick-active.slick-center.slick-current p {
+    font-size: 42px !important;
+  }
+
   .gap_32 {
     gap: 40px;
   }
@@ -252,17 +261,24 @@ ul {
     padding: 40px 0px 0px 40px;
   }
 
-  .vertical_slider .slick-center p {
-    font-size: 80px !important;
+  .vertical_slider .slick-slide p {
+    font-size: 46px !important;
     color: #FFFFFF !important;
-    opacity: 1 !important;
     cursor: pointer;
   }
 
   .vertical_slider .slick-slide p {
-    font-size: 42px;
+    font-size: 46px;
     color: #FFFFFF;
     opacity: 0.25;
+  }
+
+  .slick-slide.slick-active.slick-center.slick-current p {
+    font-size: 80px !important;
+  }
+
+  .slick-slide.slick-center.slick-cloned {
+    font-size: 80px !important;
   }
 }
 
