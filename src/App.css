@@ -10,7 +10,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Navbar */
 .nav-link::before {
   content: '';
   position: absolute;
@@ -80,11 +79,6 @@ ul {
   cursor: pointer;
 }
 
-@media (min-width:1400px) {
-  .common_box {
-    width: 583px;
-  }
-}
 
 .vertical_slider .slick-slide {
   height: auto;
@@ -120,108 +114,6 @@ ul {
 .social_links:hover {
   scale: 1.2;
 }
-
-@media (min-width:576px) {
-  .gap_32 {
-    gap: 40px;
-  }
-}
-
-@media (max-width:576px) {
-  .pb_30 {
-    padding-bottom: 30px;
-  }
-
-  .menu_bar {
-    cursor: pointer;
-  }
-
-  .px_30 {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-
-  .cross span {
-    background: white;
-  }
-
-  .cross span:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 9px);
-    margin-bottom: 9px;
-  }
-
-  .cross span:nth-child(2) {
-    transform: rotate(-45deg) translate(-2px);
-    margin-bottom: 9px;
-  }
-
-  .z_9 {
-    z-index: 9;
-  }
-
-  .pt_200 {
-    padding-top: 200px;
-  }
-
-  .menu_bar span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: white;
-    transition: all 0.3s;
-  }
-
-  .navbar_nav {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    position: fixed;
-    right: -100%;
-    top: 0;
-    padding-top: 40px;
-    z-index: 2;
-    transition: all 300ms linear;
-  }
-
-  .overflow_hidden {
-    overflow: hidden;
-  }
-
-  .navbar_nav.show {
-    right: 0;
-  }
-}
-
-@media (min-width:1200px) {
-  .common_box {
-    width: 480px;
-  }
-
-  .common_box_position {
-    top: -100%;
-  }
-
-  .slider_text:hover~.common_box_position {
-    top: 20px;
-    right: 20px;
-  }
-
-  .vertical_slider .slick-slide p:hover .common_box_position {
-    top: 20px;
-    right: 20px;
-  }
-}
-
-@media (min-width:1400px) {
-  .common_box {
-    width: 583px;
-  }
-}
-
 .vertical_slider .slick-slide {
   transform: scale(0.8);
   transition: transform 0.3s ease-in-out;
@@ -249,7 +141,6 @@ ul {
 .vertical_slider .slick-center p:hover {
   text-decoration: underline !important;
 }
-
 
 .common_box {
   width: 583px;
@@ -323,9 +214,7 @@ ul {
   position: absolute;
   left: -19px;
   bottom: 20px;
-
 }
-
 
 .ui_ux_text_transform {
   transform: rotate(270deg);
@@ -338,7 +227,37 @@ ul {
   gap: 32px;
 }
 
+.slick-slider.vertical_slider.slick-vertical.slick-initialized {
+  height: 100%;
+}
 
+.slick-list {
+  display: flex !important;
+  height: 100% !important;
+}
+
+@media (min-width:576px) {
+  .gap_32 {
+    gap: 40px;
+  }
+
+  .branding_padding {
+    padding: 40px 0px 0px 40px;
+  }
+
+  .vertical_slider .slick-center p {
+    font-size: 80px !important;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    cursor: pointer;
+  }
+
+  .vertical_slider .slick-slide p {
+    font-size: 42px;
+    color: #FFFFFF;
+    opacity: 0.25;
+  }
+}
 
 @media (min-width:1200px) {
   .common_box {
@@ -376,42 +295,77 @@ ul {
   }
 
 }
-
 @media (min-width:1400px) {
   .common_box {
     width: 583px;
   }
 }
 
-@media (min-width:576px) {
-  .gap_32 {
-    gap: 40px;
+@media (max-width:576px) {
+  .pb_17 {
+    padding-bottom: 17px;
   }
 
-  .branding_padding {
-    padding: 40px 0px 0px 40px;
-  }
-
-  .vertical_slider .slick-center p {
-    font-size: 80px !important;
-    color: #FFFFFF !important;
-    opacity: 1 !important;
+  .menu_bar {
     cursor: pointer;
   }
 
-  .vertical_slider .slick-slide p {
-    font-size: 42px;
-    color: #FFFFFF;
-    opacity: 0.25;
+  .px_30 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
-}
 
+  .cross span {
+    background: white;
+  }
 
-.slick-slider.vertical_slider.slick-vertical.slick-initialized {
-  height: 100%;
-}
+  .cross span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 9px);
+    margin-bottom: 9px;
+  }
 
-.slick-list {
-  display: flex !important;
-  height: 100% !important;
+  .cross span:nth-child(2) {
+    transform: rotate(-45deg) translate(-2px);
+    margin-bottom: 9px;
+  }
+
+  .z_9 {
+    z-index: 9;
+  }
+
+  .pt_200 {
+    padding-top: 200px;
+  }
+
+  .menu_bar span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
+  }
+
+  .navbar_nav {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    padding-top: 40px;
+    z-index: 2;
+    transition: all 300ms linear;
+  }
+
+  .overflow_hidden {
+    overflow: hidden;
+  }
+
+  .navbar_nav.show {
+    right: 0;
+  }
 }

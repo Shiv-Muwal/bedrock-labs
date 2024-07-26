@@ -17,7 +17,7 @@ function BedRocks() {
           <source src={bedrockVideo} type="video/mp4" />
         </video>
       </Container>
-      <div className="pb_30">
+      <div className="pb_17">
         <Header />
       </div>
     </div>
