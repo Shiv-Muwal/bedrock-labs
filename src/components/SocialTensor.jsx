@@ -100,7 +100,7 @@ const SocialTensor = () => {
 
   return (
     <div className="overflow-hidden bg-black d-flex flex-column position-relative scroll_behave" onWheel={HANDLE_WHEEL}>
-      <div className="d-sm-block d-none branding_padding position-absolute">
+      <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
           <img src={logo} alt="logo" />
         </a>
