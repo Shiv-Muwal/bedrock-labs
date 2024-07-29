@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Acumin_Pro_Wide";
+  src: url("./assets/fonts/Acumin\ Pro\ Condensed.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy_SemiBoldItalic";
+  src: url("./assets/fonts/FontsFree-Net-Gilroy-ExtraBold.ttf");
+}
+
+.font_acumin_pro_wide {
+  font-family: "Acumin_Pro_Wide";
+}
+
+.font_gilroy_semibold_italic {
+  font-family: "Gilroy_SemiBoldItalic";
+}
+
 :root {
   --fs-sm: 12px;
   --fs-md: 16px;
@@ -75,26 +93,7 @@
   font-size: var(--fs-3xl);
 }
 
-@font-face {
-  font-family: "Acumin_Pro_Wide";
-  src: url("./assets/fonts/Acumin\ Pro\ Condensed.ttf");
-}
-
-@font-face {
-  font-family: "Gilroy_SemiBoldItalic";
-  src: url("./assets/fonts/FontsFree-Net-Gilroy-ExtraBold.ttf");
-}
-
-.font_Acumin_Pro_Wide {
-  font-family: "Acumin_Pro_Wide";
-}
-
-.font_Gilroy_SemiBoldItalic {
-  font-family: "Gilroy_SemiBoldItalic";
-}
-
 @media (min-width:576px) {
-
   :root {
     --fs-sm: 12px;
     --fs-md: 16px;
@@ -139,6 +138,4 @@
   .lh_14 {
     line-height: 14.4px;
   }
-
-
 }

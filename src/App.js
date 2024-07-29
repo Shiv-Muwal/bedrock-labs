@@ -5,17 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BedRockIcons from "./components/BedRockIcons";
 import Future from "./components/Future";
 import BedRocks from "./components/BedRocks";
-import Branding from "./components/Branding";
-
+import SocialTensor from "./components/SocialTensor";
+import Swiper_js from "./components/S";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<BedRocks />} />
+          <Route exact path="/" element={<Swiper_js />} />
           <Route exact path="/future" element={<Future />} />
-          <Route exact path="/branding" element={<Branding />} />
-          <Route exact path="/bedrock_icon" element={<BedRockIcons />} />
+          <Route exact path="/social-tensor" element={<SocialTensor />} />
+          <Route exact path="/bedrock-icon" element={<BedRockIcons />} />
         </Routes>
       </BrowserRouter>
     </div>
