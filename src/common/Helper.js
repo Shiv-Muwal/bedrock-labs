@@ -10,4 +10,11 @@ export const SLIDER_LIST = [
     "INFINI",
     "Aperture",
     "INFINI",
+    "SocialTensor",
+    "Aperture",
+    "NicheTensor",
+    "Aperture",
+    "THELASTONE",
+    "INFINI",
+    "THELASTONE",
 ];

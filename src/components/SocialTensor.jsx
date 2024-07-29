@@ -13,9 +13,10 @@ import { SLIDER_LIST } from "../common/Helper";
 const SocialTensor = () => {
   const settings = {
     centerMode: true,
-    slidesToShow: 11,
+    initialSlide: Math.floor(SLIDER_LIST.length / 2),
+    slidesToShow: 21.5,
     centerPadding: "0px",
-    // verticalSwiping: true,
+    verticalSwiping: true,
     infinite: true,
     dots: false,
     arrows: false,
@@ -24,17 +25,46 @@ const SocialTensor = () => {
     swipeToSlide: true,
     speed: 2000,
     pauseOnHover: false,
-    initialSlide: Math.floor(SLIDER_LIST.length / 2),
-    touchThreshold: 1, // Adjusted value
-  touchMovementThreshold: 1,
+    touchThreshold: 1,
+    touchMovementThreshold: 1,
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 12.5,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 15.5,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 14,
+          autoplay: true,
+        autoplaySpeed: 2000, 
+        }
+      },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 9,
-        },
+          slidesToShow: 17,
+          autoplay: true,
+          autoplaySpeed: 2000, 
+        }
       },
-    ],
+      {
+        breakpoint: 375,
+        settings: {
+          autoPlay: true,
+          autoplaySpeed: 2000, 
+          slidesToShow: 12,
+        }
+      }
+    ]
   };
 
   const [isHovered, setIsHovered] = useState(false);
@@ -42,7 +72,7 @@ const SocialTensor = () => {
   const sliderRef = useRef(null);
 
 
-  const handleWheel = (e) => {
+  const HANDLE_WHEEL = (e) => {
     if (e.deltaY > 0) {
       sliderRef.current.slickNext();
     } else {
@@ -75,8 +105,8 @@ const SocialTensor = () => {
   };
 
   return (
-    <div className="overflow-hidden vh-100 bg-black d-flex flex-column position-relative scroll_behave" onWheel={handleWheel}>
-      <div className="d-sm-block d-none branding_padding">
+    <div className="overflow-hidden bg-black d-flex flex-column position-relative scroll_behave" onWheel={HANDLE_WHEEL}>
+      <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
           <img src={logo} alt="logo" />
         </a>
