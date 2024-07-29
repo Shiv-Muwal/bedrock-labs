@@ -16,7 +16,7 @@ const SocialTensor = () => {
     slidesToShow: 11,
     centerPadding: "0px",
     verticalSwiping: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     infinite: true,
     dots: false,
@@ -75,7 +75,7 @@ const SocialTensor = () => {
       <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
         <Slider {...settings} className="vertical_slider">
           {SLIDER_LIST.map((item, index) => (
-            <div
+             <div
               className="d-flex align-items-center justify-content-center"
               key={index}
             >
