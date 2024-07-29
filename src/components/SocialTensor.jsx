@@ -12,10 +12,11 @@ import { SLIDER_LIST } from "../common/Helper";
 
 const SocialTensor = () => {
   const settings = {
+    initialSlide: Math.floor(SLIDER_LIST.length / 2),
     centerMode: true,
-    slidesToShow: 11,
+    slidesToShow: 18,
     centerPadding: "0px",
-    // verticalSwiping: true,
+    verticalSwiping: true,
     infinite: true,
     dots: false,
     arrows: false,
@@ -24,17 +25,9 @@ const SocialTensor = () => {
     swipeToSlide: true,
     speed: 2000,
     pauseOnHover: false,
-    initialSlide: Math.floor(SLIDER_LIST.length / 2),
-    touchThreshold: 1, // Adjusted value
+    touchThreshold: 1,
   touchMovementThreshold: 1,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 9,
-        },
-      },
-    ],
+  
   };
 
   const [isHovered, setIsHovered] = useState(false);
@@ -42,7 +35,7 @@ const SocialTensor = () => {
   const sliderRef = useRef(null);
 
 
-  const handleWheel = (e) => {
+  const HANDLE_WHEEL = (e) => {
     if (e.deltaY > 0) {
       sliderRef.current.slickNext();
     } else {
@@ -75,13 +68,13 @@ const SocialTensor = () => {
   };
 
   return (
-    <div className="overflow-hidden vh-100 bg-black d-flex flex-column position-relative scroll_behave" onWheel={handleWheel}>
-      <div className="d-sm-block d-none branding_padding">
+    <div className="overflow-hidden bg-black d-flex flex-column position-relative scroll_behave" onWheel={HANDLE_WHEEL}>
+      <div className="d-sm-block d-none branding_padding position-absolute">
         <a href="/">
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
+      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center min-vh-100">
         <Slider {...settings} ref={sliderRef} className="vertical_slider">
           {SLIDER_LIST.map((item, index) => (
             <div
