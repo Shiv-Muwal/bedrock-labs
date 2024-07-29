@@ -14,7 +14,7 @@ const SocialTensor = () => {
   const settings = {
     centerMode: true,
     initialSlide: Math.floor(SLIDER_LIST.length / 2),
-    slidesToShow: 20.5,
+    slidesToShow: 21.5,
     centerPadding: "0px",
     verticalSwiping: true,
     infinite: true,
