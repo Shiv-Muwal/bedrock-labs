@@ -12,9 +12,9 @@ import { SLIDER_LIST } from "../common/Helper";
 
 const SocialTensor = () => {
   const settings = {
-    initialSlide: Math.floor(SLIDER_LIST.length / 2),
     centerMode: true,
-    slidesToShow: 18,
+    initialSlide: Math.floor(SLIDER_LIST.length / 2),
+    slidesToShow: 20.5,
     centerPadding: "0px",
     verticalSwiping: true,
     infinite: true,
@@ -26,8 +26,39 @@ const SocialTensor = () => {
     speed: 2000,
     pauseOnHover: false,
     touchThreshold: 1,
-  touchMovementThreshold: 1,
-  
+    touchMovementThreshold: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 12.5,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 15.5,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 14,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 17,
+        }
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 12,
+        }
+      }
+    ]
   };
 
   const [isHovered, setIsHovered] = useState(false);
@@ -74,7 +105,7 @@ const SocialTensor = () => {
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center min-vh-100">
+      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
         <Slider {...settings} ref={sliderRef} className="vertical_slider">
           {SLIDER_LIST.map((item, index) => (
             <div

@@ -2,6 +2,15 @@
   letter-spacing: 0.5px;
 }
 
+.vertical_slider {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.slick-list {
+  height: 100% !important;
+}
+
 .nav_link::before {
   content: '';
   position: absolute;
@@ -204,10 +213,12 @@ ul {
 .cursor_pointer {
   cursor: pointer;
 }
-.hovered.common_box{
+
+.hovered.common_box {
   top: 20px !important;
   right: 20px !important;
 }
+
 @media (min-width:576px) {
   .vertical_slider .slick-slide p {
     font-size: 42px !important;
