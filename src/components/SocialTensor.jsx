@@ -44,17 +44,23 @@ const SocialTensor = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 14,
+          autoplay: true,
+        autoplaySpeed: 2000, 
         }
       },
       {
         breakpoint: 576,
         settings: {
           slidesToShow: 17,
+          autoplay: true,
+          autoplaySpeed: 2000, 
         }
       },
       {
         breakpoint: 375,
         settings: {
+          autoPlay: true,
+          autoplaySpeed: 2000, 
           slidesToShow: 12,
         }
       }
