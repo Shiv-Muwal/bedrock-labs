@@ -21,7 +21,6 @@ const SocialTensor = () => {
     dots: false,
     arrows: false,
     vertical: true,
-    focusOnSelect: true,
     swipeToSlide: true,
     speed: 2000,
     pauseOnHover: false,
