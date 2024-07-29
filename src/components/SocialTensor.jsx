@@ -37,19 +37,19 @@ const SocialTensor = () => {
       {
         breakpoint: 1536,
         settings: {
-          slidesToShow: 17.5,
+          slidesToShow: 10,
         }
       },
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 17.5,
+          slidesToShow: 10,
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 15.5,
+          slidesToShow: 8,
         }
       },
       {
@@ -60,22 +60,6 @@ const SocialTensor = () => {
         autoplaySpeed: 2000, 
         }
       },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 22.5,
-          autoplay: true,
-          autoplaySpeed: 2000, 
-        }
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          autoPlay: true,
-          autoplaySpeed: 2000, 
-          slidesToShow: 12,
-        }
-      }
     ]
   };
 
@@ -117,7 +101,7 @@ const SocialTensor = () => {
   };
 
   return (
-    <div className="overflow-hidden bg-black d-flex flex-column position-relative scroll_behave" onWheel={HANDLE_WHEEL}>
+    <div className="overflow-hidden min-vh-100 bg-black d-flex flex-column position-relative scroll_behave" onWheel={HANDLE_WHEEL}>
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
           <img src={logo} alt="logo" />
