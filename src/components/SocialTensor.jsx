@@ -1,184 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
 import social_sensor from "../assets/images/webp/social-sensor.webp";
 import social_tensor from "../assets/images/webp/social-tensor.webp";
 import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
-import { useState } from "react";
 import Header from "../common/Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { SLIDER_LIST } from "../common/Helper";
 
 const SocialTensor = () => {
+  const settings = {
+    centerMode: true,
+    slidesToShow: 11,
+    centerPadding: "0px",
+    verticalSwiping: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    infinite: true,
+    dots: false,
+    arrows: false,
+    slidesToScroll: 1,
+    vertical: true,
+    speed: 1000,
+    pauseOnHover: false,
+    initialSlide: Math.floor(SLIDER_LIST.length / 2),
+    easing: "ease-out",
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 9,
+        },
+      },
+    ],
+  };
+
   const [isHovered, setIsHovered] = useState(false);
+  const [show, setShow] = useState(true);
+
   const HANDLE_MOUSE_OVER = (e) => {
     const centerSlide = e.target.closest(".slick-center p");
     if (centerSlide) {
       setIsHovered(true);
     }
   };
+
   const HANDLE_MOUSE_OUT = (e) => {
     const centerSlide = e.target.closest(".slick-center p");
     if (centerSlide) {
       setIsHovered(false);
     }
   };
-  const [show, setShow] = useState(true);
-  function HANDLE_SHOW(e) {
+
+  const HANDLE_SHOW = (e) => {
     const centerSlide = e.target.closest(".slick-center p");
     if (centerSlide) {
       setShow(false);
     }
-  }
-  function HANDLE_HIDE() {
-    setShow(true);
-  }
-
-  // slick-slider
-  var settings = {
-    dots: false,
-    arrows: false,
-    slidesToShow: 11,
-    slidesToScroll: 1,
-    vertical: true,
-    speed: 2000,
-    pauseOnHover: false,
-    autoplay: true,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "0px",
-    verticalSwiping: true,
   };
+
+  const HANDLE_HIDE = () => {
+    setShow(true);
+  };
+
   return (
-    <div className="overflow-hidden branding_padding vh-100 bg-black d-flex flex-column position-relative ">
-      <div className="d-sm-block d-none">
+    <div className="overflow-hidden vh-100 bg-black d-flex flex-column position-relative">
+      <div className="d-sm-block d-none branding_padding">
         <a href="/">
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className="d-flex flex-column flex-grow-1 justify-content-end align-items-center">
+      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
         <Slider {...settings} className="vertical_slider">
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text-center slider_text text_42 d-inline-block font_gilroy_semibold_italic lh_52 fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
+          {SLIDER_LIST.map((item, index) => (
+            <div
+              className="d-flex align-items-center justify-content-center"
+              key={index}
             >
-              SocialTensor
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              Aperture
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              Aperture
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              NicheTensor
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              THELASTONE
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
-          <div className="d-flex align-items-center justify-content-center">
-            <p
-              className="mb-0 show_box text_42 lh_52 slider_text text-center d-inline-block font_gilroy_semibold_italic fst-italic"
-              onMouseOver={HANDLE_MOUSE_OVER}
-              onMouseOut={HANDLE_MOUSE_OUT}
-              onClick={HANDLE_SHOW}
-            >
-              INFINI
-            </p>
-          </div>
+              <p
+                className="mb-0 show_box text-center slider_text d-inline-block lh_52 fst-italic"
+                onMouseOver={HANDLE_MOUSE_OVER}
+                onMouseOut={HANDLE_MOUSE_OUT}
+                onClick={HANDLE_SHOW}
+              >
+                {item}
+              </p>
+            </div>
+          ))}
         </Slider>
-        <div>
+        <div className="d-none d-xl-block">
           <div
-            className={`${isHovered ? "hovered" : ""
+            className={`${isHovered && "hovered"
               } common_box common_box_position bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
           >
-            <p className="common_text_transform  text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
+            <p className="common_text_transform  text-white fw-normal fst-italic text_sm lh_16">
               UI UX
             </p>
-
             <img
               className="social_sensor_img_w"
               src={social_sensor}
@@ -186,18 +105,18 @@ const SocialTensor = () => {
             />
           </div>
           <div
-            className={`${isHovered ? "hovered" : ""
+            className={`${isHovered && "hovered"
               } common_box common_box_position bg-black common_box_position social_tensor_transition_2`}
-          ><div className="position-relative d-flex justify-content-end">
-            <p className="common_text_transform branding_text_pos mb-4 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
-              Branding
-            </p>
-
-            <img
-              className="social_tensor_img_w"
-              src={social_tensor}
-              alt="social_tensor"
-            />
+          >
+            <div className="position-relative d-flex justify-content-end">
+              <p className="common_text_transform branding_text_pos mb-4 text-white fw-normal fst-italic text_sm lh_16">
+                Branding
+              </p>
+              <img
+                className="social_tensor_img_w"
+                src={social_tensor}
+                alt="social_tensor"
+              />
             </div>
           </div>
         </div>
@@ -211,11 +130,11 @@ const SocialTensor = () => {
                 onClick={HANDLE_HIDE}
                 className="d-flex justify-content-center cross_icon_box align-items-center"
               >
-                <Icons icon="Cross_Icon" />
+                <Icons icon="Cross_Icon" className="cursor_pointer" />
               </div>
               <div className="responsive_box grey">
                 <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
+                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                     UI UX
                   </p>
                   <div>
@@ -227,10 +146,9 @@ const SocialTensor = () => {
                   </div>
                 </div>
                 <div className="mt_20 position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="branding_text_transform text-nowrap mb-0 text-white font_gilroy_semibold_italic fw-normal fst-italic text_12 lh_16 ">
+                  <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
                     Branding
                   </p>
-
                   <div>
                     <img
                       className="social_sensor_img_w"
@@ -252,3 +170,4 @@ const SocialTensor = () => {
 };
 
 export default SocialTensor;
+

@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import telegram from "../assets/images/svg/Telegram.svg";
 import discord from "../assets/images/svg/Discord.svg";
 import twitter from "../assets/images/svg/Twitter.svg";
-import exclude from "../assets/images/svg/Exclude.svg";
+import exclude from "../assets/images/svg/medium.svg";
 import logo_nav from "../assets/images/svg/logo-nav.svg";
 import Header from "../common/Header";
 
