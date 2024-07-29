@@ -13,11 +13,11 @@ import { SLIDER_LIST } from "../common/Helper";
 const SocialTensor = () => {
   const settings = {
     centerMode: true,
+    infinite: true,
     initialSlide: Math.floor(SLIDER_LIST.length / 2),
-    slidesToShow: 21.5,
+    slidesToShow: 18.5,
     centerPadding: "0px",
     verticalSwiping: true,
-    infinite: true,
     dots: false,
     arrows: false,
     vertical: true,
@@ -29,9 +29,21 @@ const SocialTensor = () => {
     touchMovementThreshold: 1,
     responsive: [
       {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 17.5,
+        }
+      },
+      {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 17.5,
+        }
+      },
+      {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 12.5,
+          slidesToShow: 17.5,
         }
       },
       {
@@ -51,7 +63,7 @@ const SocialTensor = () => {
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 17,
+          slidesToShow: 22.5,
           autoplay: true,
           autoplaySpeed: 2000, 
         }
@@ -123,6 +135,7 @@ const SocialTensor = () => {
                 onMouseOver={HANDLE_MOUSE_OVER}
                 onMouseOut={HANDLE_MOUSE_OUT}
                 onClick={HANDLE_SHOW}
+                style={{fontSize:index === 0 && '80px' }}
               >
                 {item}
               </p>
