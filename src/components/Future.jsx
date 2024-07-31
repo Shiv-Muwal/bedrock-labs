@@ -6,12 +6,12 @@ import Header from "../common/Header";
 function Future() {
   return (
     <div className="bg-black d-flex flex-column min-vh-100">
-      <div className="d-none pl_40 d-sm-block pt_40">
+      <div className="d-none logo_spacing d-sm-block ">
         <a href="/">
           <img src={logo_nav} alt="nav_logo" />
         </a>
       </div>
-      <Container className="d-flex flex-grow-1 flex-column justify-content-center px_30 align-items-sm-center">
+      <Container className="d-flex flex-grow-1 flex-column justify-content-center common_padding align-items-sm-center">
         <div className="paragraph_future_max_w text-center">
           <h1 className="mb-0 letter_space text-uppercase fw-normal fst-italic text_lg lh_38 text-white">
             Forging the Future of Crypto

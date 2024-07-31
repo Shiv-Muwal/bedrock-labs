@@ -56,7 +56,7 @@ const SocialTensor = () => {
         settings: {
           slidesToShow: 14,
           autoplay: true,
-        autoplaySpeed: 2000, 
+          autoplaySpeed: 2000,
         }
       },
     ]
@@ -118,7 +118,7 @@ const SocialTensor = () => {
                 onMouseOver={HANDLE_MOUSE_OVER}
                 onMouseOut={HANDLE_MOUSE_OUT}
                 onClick={HANDLE_SHOW}
-                style={{fontSize:index === 0 && '80px' }}
+                style={{ fontSize: index === 0 && '80px' }}
               >
                 {item}
               </p>
@@ -180,7 +180,7 @@ const SocialTensor = () => {
                     />
                   </div>
                 </div>
-                <div className="mt_20 position-relative justify-content-end d-flex gap_12 w-100">
+                <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
                   <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
                     Branding
                   </p>

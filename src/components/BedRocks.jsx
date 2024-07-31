@@ -6,7 +6,7 @@ import bedrockVideo from "../assets/video/bedrock.mp4";
 function BedRocks() {
   return (
     <div className="bg-black d-flex flex-column min-vh-100">
-      <Container className="d-flex flex-column justify-content-center px_30 align-items-center flex-grow-1">
+      <Container className="d-flex flex-column justify-content-center common_padding align-items-center flex-grow-1">
         <video
           autoPlay
           loop
@@ -17,7 +17,7 @@ function BedRocks() {
           <source src={bedrockVideo} type="video/mp4" />
         </video>
       </Container>
-      <div className="pb_17">
+      <div className="header_custom_spacing">
         <Header />
       </div>
     </div>

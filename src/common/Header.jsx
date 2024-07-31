@@ -18,7 +18,7 @@ function Header() {
   };
 
   return (
-    <div className="container w-100 d-flex pb-sm-5  px_30 pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
+    <div className="container w-100 d-flex pb-sm-5  common_padding pb-4 mb-sm-2 justify-content-sm-center justify-content-between align-items-center">
       <a href="/">
         <img
           className={`d-block d-sm-none text-center ${location.pathname === "/" && "d-none"
@@ -36,7 +36,7 @@ function Header() {
       </div>
       <ul
         className={`navbar_nav ${show ? "show" : "hide"
-          } d-flex flex-column flex-sm-row gap_32 mb-0`}
+          } d-flex flex-column flex-sm-row icons_gap mb-0`}
       >
         <li className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
