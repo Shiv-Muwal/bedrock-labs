@@ -92,35 +92,4 @@
   .lh_38 {
     line-height: 38.4px;
   }
-
-  .swiper-slide-active {
-    height: 90px !important;
-  }
-}
-
-/* SLIDER CSS CODE HERE */
-
-.slider_height {
-  height: 100vh;
-}
-
-.slider_width {
-  max-width: 100%;
-}
-
-.active_slide:hover {
-  text-decoration: underline !important;
-}
-
-.slide_content {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  color: white;
-}
-
-.hovered_position {
-  top: 20px !important;
-  right: 20px !important;
 }

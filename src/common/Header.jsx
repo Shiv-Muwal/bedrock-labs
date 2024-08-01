@@ -8,7 +8,7 @@ function Header() {
   const [first, setFirst] = useState(false);
   const location = useLocation();
 
-  const TOGGLE_MENU_HANDLER = () => {
+  const toggleMenuHandler = () => {
     setShow(!show);
     setFirst(!first);
     if (!show) {
@@ -28,7 +28,7 @@ function Header() {
       />
     </a>
     <div
-      onClick={TOGGLE_MENU_HANDLER}
+      onClick={toggleMenuHandler}
       className={`menu_bar d-block d-lg-none z_9 ${first && "cross"}`}
     >
       <span className="mb-2"></span>
@@ -40,7 +40,7 @@ function Header() {
       {NAV_ITEMS.map((item, index) => (
         <li key={index} className="ms-4 ps-2 ms-sm-0 ps-sm-0">
           <a
-            onClick={TOGGLE_MENU_HANDLER}
+            onClick={toggleMenuHandler}
             className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
             href={item.href}
           >

@@ -55,6 +55,7 @@ const SocialTensor = () => {
   const HANDLE_HIDE = () => {
     setShow(true);
   };
+  
   const HANDLE_DOCUMENT_CLICK = (e) => {
     const clickedInside = e.target.closest('.active_slide') || e.target.closest('.common_box');
     if (!clickedInside) {
@@ -196,10 +197,9 @@ const SocialTensor = () => {
             </div>
           </div>
           <div className="d-flex justify-content-center z-3">
-            <div className="responsive_box_pos">
+            <div className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}>
               <div
-                className={`${show ? "d-none" : "d-block"
-                  } d-flex d-xl-none mt_153 flex-column align-items-end`}
+                className="d-flex d-xl-none flex-column align-items-end"
               >
                 <div
                   onClick={HANDLE_HIDE}

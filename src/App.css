@@ -145,14 +145,55 @@ ul {
   cursor: pointer;
 }
 
-@media (min-width:576px) {
+/* SLIDER CSS CODE HERE */
+.slider_height {
+  height: 100vh;
+}
 
+.slider_width {
+  max-width: 100%;
+}
+
+.active_slide:hover {
+  text-decoration: underline !important;
+}
+
+.slide_content {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  color: white;
+}
+
+.hovered_position {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.card_hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.card_visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+@media (min-width:576px) {
   .icons_gap {
     gap: 40px;
   }
 
   .branding_padding {
     padding: 40px 0px 0px 40px;
+  }
+
+  .swiper-slide-active {
+    height: 90px !important;
   }
 }
 
@@ -174,7 +215,6 @@ ul {
     transform: translate(-104%, 0%);
     transition: ease-in-out 900ms !important;
   }
-
 }
 
 @media (min-width:1400px) {
