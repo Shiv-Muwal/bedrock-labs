@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import telegram from "../assets/images/svg/telegram.svg";
-import discord from "../assets/images/svg/discord.svg";
-import twitter from "../assets/images/svg/twitter.svg";
-import exclude from "../assets/images/svg/medium.svg";
+import telegram from "../assets/images/svg/telegram-icon.svg";
+import discord from "../assets/images/svg/discord-icon.svg";
+import twitter from "../assets/images/svg/twitter-icon.svg";
+import exclude from "../assets/images/svg/medium-icon.svg";
 import logo_nav from "../assets/images/svg/logo-nav.svg";
 import Header from "../common/Header";
 
