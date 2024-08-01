@@ -212,7 +212,7 @@ ul {
   }
 
   .z_9 {
-    z-index: 9;
+    z-index: 9 !important;
   }
 
   .menu_bar span {
