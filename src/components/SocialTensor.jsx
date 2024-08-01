@@ -14,7 +14,17 @@ import 'swiper/css/keyboard';
 
 const SocialTensor = () => {
 
+  const getSlidesPerView = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1920) return 13;
+      if (window.innerWidth >= 1280) return 9;
+      return 9;
+    }
+    return 9;
+  };
+
   const [slides, setSlides] = useState([]);
+  const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
   const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [show, setShow] = useState(true);
@@ -45,16 +55,26 @@ const SocialTensor = () => {
   useEffect(() => {
     setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
     document.addEventListener('click', HANDLE_DOCUMENT_CLICK);
-
     return () => {
       document.removeEventListener('click', HANDLE_DOCUMENT_CLICK);
     };
   }, []);
 
   useEffect(() => {
-    if (!swiperRef.current?.swiper) return;
+    const handleResize = () => {
+      setSlidesPerView(getSlidesPerView());
+    };
 
-    const swiperInstance = swiperRef.current.swiper;
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!swiperRef.current?.swiper) return;
 
     const updateSlideStyles = () => {
       const slides = swiperInstance.slides;
@@ -78,25 +98,21 @@ const SocialTensor = () => {
         slideElement.style.opacity = opacity.toFixed(2);
       });
     };
-    swiperInstance.on('slideChange', updateSlideStyles);
-    swiperInstance.on('resize', updateSlideStyles);
 
-    updateSlideStyles();
+    const swiperInstance = swiperRef.current.swiper;
+    if (swiperInstance) {
+      swiperInstance.on('slideChange', updateSlideStyles);
+      swiperInstance.on('resize', updateSlideStyles);
+      updateSlideStyles();
+    }
 
     return () => {
-      swiperInstance.off('slideChange', updateSlideStyles);
-      swiperInstance.off('resize', updateSlideStyles);
+      if (swiperInstance) {
+        swiperInstance.off('slideChange', updateSlideStyles);
+        swiperInstance.off('resize', updateSlideStyles);
+      }
     };
-  }, [slides]);
-
-  const getSlidesPerView = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth >= 1920) return 13;
-      if (window.innerWidth >= 1280) return 9;
-      return 9;
-    }
-    return 9;
-  };
+  }, [slides, slidesPerView]);
 
   return (
     <div className="position-relative">
@@ -128,8 +144,8 @@ const SocialTensor = () => {
                     className={`slide_content d-flex align-items-center justify-content-center`}
                   >
                     <span
-                    onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
-                      className={`${isActive ? 'text_2xl cursor_pointer active_slide' : 'text_xl'} fst-italic`}
+                      onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
+                      className={`${isActive ? 'text_2xl cursor_pointer active_slide px-4' : 'text_xl px-4'} fst-italic`}
                     >
                       {slide}
                     </span>

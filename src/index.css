@@ -101,7 +101,11 @@
 }
 
 .slider_width {
-  max-width: 103%;
+  max-width: 100%;
+}
+
+.swiper-slide-active {
+  height: 90px !important;
 }
 
 .active_slide:hover {
@@ -119,4 +123,8 @@
 .hovered_position {
   top: 20px !important;
   right: 20px !important;
+}
+
+.transparent_box {
+  z-index: 30;
 }
