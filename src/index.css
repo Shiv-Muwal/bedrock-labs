@@ -115,3 +115,8 @@
   transition-duration: 150ms;
   color: white;
 }
+
+.hovered_position {
+  top: 20px !important;
+  right: 20px !important;
+}
