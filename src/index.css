@@ -122,3 +122,8 @@
     margin-bottom: 30px !important;
   }
 }
+
+.hovered_position {
+  top: 20px !important;
+  right: 20px !important;
+}
