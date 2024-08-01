@@ -4,10 +4,7 @@ import social_tensor from "../assets/images/webp/social-tensor.webp";
 import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import { SLIDER_LIST } from "../common/Helper";
+import { SLIDER_LIST } from "../common/Helper";
 
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -17,10 +14,6 @@ import 'swiper/css';
 import 'swiper/css/mousewheel';
 import 'swiper/css/keyboard';
 
-const SLIDER_LIST = [
-  'INFINI', 'TourGame', 'Aperture', 'Aperture',
-  'Social Tensor', 'Niche Tensor', 'THELASTONE', 'INFINI'
-];
 const SocialTensor = () => {
   // const settings = {
   //   centerMode: true,
