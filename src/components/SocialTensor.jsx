@@ -292,7 +292,7 @@ const SocialTensor = () => {
                     className={`slide_content d-flex align-items-center justify-content-center`}
                   >
                     <span
-                      className={`${isActive ? 'slide_text_large cursor_pointer' : 'slide_text_small'} fst-italic`}
+                      className={`${isActive ? 'text_2xl cursor_pointer active_slide' : 'text_xl'} fst-italic`}
                     >
                       {slide}
                     </span>
