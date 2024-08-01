@@ -16,19 +16,12 @@ const SocialTensor = () => {
 
   const [slides, setSlides] = useState([]);
   const swiperRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const [show, setShow] = useState(true);
-  const HANDLE_MOUSE_OVER = (e) => {
+  const HANDLE_CLICK = (e) => {
     const centerSlide = e.target.closest(".active_slide");
     if (centerSlide) {
-      setIsHovered(true);
-    }
-  };
-
-  const HANDLE_MOUSE_OUT = (e) => {
-    const centerSlide = e.target.closest(".active_slide");
-    if (centerSlide) {
-      setIsHovered(false);
+      setIsClicked(!isClicked);
     }
   };
 
@@ -42,8 +35,20 @@ const SocialTensor = () => {
   const HANDLE_HIDE = () => {
     setShow(true);
   };
+  const HANDLE_DOCUMENT_CLICK = (e) => {
+    const clickedInside = e.target.closest('.active_slide') || e.target.closest('.common_box');
+    if (!clickedInside) {
+      setIsClicked(false);
+    }
+  };
+
   useEffect(() => {
     setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
+    document.addEventListener('click', HANDLE_DOCUMENT_CLICK);
+
+    return () => {
+      document.removeEventListener('click', HANDLE_DOCUMENT_CLICK);
+    };
   }, []);
 
   useEffect(() => {
@@ -122,9 +127,8 @@ const SocialTensor = () => {
                   <div
                     className={`slide_content d-flex align-items-center justify-content-center`}
                   >
-                    <span onMouseOver={HANDLE_MOUSE_OVER}
-                      onMouseOut={HANDLE_MOUSE_OUT}
-                      onClick={HANDLE_SHOW}
+                    <span
+                    onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
                       className={`${isActive ? 'text_2xl cursor_pointer active_slide' : 'text_xl'} fst-italic`}
                     >
                       {slide}
@@ -136,7 +140,7 @@ const SocialTensor = () => {
           </Swiper>
           <div className="d-none d-xl-block">
             <div
-              className={`${isHovered && "hovered_position"
+              className={`${isClicked && "hovered_position"
                 } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
             >
               <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
@@ -149,7 +153,7 @@ const SocialTensor = () => {
               />
             </div>
             <div
-              className={`${isHovered && "hovered_position"
+              className={`${isClicked && "hovered_position"
                 } common_box bg-black common_box_position social_tensor_transition_2`}
             >
               <div className="position-relative d-flex justify-content-end">

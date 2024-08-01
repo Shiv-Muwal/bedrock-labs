@@ -106,7 +106,7 @@ ul {
 }
 
 .social_tensor_transition_2 {
-  transition: all linear 1000ms !important;
+  transition: all ease-in-out 1000ms !important;
 }
 
 .gap_12 {
@@ -172,7 +172,7 @@ ul {
 
   .common_box_position_transform_1 {
     transform: translate(-104%, 0%);
-    transition: ease-in 900ms !important;
+    transition: ease-in-out 900ms !important;
   }
 
 }
