@@ -106,7 +106,7 @@ ul {
 }
 
 .social_tensor_transition_2 {
-  transition: all ease-in-out 1000ms !important;
+  transition: all linear 1000ms !important;
 }
 
 .gap_12 {
@@ -235,7 +235,6 @@ ul {
     right: -100%;
     top: 0;
     padding-top: 40px;
-    z-index: 50;
     transition: all 300ms linear;
   }
 

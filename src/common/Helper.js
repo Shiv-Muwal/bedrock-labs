@@ -1,4 +1,4 @@
 export const SLIDER_LIST = [
-    'INFINI', 'TourGame', 'Aperture', 'Aperture',
-    'Social Tensor', 'Niche Tensor', 'THELASTONE', 'INFINI'
+    'INFINI', 'TourGame', 'Aperture', 'INFINI', 'THELASTONE', 'Aperture',
+    'Social Tensor', 'Niche Tensor'
 ];

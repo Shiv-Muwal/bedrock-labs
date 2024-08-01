@@ -23,8 +23,18 @@ const SocialTensor = () => {
     return 9;
   };
 
+  const getSpaceBetween = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1920) return 24;
+      if (window.innerWidth >= 1280) return 24;
+      return 0;
+    }
+    return 0;
+  };
+
   const [slides, setSlides] = useState([]);
   const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
+  const [spaceBetween, setSpaceBetween] = useState(getSpaceBetween());
   const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [show, setShow] = useState(true);
@@ -63,6 +73,7 @@ const SocialTensor = () => {
   useEffect(() => {
     const handleResize = () => {
       setSlidesPerView(getSlidesPerView());
+      setSpaceBetween(getSpaceBetween());
     };
 
     window.addEventListener('resize', handleResize);
@@ -112,7 +123,7 @@ const SocialTensor = () => {
         swiperInstance.off('resize', updateSlideStyles);
       }
     };
-  }, [slides, slidesPerView]);
+  }, [slides, slidesPerView, spaceBetween]);
 
   return (
     <div className="position-relative">
@@ -128,13 +139,13 @@ const SocialTensor = () => {
             direction="vertical"
             slidesPerView={getSlidesPerView()}
             centeredSlides={true}
-            spaceBetween={24}
+            spaceBetween={spaceBetween}
             mousewheel={true}
             keyboard={{ enabled: true }}
             modules={[Mousewheel, Keyboard, Virtual]}
             loop={true}
             loopAdditionalSlides={SLIDER_LIST.length}
-            speed={800}
+            speed={1200}
             className="h-100 w-100"
           >
             {slides.map((slide, index) => (
@@ -145,7 +156,7 @@ const SocialTensor = () => {
                   >
                     <span
                       onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
-                      className={`${isActive ? 'text_2xl cursor_pointer active_slide px-4' : 'text_xl px-4'} fst-italic`}
+                      className={`${isActive ? 'text_2xl cursor_pointer active_slide px-sm-4' : 'text_xl px-sm-4'} fst-italic`}
                     >
                       {slide}
                     </span>
