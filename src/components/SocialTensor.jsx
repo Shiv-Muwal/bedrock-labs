@@ -156,7 +156,7 @@ const SocialTensor = () => {
                   >
                     <span
                       onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
-                      className={`${isActive ? 'text_2xl cursor_pointer active_slide px-sm-4' : 'text_xl px-sm-4'} fst-italic`}
+                      className={`${isActive ? 'text_2xl cursor_pointer active_slide px-2 px-sm-4' : 'text_xl px-2 px-sm-4'} fst-italic`}
                     >
                       {slide}
                     </span>
