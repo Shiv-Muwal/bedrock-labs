@@ -271,7 +271,6 @@ const SocialTensor = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [ishovered, setishoverd] = useState(false);
   const [show, setShow] = useState(true);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const Mouse_Over = (e) => {
     const hoveredSlide = e.target.closest(".slider_text");
@@ -327,7 +326,6 @@ const SocialTensor = () => {
     const handleResize = () => {
       setSlidesPerView(getSlidesPerView());
       setSpaceBetween(getSpaceBetween());
-      setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -355,8 +353,6 @@ const SocialTensor = () => {
           Math.abs(index - activeIndex),
           totalSlides - Math.abs(index - activeIndex)
         );
-        const maxDistance = Math.floor(slidesPerView / 2);
-        const normalizedDistance = distance / maxDistance;
       });
     };
 
