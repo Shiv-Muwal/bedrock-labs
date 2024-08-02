@@ -110,26 +110,25 @@
     line-height: 38.4px;
   }
 }
+
 .slick-slider .slick-track {
   display: flex !important;
   align-items: center !important;
 }
-.slick-slider .slick-slide {
-  margin-left: 12px !important;
-  margin-right: 12px !important;
-}
 
-.opacity_20{
+.opacity_20 {
   opacity: 20%;
 }
 
-.mt_10{
+.mt_10 {
   margin-top: 10px;
 }
-.slider_text{
+
+.slider_text {
   transition: all 500ms linear;
 }
-.slider_text:hover{
+
+.slider_text:hover {
   opacity: 1 !important;
   cursor: pointer !important;
 }

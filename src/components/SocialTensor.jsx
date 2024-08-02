@@ -77,6 +77,7 @@ const SocialTensor = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [ishovered, setishoverd] = useState(false);
   const [show, setShow] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const Mouse_Over = (e) => {
     const hoveredSlide = e.target.closest(".slider_text");
@@ -131,6 +132,7 @@ const SocialTensor = () => {
     const handleResize = () => {
       setSlidesPerView(getSlidesPerView());
       setSpaceBetween(getSpaceBetween());
+      setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
@@ -185,14 +187,14 @@ const SocialTensor = () => {
       </div>
       <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
         <div className=" d-f lex  flex-column w-100 d-none d-md-block">
-          <Slider {...settings} className=' w-100'>
+        <Slider key={windowWidth + '_rtl'} {...{ ...settings, rtl: true }} className='w-100'>
             {CONTINUE_SLIDER.map((obj, index) => (
               <div key={index} className='d-flex align-items-center justify-content-center'>
                 <h3 className='mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text fst-italic' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
               </div>
             ))}
           </Slider>
-          <Slider {...{ ...settings, rtl: true }} className='w-100 mt_10'>
+          <Slider key={windowWidth} {...settings} className='w-100 mt_10'>
             {CONTINUE_SLIDER.map((obj, index) => (
               <div key={index} className='d-flex align-items-center justify-content-center'>
                 <h3 className='mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text fst-italic' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
@@ -212,7 +214,7 @@ const SocialTensor = () => {
             modules={[Mousewheel, Keyboard, Virtual]}
             loop={true}
             loopAdditionalSlides={SLIDER_LIST.length}
-            speed={100}
+            speed={500}
             className="h-100 w-100 d-md-none"
           >
             {slides.map((slide, index) => (
@@ -223,7 +225,7 @@ const SocialTensor = () => {
                   >
                     <span
                       onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
-                      className={`${isActive ? 'text_xl cursor_pointer active_slide px-2 px-sm-4 opacity_20' : 'text_xl px-2 px-sm-4 opacity_20'} fst-italic`}
+                      className={`${isActive ? 'text_xl cursor_pointer active_slide px-2 px-sm-4 ' : 'text_xl px-2 px-sm-4 opacity_20'} fst-italic`}
                     >
                       {slide}
                     </span>
