@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import social1 from '../assets/images/webp/social-sensor.webp'
+import social2 from '../assets/images/webp/social-tensor.webp'
 import Marquee from "react-marquee-slider";
 import styled from "styled-components";
-import social_sensor from '../assets/images/webp/social-sensor.webp'
-import social_tensor from '../assets/images/webp/social-sensor.webp'
+
 
 const TextItem = styled.div`
   display: flex;
@@ -69,9 +70,8 @@ const ContinueSlider = ({ items, key1, key2, social_sensor, social_tensor }) => 
           <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
             UI UX
           </p>
-          <img
-            className="social_sensor_img_w"
-            src={social_sensor}
+          <img className="social_sensor_img_w"
+            src={social1}
             alt="social_sensor"
           />
         </div>
@@ -84,7 +84,7 @@ const ContinueSlider = ({ items, key1, key2, social_sensor, social_tensor }) => 
             </p>
             <img
               className="social_tensor_img_w"
-              src={social_tensor}
+              src={social2} 
               alt="social_tensor"
             />
           </div>
