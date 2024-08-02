@@ -10,6 +10,7 @@ const TextItem = styled.div`
   color: white;
   justify-content: center;
   font-size: 32px;
+  font-style: italic;
   font-weight: bold;
   padding: 0;
   margin: 0 12px;
