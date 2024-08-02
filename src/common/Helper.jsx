@@ -43,4 +43,11 @@ export const CONTINUE_SLIDER = [
   { text: "Social Tensor" },
   { text: "THELASTONE" },
   { text: "INFINI" },
+  { text: "TourGame" },
+  { text: "Aperture" },
+  { text: "Niche Tensor" },
+  { text: "Aperture" },
+  { text: "Social Tensor" },
+  { text: "THELASTONE" },
+  { text: "INFINI" },
 ];

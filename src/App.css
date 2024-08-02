@@ -146,10 +146,6 @@ ul {
   max-width: 100%;
 }
 
-.active_slide:hover {
-  text-decoration: underline !important;
-}
-
 .slide_content {
   transition: transform 0.5s ease, opacity 0.5s ease;
   transition-property: transform;
@@ -175,6 +171,72 @@ ul {
   transition: visibility 0.5s, opacity 0.5s;
 }
 
+.opacity_20 {
+  opacity: 20%;
+}
+
+.slider_text {
+  transition: all 500ms linear;
+}
+
+.slider_text:hover {
+  opacity: 1 !important;
+}
+
+.slider_container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slider_parent {
+  display: flex;
+  width: auto;
+  animation: slide 20s linear infinite;
+}
+
+.slider_reverse {
+  display: flex;
+  width: auto;
+  animation: slide_rev 20s linear infinite;
+}
+
+.slider_parent:hover,
+.slider_reverse:hover {
+  animation-play-state: paused;
+}
+
+.slider_item {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  font-size: 32px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide_rev {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 @media (min-width:576px) {
   .icons_gap {
     gap: 19px;
@@ -183,12 +245,13 @@ ul {
   .branding_padding {
     padding: 40px 0px 0px 40px;
   }
+}
 
+@media (min-width:768px) {
   .swiper-slide-active {
     height: 90px !important;
   }
-}
-@media (min-width:768px) {
+
   .icons_gap {
     gap: 40px;
   }
@@ -260,30 +323,30 @@ ul {
     transition: all 0.3s;
   }
 
-    .navbar_nav {
-      background-color: black;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: start;
-      justify-content: start;
-      flex-direction: column;
-      position: fixed;
-      right: -100%;
-      top: 0;
-      padding-top: 40px;
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.3s ease-in;
-    }
-  
-    .overflow_hidden {
-      overflow: hidden;
-    }
-  
-    .navbar_nav.show {
-      visibility: visible;
-      opacity: 0.8;
-      right: 0;
-    }
-    }
+  .navbar_nav {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    padding-top: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in;
+  }
+
+  .overflow_hidden {
+    overflow: hidden;
+  }
+
+  .navbar_nav.show {
+    visibility: visible;
+    opacity: 0.8;
+    right: 0;
+  }
+}
