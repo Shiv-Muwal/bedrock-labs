@@ -17,38 +17,35 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const SocialTensor = () => {
-  // sllider code 
   var settings = {
     infinite: true,
     dots: false,
-    arrows:false,
+    arrows: false,
     speed: 3000,
     autoplay: true,
     autoplaySpeed: 1,
     slidesToScroll: 1,
-    // variableWidth: true,
     cssEase: 'linear',
     pauseOnHover: true,
-    slidesToShow: 9,
+    slidesToShow: 7,
     responsive: [
       {
         breakpoint: 1400,
-        settings: {
-          slidesToShow: 7,
-        }
-      },
-      {
-        breakpoint: 1200,
         settings: {
           slidesToShow: 6,
         }
       },
       {
-        breakpoint:992,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
         }
       },
 
@@ -81,9 +78,6 @@ const SocialTensor = () => {
   const [ishovered, setishoverd] = useState(false);
   const [show, setShow] = useState(true);
 
-
-
-  
   const Mouse_Over = (e) => {
     const hoveredSlide = e.target.closest(".slider_text");
     if (hoveredSlide) {
@@ -99,11 +93,6 @@ const SocialTensor = () => {
       setishoverd(false);
     }
   };
-
-
-
-
-
 
   const HANDLE_CLICK = (e) => {
     const centerSlide = e.target.closest(".active_slide");
@@ -122,7 +111,7 @@ const SocialTensor = () => {
   const HANDLE_HIDE = () => {
     setShow(true);
   };
-  
+
   const HANDLE_DOCUMENT_CLICK = (e) => {
     const clickedInside = e.target.closest('.active_slide') || e.target.closest('.common_box');
     if (!clickedInside) {
@@ -169,12 +158,6 @@ const SocialTensor = () => {
         const maxDistance = Math.floor(slidesPerView / 2);
         const normalizedDistance = distance / maxDistance;
 
-        const rotateX = normalizedDistance * 50;
-        const scale = 1 - (normalizedDistance * 0.2);
-        const opacity = Math.max(0, 1 - normalizedDistance * 0.5);
-
-        slideElement.style.transform = `rotateX(${rotateX}deg) scale(${scale})`;
-        slideElement.style.opacity = opacity.toFixed(2);
       });
     };
 
@@ -201,27 +184,23 @@ const SocialTensor = () => {
         </a>
       </div>
       <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
-
-
-
-
-<div className=" d-f lex  flex-column w-100 d-none d-md-block">
-<Slider {...settings} className=' w-100'>
-      {CONTINUE_SLIDER.map((obj, index) => (
-        <div key={index} className='d-flex align-items-center justify-content-center'>
-          <h3 className='mb-0 text-xl opacity_20 text-white text-center text-nowrap slider_text' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
+        <div className=" d-f lex  flex-column w-100 d-none d-md-block">
+          <Slider {...settings} className=' w-100'>
+            {CONTINUE_SLIDER.map((obj, index) => (
+              <div key={index} className='d-flex align-items-center justify-content-center'>
+                <h3 className='mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text fst-italic' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
+              </div>
+            ))}
+          </Slider>
+          <Slider {...{ ...settings, rtl: true }} className='w-100 mt_10'>
+            {CONTINUE_SLIDER.map((obj, index) => (
+              <div key={index} className='d-flex align-items-center justify-content-center'>
+                <h3 className='mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text fst-italic' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
+              </div>
+            ))}
+          </Slider>
         </div>
-      ))}
-    </Slider>
-    <Slider {...{ ...settings, rtl: true }} className='w-100 mt_10'>
-      {CONTINUE_SLIDER.map((obj, index) => (
-        <div key={index} className='d-flex align-items-center justify-content-center'>
-          <h3 className='mb-0 text-xl opacity_20 text-white text-center text-nowrap slider_text'>{obj.text}</h3>
-        </div>
-      ))}
-    </Slider>
-</div>
-        <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto px-3 slider_width" style={{ perspective: '1000px' }}>
+        <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width" style={{ perspective: '1000px' }}>
           <Swiper
             ref={swiperRef}
             direction="vertical"
@@ -244,7 +223,7 @@ const SocialTensor = () => {
                   >
                     <span
                       onClick={(e) => { HANDLE_CLICK(e); HANDLE_SHOW(e); }}
-                      className={`${isActive ? 'text_2xl cursor_pointer active_slide px-2 px-sm-4' : 'text_xl px-2 px-sm-4'} fst-italic`}
+                      className={`${isActive ? 'text_xl cursor_pointer active_slide px-2 px-sm-4 opacity_20' : 'text_xl px-2 px-sm-4 opacity_20'} fst-italic`}
                     >
                       {slide}
                     </span>
