@@ -225,7 +225,7 @@ const SocialTensor = () => {
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-center z-3">
+          <div className="d-flex d-xl-none justify-content-center z-3">
             <div
               className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
             >
