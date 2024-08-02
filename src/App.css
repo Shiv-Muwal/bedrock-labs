@@ -28,7 +28,7 @@
 }
 
 .paragraph_future_max_w {
-  max-width: 640px;
+  max-width: 680px;
 }
 
 .logo_spacing {
@@ -58,10 +58,6 @@ ul {
   padding: 10px;
   border: 1px solid #3A3A3A;
   z-index: 10;
-}
-
-.paragraph_future_max_w {
-  max-width: 640px;
 }
 
 .common_text_transform {
@@ -131,10 +127,6 @@ ul {
   bottom: 8px;
 }
 
-.icons_gap {
-  gap: 32px;
-}
-
 .branding_text_pos {
   position: absolute;
   left: -11px;
@@ -185,7 +177,7 @@ ul {
 
 @media (min-width:576px) {
   .icons_gap {
-    gap: 40px;
+    gap: 19px;
   }
 
   .branding_padding {
@@ -194,6 +186,11 @@ ul {
 
   .swiper-slide-active {
     height: 90px !important;
+  }
+}
+@media (min-width:768px) {
+  .icons_gap {
+    gap: 40px;
   }
 }
 

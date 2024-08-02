@@ -33,7 +33,7 @@ function Future() {
               Software Development
             </p>
           </div>
-          <p className="mb-0 fw-bold font_acumin_pro_wide text_[13px] lh_14 text-white opacity-50 mt-4 paragraph_future_max_w">
+          <p className="mb-0 fw-bold font_acumin_pro_condensed text_13 lh_15 text-white opacity-50 mt-4 paragraph_future_max_w">
             The rise of blockchain technology has ushered in a new era of
             digital sovereignty, enabling individuals to reclaim control over
             their financial assets. Bedrock Labs is a premier product-driven
