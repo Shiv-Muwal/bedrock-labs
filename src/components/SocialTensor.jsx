@@ -5,14 +5,55 @@ import social_tensor from "../assets/images/webp/social-tensor.webp";
 import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
-import { SLIDER_LIST } from "../common/Helper";
+import { CONTINUE_SLIDER, SLIDER_LIST } from "../common/Helper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Keyboard, Virtual } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/mousewheel';
 import 'swiper/css/keyboard';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const SocialTensor = () => {
+  // sllider code 
+  var settings = {
+    infinite: true,
+    dots: false,
+    arrows:false,
+    speed: 3000,
+    autoplay: true,
+    autoplaySpeed: 1,
+    slidesToScroll: 1,
+    // variableWidth: true,
+    cssEase: 'linear',
+    pauseOnHover: true,
+    slidesToShow: 9,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 7,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 6,
+        }
+      },
+      {
+        breakpoint:992,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+
+    ]
+  };
 
   const getSlidesPerView = () => {
     if (typeof window !== 'undefined') {
@@ -37,7 +78,33 @@ const SocialTensor = () => {
   const [spaceBetween, setSpaceBetween] = useState(getSpaceBetween());
   const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
+  const [ishovered, setishoverd] = useState(false);
   const [show, setShow] = useState(true);
+
+
+
+  
+  const Mouse_Over = (e) => {
+    const hoveredSlide = e.target.closest(".slider_text");
+    if (hoveredSlide) {
+      hoveredSlide.classList.add('hovered_position');
+      setishoverd(!ishovered);
+    }
+  };
+
+  const Mouse_out = (e) => {
+    const hoveredSlide = e.target.closest(".slider_text");
+    if (hoveredSlide) {
+      hoveredSlide.classList.remove('hovered_position');
+      setishoverd(false);
+    }
+  };
+
+
+
+
+
+
   const HANDLE_CLICK = (e) => {
     const centerSlide = e.target.closest(".active_slide");
     if (centerSlide) {
@@ -134,6 +201,26 @@ const SocialTensor = () => {
         </a>
       </div>
       <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
+
+
+
+
+<div className=" d-f lex  flex-column w-100 d-none d-md-block">
+<Slider {...settings} className=' w-100'>
+      {CONTINUE_SLIDER.map((obj, index) => (
+        <div key={index} className='d-flex align-items-center justify-content-center'>
+          <h3 className='mb-0 text-xl opacity_20 text-white text-center text-nowrap slider_text' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
+        </div>
+      ))}
+    </Slider>
+    <Slider {...{ ...settings, rtl: true }} className='w-100 mt_10'>
+      {CONTINUE_SLIDER.map((obj, index) => (
+        <div key={index} className='d-flex align-items-center justify-content-center'>
+          <h3 className='mb-0 text-xl opacity_20 text-white text-center text-nowrap slider_text'>{obj.text}</h3>
+        </div>
+      ))}
+    </Slider>
+</div>
         <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto px-3 slider_width" style={{ perspective: '1000px' }}>
           <Swiper
             ref={swiperRef}
@@ -146,8 +233,8 @@ const SocialTensor = () => {
             modules={[Mousewheel, Keyboard, Virtual]}
             loop={true}
             loopAdditionalSlides={SLIDER_LIST.length}
-            speed={1200}
-            className="h-100 w-100"
+            speed={100}
+            className="h-100 w-100 d-md-none"
           >
             {slides.map((slide, index) => (
               <SwiperSlide key={index} className="d-flex align-items-center justify-content-center">
@@ -168,7 +255,7 @@ const SocialTensor = () => {
           </Swiper>
           <div className="d-none d-xl-block">
             <div
-              className={`${isClicked && "hovered_position"
+              className={`${ishovered && "hovered_position"
                 } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
             >
               <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
@@ -181,7 +268,7 @@ const SocialTensor = () => {
               />
             </div>
             <div
-              className={`${isClicked && "hovered_position"
+              className={`${ishovered && "hovered_position"
                 } common_box bg-black common_box_position social_tensor_transition_2`}
             >
               <div className="position-relative d-flex justify-content-end">

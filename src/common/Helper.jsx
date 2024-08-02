@@ -9,3 +9,14 @@ export const NAV_ITEMS = [
     { name: "MEDIA", href: "#media" },
     { name: "CONTACT", href: "#contact" },
   ];
+  export const CONTINUE_SLIDER = [
+   {text:'Social Tensor'},
+   {text:'INFINI'},
+   {text:'TourGame'},
+   {text:'Aperture'},
+   {text:'Niche Tensor'},
+   {text:'Aperture'},
+   {text:'Social Tensor'},
+   {text:'THELASTONE'},
+   {text:'INFINI'},
+];
