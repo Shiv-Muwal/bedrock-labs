@@ -195,6 +195,76 @@ const SocialTensor = () => {
               ))}
             </div>
           </div>
+          <div className="d-none d-xl-block">
+            <div
+              className={`${ishovered && "hovered_position"
+                } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+            >
+              <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
+                UI UX
+              </p>
+              <img
+                className="social_sensor_img_w"
+                src={social_sensor}
+                alt="social_sensor"
+              />
+            </div>
+            <div
+              className={`${ishovered && "hovered_position"
+                } common_box bg-black common_box_position social_tensor_transition_2`}
+            >
+              <div className="position-relative d-flex justify-content-end">
+                <p className="common_text_transform branding_text_pos mb-4 text-white fw-normal fst-italic text_sm lh_16">
+                  Branding
+                </p>
+                <img
+                  className="social_tensor_img_w"
+                  src={social_tensor}
+                  alt="social_tensor"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="d-flex justify-content-center z-3">
+            <div
+              className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
+            >
+              <div className="d-flex flex-column align-items-end">
+                <div
+                  onClick={HANDLE_HIDE}
+                  className="d-flex justify-content-center cross_icon_box align-items-center"
+                >
+                  <Icons icon="Cross_Icon" className="cursor_pointer" />
+                </div>
+                <div className="responsive_box grey">
+                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                    <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
+                      UI UX
+                    </p>
+                    <div>
+                      <img
+                        className="social_sensor_img_w"
+                        src={social_sensor_responsive}
+                        alt="sensor"
+                      />
+                    </div>
+                  </div>
+                  <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
+                    <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
+                      Branding
+                    </p>
+                    <div>
+                      <img
+                        className="social_sensor_img_w"
+                        src={social_tensor}
+                        alt="tensor"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width"
@@ -240,76 +310,7 @@ const SocialTensor = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="d-none d-xl-block">
-            <div
-              className={`${ishovered && "hovered_position"
-                } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
-            >
-              <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
-                UI UX
-              </p>
-              <img
-                className="social_sensor_img_w"
-                src={social_sensor}
-                alt="social_sensor"
-              />
-            </div>
-            <div
-              className={`${ishovered && "hovered_position"
-                } common_box bg-black common_box_position social_tensor_transition_2`}
-            >
-              <div className="position-relative d-flex justify-content-end">
-                <p className="common_text_transform branding_text_pos mb-4 text-white fw-normal fst-italic text_sm lh_16">
-                  Branding
-                </p>
-                <img
-                  className="social_tensor_img_w"
-                  src={social_tensor}
-                  alt="social_tensor"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="d-flex justify-content-center z-3">
-            <div
-              className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
-            >
-              <div className="d-flex d-xlnone flex-column align-items-end">
-                <div
-                  onClick={HANDLE_HIDE}
-                  className="d-flex justify-content-center cross_icon_box align-items-center"
-                >
-                  <Icons icon="Cross_Icon" className="cursor_pointer" />
-                </div>
-                <div className="responsive_box grey">
-                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                    <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
-                      UI UX
-                    </p>
-                    <div>
-                      <img
-                        className="social_sensor_img_w"
-                        src={social_sensor_responsive}
-                        alt="sensor"
-                      />
-                    </div>
-                  </div>
-                  <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
-                    <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
-                      Branding
-                    </p>
-                    <div>
-                      <img
-                        className="social_sensor_img_w"
-                        src={social_tensor}
-                        alt="tensor"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
         <div className="position-absolute bottom-0 z-3 flex-column w-100 justify-content-center slider_gradient">
           <Header />
