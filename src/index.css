@@ -9,12 +9,12 @@
 
 @font-face {
   font-family: "Acumin_Pro_Wide";
-  src: url("./assets/fonts/Acumin\ Pro\ Condensed.ttf");
+  src: url("./assets/fonts/Acumin_Pro_Wide.otf");
 }
 
 @font-face {
   font-family: "Gilroy_SemiBoldItalic";
-  src: url("./assets/fonts/FontsFree-Net-Gilroy-ExtraBold.ttf");
+  src: url("./assets/fonts/gilroy_extra_bold.ttf");
 }
 
 .font_acumin_pro_wide {
@@ -25,6 +25,8 @@
   --font-sm: 12px;
   --font-md: 16px;
   --font-lg: 24px;
+  --font-xl: 32px;
+  --font-2xl: 46px;
   /* ----color- */
   --color-grey: #252525;
 }
@@ -65,6 +67,21 @@
   font-size: var(--font-lg);
 }
 
+.text_xl {
+  font-size: var(--font-xl);
+}
+
+.text_2xl {
+  font-size: var(--font-2xl);
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --font-xl: 42px;
+    --font-2xl: 80px;
+  }
+}
+
 @media (min-width:576px) {
   :root {
     --font-sm: 12px;
@@ -75,4 +92,8 @@
   .lh_38 {
     line-height: 38.4px;
   }
+}
+
+.manual_height {
+  min-height: calc(100vh - 100px);
 }
