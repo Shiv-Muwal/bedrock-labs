@@ -13,44 +13,11 @@ import 'swiper/css/mousewheel';
 import 'swiper/css/keyboard';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import ContinueSlider from './ContinueSlider';
 
 const SocialTensor = () => {
-  var settings = {
-    infinite: true,
-    dots: false,
-    arrows: false,
-    speed: 3000,
-    autoplay: true,
-    autoplaySpeed: 1,
-    slidesToScroll: 1,
-    cssEase: 'linear',
-    pauseOnHover: true,
-    slidesToShow: 7,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 6,
-        }
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5,
-        }
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-
-    ]
-  };
+  const key1 = "marquee1";
+  const key2 = "marquee2";
 
   const getSlidesPerView = () => {
     if (typeof window !== 'undefined') {
@@ -78,22 +45,6 @@ const SocialTensor = () => {
   const [ishovered, setishoverd] = useState(false);
   const [show, setShow] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const Mouse_Over = (e) => {
-    const hoveredSlide = e.target.closest(".slider_text");
-    if (hoveredSlide) {
-      hoveredSlide.classList.add('hovered_position');
-      setishoverd(!ishovered);
-    }
-  };
-
-  const Mouse_out = (e) => {
-    const hoveredSlide = e.target.closest(".slider_text");
-    if (hoveredSlide) {
-      hoveredSlide.classList.remove('hovered_position');
-      setishoverd(false);
-    }
-  };
 
   const HANDLE_CLICK = (e) => {
     const centerSlide = e.target.closest(".active_slide");
@@ -186,23 +137,14 @@ const SocialTensor = () => {
         </a>
       </div>
       <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
-        <div className=" d-f lex  flex-column w-100 d-none d-md-block">
-        <Slider key={windowWidth + '_rtl'} {...{ ...settings, rtl: true }} className='w-100'>
-            {CONTINUE_SLIDER.map((obj, index) => (
-              <div key={index} className='d-flex align-items-center justify-content-center'>
-                <h3 className='mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text fst-italic' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
-              </div>
-            ))}
-          </Slider>
-          <Slider key={windowWidth} {...settings} className='w-100 mt_10'>
-            {CONTINUE_SLIDER.map((obj, index) => (
-              <div key={index} className='d-flex align-items-center justify-content-center'>
-                <h3 className='mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text fst-italic' onMouseEnter={Mouse_Over} onMouseLeave={Mouse_out}>{obj.text}</h3>
-              </div>
-            ))}
-          </Slider>
+        <div className=" d-flex flex-column w-100 d-none d-md-block">
+        <ContinueSlider 
+        items={CONTINUE_SLIDER} 
+        key1={key1}
+        key2={key2}
+      />
         </div>
-        <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width" style={{ perspective: '1000px' }}>
+        <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width d-md-none" style={{ perspective: '1000px' }}>
           <Swiper
             ref={swiperRef}
             direction="vertical"
@@ -234,36 +176,6 @@ const SocialTensor = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="d-none d-xl-block">
-            <div
-              className={`${ishovered && "hovered_position"
-                } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
-            >
-              <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
-                UI UX
-              </p>
-              <img
-                className="social_sensor_img_w"
-                src={social_sensor}
-                alt="social_sensor"
-              />
-            </div>
-            <div
-              className={`${ishovered && "hovered_position"
-                } common_box bg-black common_box_position social_tensor_transition_2`}
-            >
-              <div className="position-relative d-flex justify-content-end">
-                <p className="common_text_transform branding_text_pos mb-4 text-white fw-normal fst-italic text_sm lh_16">
-                  Branding
-                </p>
-                <img
-                  className="social_tensor_img_w"
-                  src={social_tensor}
-                  alt="social_tensor"
-                />
-              </div>
-            </div>
-          </div>
           <div className="d-flex justify-content-center z-3">
             <div className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}>
               <div
