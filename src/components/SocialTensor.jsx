@@ -225,7 +225,8 @@ const SocialTensor = () => {
               </div>
             </div>
           </div>
-          <div className="d-flex d-xl-none justify-content-center z-3">
+        </div>
+        <div className="d-flex d-xl-none justify-content-center z-3">
             <div
               className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
             >
@@ -265,7 +266,6 @@ const SocialTensor = () => {
               </div>
             </div>
           </div>
-        </div>
         <div
           className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width"
           style={{ perspective: "1000px" }}
@@ -310,7 +310,6 @@ const SocialTensor = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-         
         </div>
         <div className="position-absolute bottom-0 z-3 flex-column w-100 justify-content-center slider_gradient">
           <Header />
