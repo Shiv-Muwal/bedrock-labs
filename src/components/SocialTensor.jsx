@@ -221,11 +221,11 @@ const SocialTensor = () => {
           <Swiper
             ref={swiperRef}
             direction="vertical"
-            slidesPerView={10} 
+            slidesPerView={15} 
             freeMode= {true}
             centeredSlides={true}
             keyboard={{ enabled: true }}
-            speed={300}
+            speed={500}
             modules={[Mousewheel, Keyboard, Virtual]}
             loop={true}
             mousewheel={{ releaseOnEdges: true }}         
@@ -235,7 +235,8 @@ const SocialTensor = () => {
             {slides.map((slide, index) => (
               <SwiperSlide
                 key={index}
-                className="d-flex align-items-center justify-content-center"
+                className="d-flex align-items-center justify-content-center "
+                style={{ height: '24px'}} 
               >
                 {({ isActive }) => (
                   <div
