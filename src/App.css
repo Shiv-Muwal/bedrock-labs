@@ -299,7 +299,7 @@ ul {
 
 @media (min-width:1200px) {
   .common_box {
-    width: calc(50% - 141px) !important;
+    width: calc(50% - 140px) !important;
     height: 246px;
   }
 
@@ -312,7 +312,7 @@ ul {
   }
 
   .social_sensor_img_w {
-    max-width: 416.75px;
+    max-width: 409.75px;
     width: 100%;
     height: 226px !important;
   }
@@ -320,6 +320,12 @@ ul {
   .common_box_position_transform_1 {
     transform: translate(-104%, 0%);
     transition: ease-in-out 900ms !important;
+  }
+}
+
+@media (min-width:1400px) {
+  .social_sensor_img_w {
+    max-width: 416.75px;
   }
 }
 
