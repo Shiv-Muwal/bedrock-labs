@@ -102,7 +102,7 @@
 @media (min-width: 576px) {
   :root {
     --font-sm: 12px;
-    --font-md: 16px;
+    --font-md: 12px;
     --font-lg: 32px;
   }
 

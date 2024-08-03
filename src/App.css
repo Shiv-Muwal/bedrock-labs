@@ -201,7 +201,7 @@ ul {
 .slider_reverse {
   display: flex;
   width: auto;
-  animation-duration: 30s;
+  animation-duration: 40s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
