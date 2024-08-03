@@ -15,27 +15,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const SocialTensor = () => {
-  const getSlidesPerView = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1920) return 13;
-      if (window.innerWidth >= 1280) return 9;
-      return 9;
-    }
-    return 9;
-  };
-
-  const getSpaceBetween = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1920) return 24;
-      if (window.innerWidth >= 1280) return 24;
-      return 0;
-    }
-    return 0;
-  };
 
   const [slides, setSlides] = useState([]);
-  const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
-  const [spaceBetween, setSpaceBetween] = useState(getSpaceBetween());
   const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -109,8 +90,6 @@ const SocialTensor = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setSlidesPerView(getSlidesPerView());
-      setSpaceBetween(getSpaceBetween());
       setScreenWidth(window.innerWidth);
     };
 
@@ -121,42 +100,6 @@ const SocialTensor = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  useEffect(() => {
-    if (!swiperRef.current?.swiper) return;
-
-    const updateSlideStyles = () => {
-      const slides = swiperInstance.slides;
-      const activeIndex = swiperInstance.activeIndex;
-      const totalSlides = slides.length;
-      const slidesPerView = swiperInstance.params.slidesPerView;
-
-      slides.forEach((slide, index) => {
-        const slideElement = slide.querySelector(".slide_content");
-        if (!slideElement) return;
-
-        const distance = Math.min(
-          Math.abs(index - activeIndex),
-          totalSlides - Math.abs(index - activeIndex)
-        );
-      });
-    };
-
-    const swiperInstance = swiperRef.current.swiper;
-    if (swiperInstance) {
-      swiperInstance.on("slideChange", updateSlideStyles);
-      swiperInstance.on("resize", updateSlideStyles);
-      updateSlideStyles();
-    }
-
-    return () => {
-      if (swiperInstance) {
-        swiperInstance.off("slideChange", updateSlideStyles);
-        swiperInstance.off("resize", updateSlideStyles);
-      }
-    };
-  }, [slides, slidesPerView, spaceBetween, screenWidth]);
-
   return (
     <div className="position-relative">
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
@@ -278,15 +221,15 @@ const SocialTensor = () => {
           <Swiper
             ref={swiperRef}
             direction="vertical"
-            slidesPerView={getSlidesPerView()}
+            slidesPerView={10} 
+            freeMode= {true}
             centeredSlides={true}
-            spaceBetween={spaceBetween}
-            mousewheel={true}
             keyboard={{ enabled: true }}
+            speed={300}
             modules={[Mousewheel, Keyboard, Virtual]}
             loop={true}
+            mousewheel={{ releaseOnEdges: true }}         
             loopAdditionalSlides={SLIDER_LIST.length}
-            speed={500}
             className="h-100 w-100 d-md-none"
           >
             {slides.map((slide, index) => (

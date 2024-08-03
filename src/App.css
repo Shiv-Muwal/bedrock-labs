@@ -88,11 +88,13 @@ ul {
 .social_sensor_img_w {
   max-width: 284px;
   width: 100%;
+  height: 226px;
 }
 
 .social_tensor_img_w {
   max-width: 401.02px;
   width: 100%;
+  height: 226px !important;
 }
 
 .cross_icon_box {
@@ -195,20 +197,28 @@ ul {
   overflow: hidden;
 }
 
-.slider_parent {
-  display: flex;
-  width: auto;
-  animation: slide 20s linear infinite;
-}
-
+.slider_parent,
 .slider_reverse {
   display: flex;
   width: auto;
-  animation: slide_rev 20s linear infinite;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
+.slider_parent {
+  animation-name: slide;
+}
+
+.slider_reverse {
+  animation-name: slide_rev;
+}
+
+/* Combined hover effects */
 .slider_parent:hover,
-.slider_reverse:hover {
+.slider_reverse:hover,
+.slider_container:hover .slider_parent,
+.slider_container:hover .slider_reverse {
   animation-play-state: paused;
 }
 
@@ -255,7 +265,10 @@ ul {
   .swiper-slide-active {
     height: 90px !important;
   }
-
+  .common_box {
+    width: calc(50% - 160px) !important;
+    height: 246px;
+  }
   .icons_gap {
     gap: 40px;
   }
@@ -263,7 +276,8 @@ ul {
 
 @media (min-width:1200px) {
   .common_box {
-    width: 480px;
+    width: calc(50% - 130px) !important;
+    height: 246px;
   }
 
   .common_box_position {
@@ -281,10 +295,12 @@ ul {
   }
 }
 
-@media (min-width:1400px) {
+@media (min-width:1536px) {
   .common_box {
-    width: 583px;
+    width: calc(50% - 170px) !important;
+    height: 246px;
   }
+
 }
 
 @media (max-width:575.98px) {
