@@ -178,7 +178,7 @@ const SocialTensor = () => {
           <div
             className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
           >
-            <div className="d-flex flex-column align-items-end">
+            <div className="d-flex flex-column align-items-end mx_30">
               <div
                 onClick={HANDLE_HIDE}
                 className="d-flex justify-content-center cross_icon_box align-items-center"
@@ -190,25 +190,21 @@ const SocialTensor = () => {
                   <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                     UI UX
                   </p>
-                  <div>
                     <img
                       className="social_sensor_img_w"
                       src={social_sensor_responsive}
                       alt="sensor"
                     />
-                  </div>
                 </div>
                 <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
                   <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
                     Branding
                   </p>
-                  <div>
                     <img
                       className="social_sensor_img_w"
                       src={social_tensor}
                       alt="tensor"
                     />
-                  </div>
                 </div>
               </div>
             </div>
