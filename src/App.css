@@ -329,6 +329,13 @@ ul {
   }
 }
 
+@media (min-width:1760px) {
+  .common_box {
+    width: calc(50% - 156px) !important;
+    height: 246px;
+  }
+}
+
 @media (max-width:575.98px) {
   .video_width {
     max-width: 302px;

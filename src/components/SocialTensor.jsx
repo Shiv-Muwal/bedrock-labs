@@ -79,7 +79,18 @@ const SocialTensor = () => {
       }
     }
   };
-
+  const getSlidesPerView = () => {
+    if (typeof window !== "undefined") {
+      if (window.innerHeight >= 932) return 17;
+      if (window.innerHeight >= 895) return 15;
+      if (window.innerHeight >= 844) return 16;
+      if (window.innerHeight >= 740) return 14;
+      if (window.innerHeight >= 667) return 11;
+   
+      return 8;
+    }
+    return 8;
+  };
   useEffect(() => {
     setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
     document.addEventListener("click", HANDLE_DOCUMENT_CLICK);
@@ -217,7 +228,7 @@ const SocialTensor = () => {
           <Swiper
             ref={swiperRef}
             direction="vertical"
-            slidesPerView={15} 
+            slidesPerView={getSlidesPerView()}
             freeMode= {true}
             centeredSlides={true}
             keyboard={{ enabled: true }}
