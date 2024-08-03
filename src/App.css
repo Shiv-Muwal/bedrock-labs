@@ -88,13 +88,11 @@ ul {
 .social_sensor_img_w {
   max-width: 284px;
   width: 100%;
-  height: 226px;
 }
 
 .social_tensor_img_w {
   max-width: 401.02px;
   width: 100%;
-  height: 226px !important;
 }
 
 .cross_icon_box {
@@ -139,7 +137,7 @@ ul {
   cursor: pointer;
 }
 
-.video_width{
+.video_width {
   max-width: 396px;
 }
 
@@ -265,10 +263,12 @@ ul {
   .swiper-slide-active {
     height: 90px !important;
   }
+
   .common_box {
     width: calc(50% - 160px) !important;
     height: 246px;
   }
+
   .icons_gap {
     gap: 40px;
   }
@@ -280,6 +280,10 @@ ul {
     height: 246px;
   }
 
+  .social_tensor_img_w {
+    height: 226px;
+  }
+
   .common_box_position {
     top: -100%;
   }
@@ -287,6 +291,7 @@ ul {
   .social_sensor_img_w {
     max-width: 416.75px;
     width: 100%;
+    height: 226px !important;
   }
 
   .common_box_position_transform_1 {
@@ -304,7 +309,7 @@ ul {
 }
 
 @media (max-width:575.98px) {
-  .video_width{
+  .video_width {
     max-width: 302px;
   }
 
