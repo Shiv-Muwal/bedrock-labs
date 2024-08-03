@@ -137,6 +137,10 @@ ul {
   cursor: pointer;
 }
 
+.video_width{
+  max-width: 396px;
+}
+
 /* SLIDER CSS CODE HERE */
 .slider_height {
   height: 100vh;
@@ -283,7 +287,11 @@ ul {
   }
 }
 
-@media (max-width:576px) {
+@media (max-width:575.98px) {
+  .video_width{
+    max-width: 302px;
+  }
+
   .header_custom_spacing {
     padding-bottom: 17px;
   }

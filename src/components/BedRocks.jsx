@@ -6,13 +6,12 @@ import bedrockVideo from "../assets/video/bedrock.mp4";
 function BedRocks() {
   return (
     <div className="bg-black d-flex flex-column min-vh-100">
-      <Container className="d-flex  flex-column justify-content-center common_padding align-items-center flex-grow-1">
+      <Container className="d-flex flex-column justify-content-center common_padding align-items-center flex-grow-1">
         <video
           autoPlay
           loop
           muted
-          className="w-100"
-          style={{ maxWidth: "396px" }}
+          className="w-100 video_width"
         >
           <source src={bedrockVideo} type="video/mp4" />
         </video>

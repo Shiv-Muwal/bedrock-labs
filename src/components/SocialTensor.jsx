@@ -38,26 +38,30 @@ const SocialTensor = () => {
   const [spaceBetween, setSpaceBetween] = useState(getSpaceBetween());
   const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
-  const [ishovered, setishoverd] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [show, setShow] = useState(true);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const hideTimeoutRef = useRef(null);
 
-  const Mouse_Over = (e) => {
+  const HANDLE_MOUSE_OVER = (e) => {
     if (screenWidth > 1200) {
       const hoveredSlide = e.target.closest(".slider_text");
       if (hoveredSlide) {
         hoveredSlide.classList.add("hovered_position");
-        setishoverd(!ishovered);
+        setIsHovered(true);
+        clearTimeout(hideTimeoutRef.current);
       }
     }
   };
 
-  const Mouse_out = (e) => {
-    if (screenWidth < 1200) {
+  const HANDLE_MOUSE_OUT = (e) => {
+    if (screenWidth > 1200) {
       const hoveredSlide = e.target.closest(".slider_text");
       if (hoveredSlide) {
         hoveredSlide.classList.remove("hovered_position");
-        setishoverd(false);
+        hideTimeoutRef.current = setTimeout(() => {
+          setIsHovered(false);
+        }, 200);
       }
     }
   };
@@ -90,6 +94,7 @@ const SocialTensor = () => {
         e.target.closest(".active_slide") || e.target.closest(".common_box");
       if (!clickedInside) {
         setIsClicked(false);
+        setIsHovered(false);
       }
     }
   };
@@ -169,8 +174,8 @@ const SocialTensor = () => {
                     HANDLE_CLICK(e);
                     HANDLE_SHOW(e);
                   }}
-                  onMouseEnter={Mouse_Over}
-                  onMouseLeave={Mouse_out}
+                  onMouseEnter={HANDLE_MOUSE_OVER}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
                   className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
                   key={i}
                 >
@@ -185,8 +190,8 @@ const SocialTensor = () => {
                     HANDLE_CLICK(e);
                     HANDLE_SHOW(e);
                   }}
-                  onMouseEnter={Mouse_Over}
-                  onMouseLeave={Mouse_out}
+                  onMouseEnter={HANDLE_MOUSE_OVER}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
                   className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
                   key={i}
                 >
@@ -197,7 +202,7 @@ const SocialTensor = () => {
           </div>
           <div className="d-none d-xl-block">
             <div
-              className={`${ishovered && "hovered_position"
+              className={`${isHovered && "hovered_position"
                 } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
             >
               <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
@@ -210,7 +215,7 @@ const SocialTensor = () => {
               />
             </div>
             <div
-              className={`${ishovered && "hovered_position"
+              className={`${isHovered && "hovered_position"
                 } common_box bg-black common_box_position social_tensor_transition_2`}
             >
               <div className="position-relative d-flex justify-content-end">
@@ -227,45 +232,45 @@ const SocialTensor = () => {
           </div>
         </div>
         <div className="d-flex d-xl-none justify-content-center z-3">
-            <div
-              className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
-            >
-              <div className="d-flex flex-column align-items-end">
-                <div
-                  onClick={HANDLE_HIDE}
-                  className="d-flex justify-content-center cross_icon_box align-items-center"
-                >
-                  <Icons icon="Cross_Icon" className="cursor_pointer" />
-                </div>
-                <div className="responsive_box grey">
-                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                    <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
-                      UI UX
-                    </p>
-                    <div>
-                      <img
-                        className="social_sensor_img_w"
-                        src={social_sensor_responsive}
-                        alt="sensor"
-                      />
-                    </div>
+          <div
+            className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
+          >
+            <div className="d-flex flex-column align-items-end">
+              <div
+                onClick={HANDLE_HIDE}
+                className="d-flex justify-content-center cross_icon_box align-items-center"
+              >
+                <Icons icon="Cross_Icon" className="cursor_pointer" />
+              </div>
+              <div className="responsive_box grey">
+                <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
+                    UI UX
+                  </p>
+                  <div>
+                    <img
+                      className="social_sensor_img_w"
+                      src={social_sensor_responsive}
+                      alt="sensor"
+                    />
                   </div>
-                  <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
-                    <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
-                      Branding
-                    </p>
-                    <div>
-                      <img
-                        className="social_sensor_img_w"
-                        src={social_tensor}
-                        alt="tensor"
-                      />
-                    </div>
+                </div>
+                <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
+                  <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
+                    Branding
+                  </p>
+                  <div>
+                    <img
+                      className="social_sensor_img_w"
+                      src={social_tensor}
+                      alt="tensor"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         <div
           className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width"
           style={{ perspective: "1000px" }}
