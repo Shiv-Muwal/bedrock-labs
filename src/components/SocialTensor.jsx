@@ -148,7 +148,7 @@ const SocialTensor = () => {
               className={`${isHovered && "hovered_position"
                 } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
             >
-              <p className="common_text_transform text-white fw-normal fst-italic text_sm lh_16">
+              <p className="common_text_transform text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                 UI UX
               </p>
               <img
@@ -187,7 +187,7 @@ const SocialTensor = () => {
               </div>
               <div className="responsive_box grey">
                 <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
+                  <p className="ui_ux_text_transform mb-0 textnowrap text-white fw-normal fst-italic text_sm lh_16">
                     UI UX
                   </p>
                     <img

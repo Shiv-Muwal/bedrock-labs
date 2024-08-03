@@ -299,7 +299,7 @@ ul {
 
 @media (min-width:1200px) {
   .common_box {
-    width: calc(50% - 147px) !important;
+    width: calc(50% - 141px) !important;
     height: 246px;
   }
 
