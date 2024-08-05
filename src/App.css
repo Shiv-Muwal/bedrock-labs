@@ -317,7 +317,8 @@ ul {
   }
 
   .common_box_position_transform_1 {
-    transform: translate(-104%, 0%);
+    transform: translate(-100%, 0%);
+    right: 40px !important;
     transition: ease-in-out 900ms !important;
   }
 }
@@ -402,3 +403,5 @@ ul {
     right: 0;
   }
 }
+.trx_full{transform: translate(-100%,0%) !important;}
+.trx_0{transform: translate(0,0) !important;}

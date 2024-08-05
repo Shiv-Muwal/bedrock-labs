@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
-import social_sensor from "../assets/images/webp/social-sensor.webp";
-import social_tensor from "../assets/images/webp/social-tensor.webp";
+import social_tensor from '../assets/images/webp/social-tensor.webp'
 import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
@@ -15,32 +14,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const SocialTensor = () => {
-  const images = {
-    "Social Tensor": {
-      cardOne: social_sensor,
-      cardTwo: social_tensor,
-    },
-    // INFINI: {
-    //   cardOne: infini_card_one,
-    //   cardTwo: infini_card_two,
-    // },
-    // TourGame: {
-    //   cardOne: tourgame_card_one,
-    //   cardTwo: tourgame_card_two,
-    // },
-    // Aperture: {
-    //   cardOne: aperture_card_one,
-    //   cardTwo: aperture_card_two,
-    // },
-    // "Niche Tensor": {
-    //   cardOne: niche_tensor_card_one,
-    //   cardTwo: niche_tensor_card_two,
-    // },
-    // THELASTONE: {
-    //   cardOne: thelastone_card_one,
-    //   cardTwo: thelastone_card_two,
-    // },
-  };
 
   const [slides, setSlides] = useState([]);
   const swiperRef = useRef(null);
@@ -188,8 +161,9 @@ const SocialTensor = () => {
             </div>
           </div>
           <div className="d-none d-xl-block">
-            <div
-              className={`${isHovered && "hovered_position"} common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+         
+         <div
+              className={`${hoveredText && CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images?.cardOne &&isHovered && "hovered_position"} common_box bg-black ${hoveredText && CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images?.cardTwo &&isHovered ? "":"trx_0"} trx_full common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
             >
               <p className="common_text_transform text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                 UI UX
@@ -197,15 +171,15 @@ const SocialTensor = () => {
               <img
                 className="social_sensor_img_w"
                 src={
-                  hoveredText && images[hoveredText]
-                    ? images[hoveredText].cardOne
-                    : ''
+                  hoveredText && CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images?.cardOne
+                  ? CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images.cardOne
+                  : ''
                 }
                 alt="social_sensor"
               />
             </div>
             <div
-              className={`${isHovered && "hovered_position"
+              className={`${hoveredText && CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images?.cardTwo &&isHovered  && "hovered_position"
                 } common_box bg-black common_box_position social_tensor_transition_2`}
             >
               <div className="position-relative d-flex justify-content-end">
@@ -215,9 +189,9 @@ const SocialTensor = () => {
                 <img
                   className="social_tensor_img_w"
                   src={
-                    hoveredText && images[hoveredText]
-                      ? images[hoveredText].cardTwo
-                      : ''
+                    hoveredText && CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images?.cardTwo
+                    ? CONTINUE_SLIDER.find(item => item.text === hoveredText)?.images.cardTwo
+                    : ''
                   }
                   alt="social_tensor"
                 />
@@ -239,21 +213,21 @@ const SocialTensor = () => {
                   <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                     UI UX
                   </p>
-                    <img
-                      className="social_sensor_img_w"
-                      src={social_sensor_responsive}
-                      alt="sensor"
-                    />
+                  <img
+                    className="social_sensor_img_w"
+                    src={social_sensor_responsive}
+                    alt="sensor"
+                  />
                 </div>
                 <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
                   <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
                     Branding
                   </p>
-                    <img
-                      className="social_sensor_img_w"
-                      src={social_tensor}
-                      alt="tensor"
-                    />
+                  <img
+                    className="social_sensor_img_w"
+                    src={social_tensor}
+                    alt="tensor"
+                  />
                 </div>
               </div>
             </div>
@@ -267,13 +241,13 @@ const SocialTensor = () => {
             ref={swiperRef}
             direction="vertical"
             slidesPerView={getSlidesPerView()}
-            freeMode= {true}
+            freeMode={true}
             centeredSlides={true}
             keyboard={{ enabled: true }}
             speed={500}
             modules={[Mousewheel, Keyboard, Virtual]}
             loop={true}
-            mousewheel={{ releaseOnEdges: true }}         
+            mousewheel={{ releaseOnEdges: true }}
             loopAdditionalSlides={SLIDER_LIST.length}
             className="h-100 w-100 d-md-none"
           >
@@ -281,7 +255,7 @@ const SocialTensor = () => {
               <SwiperSlide
                 key={index}
                 className="d-flex align-items-center justify-content-center "
-                style={{ height: '24px'}} 
+                style={{ height: '24px' }}
               >
                 {({ isActive }) => (
                   <div
@@ -293,8 +267,8 @@ const SocialTensor = () => {
                         HANDLE_SHOW(e);
                       }}
                       className={`${isActive
-                          ? "text_xl cursor_pointer active_slide px-2 px-sm-4 "
-                          : "text_xl px-2 px-sm-4 opacity_20"
+                        ? "text_xl cursor_pointer active_slide px-2 px-sm-4 "
+                        : "text_xl px-2 px-sm-4 opacity_20"
                         } fst-italic`}
                     >
                       {slide}
