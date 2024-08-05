@@ -118,7 +118,7 @@ const SocialTensor = () => {
     <div className="position-relative">
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
-          <img src={logo} alt="logo" />
+          <img loading="preload" src={logo} alt="logo" />
         </a>
       </div>
       <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
@@ -174,6 +174,7 @@ const SocialTensor = () => {
                 UI UX
               </p>
               <img
+                loading="preload"
                 className="social_sensor_img_w"
                 src={
                   hoveredText &&
@@ -199,6 +200,7 @@ const SocialTensor = () => {
                   Branding
                 </p>
                 <img
+                  loading="preload"
                   className="social_tensor_img_w"
                   src={
                     hoveredText &&
@@ -216,10 +218,15 @@ const SocialTensor = () => {
           </div>
         </div>
         <div className="d-flex d-xl-none justify-content-center z-3">
+          {!show && (
+            <div
+              onClick={() => setShow(!show)}
+              className=" position-absolute top-0 start-0 bg-black z-3 opacity-75 h-100 w-100"></div>
+          )}
           <div
             className={`${
               show ? "card_hidden" : "card_visible"
-            } responsive_box_pos`}>
+            } responsive_box_pos z-3`}>
             <div className="d-flex flex-column align-items-end mx_30">
               <div
                 onClick={HANDLE_HIDE}
@@ -232,6 +239,7 @@ const SocialTensor = () => {
                     UI UX
                   </p>
                   <img
+                    loading="preload"
                     className="social_sensor_img_w"
                     src={social_sensor_responsive}
                     alt="sensor"
@@ -242,6 +250,7 @@ const SocialTensor = () => {
                     Branding
                   </p>
                   <img
+                    loading="preload"
                     className="social_sensor_img_w"
                     src={social_tensor}
                     alt="tensor"
@@ -282,9 +291,9 @@ const SocialTensor = () => {
                       }}
                       className={`${
                         isActive
-                          ? "text_xl cursor_pointer active_slide px-2 px-sm-4 "
-                          : "text_xl px-2 px-sm-4 opacity_20"
-                      } fst-italic`}>
+                          ? "text_xl cursor_pointer active_slide  px-2 px-sm-4 "
+                          : "text_xl px-2 px-sm-4"
+                      } fst-italic opacity_20 hover_opacity_1`}>
                       {slide}
                     </span>
                   </div>

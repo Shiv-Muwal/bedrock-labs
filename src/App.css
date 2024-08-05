@@ -150,7 +150,7 @@ ul {
 
 /* SLIDER CSS CODE HERE */
 .slider_height {
-  height: 100vh;
+  height: 100dvh;
 }
 
 .slider_width {
@@ -190,7 +190,8 @@ ul {
   transition: all 500ms linear;
 }
 
-.slider_text:hover {
+.slider_text:hover,
+.hover_opacity_1:hover {
   opacity: 1 !important;
 }
 
@@ -399,7 +400,7 @@ ul {
 
   .navbar_nav.show {
     visibility: visible;
-    opacity: 0.8;
+    opacity: 1;
     right: 0;
   }
 }
