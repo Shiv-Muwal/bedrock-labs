@@ -281,23 +281,17 @@ const SocialTensor = () => {
                 key={index}
                 className="d-flex align-items-center justify-content-center "
                 style={{ height: "24px" }}>
-                {({ isActive }) => (
-                  <div
-                    className={`slide_content d-flex align-items-center justify-content-center`}>
-                    <span
-                      onClick={(e) => {
-                        HANDLE_CLICK(e);
-                        HANDLE_SHOW(e);
-                      }}
-                      className={`${
-                        isActive
-                          ? "text_xl cursor_pointer active_slide  px-2 px-sm-4 "
-                          : "text_xl px-2 px-sm-4"
-                      } fst-italic opacity_20 hover_opacity_1`}>
-                      {slide}
-                    </span>
-                  </div>
-                )}
+                <div
+                  className={`slide_content d-flex align-items-center justify-content-center`}>
+                  <span
+                    onClick={(e) => {
+                      HANDLE_CLICK(e);
+                      HANDLE_SHOW(e);
+                    }}
+                    className={`${"text_xl cursor_pointer active_slide  px-2 px-sm-4 "} fst-italic opacity_20 hover_opacity_1`}>
+                    {slide}
+                  </span>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
