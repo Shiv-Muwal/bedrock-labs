@@ -15,11 +15,38 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const SocialTensor = () => {
+  const images = {
+    "Social Tensor": {
+      cardOne: social_sensor,
+      cardTwo: social_tensor,
+    },
+    // INFINI: {
+    //   cardOne: infini_card_one,
+    //   cardTwo: infini_card_two,
+    // },
+    // TourGame: {
+    //   cardOne: tourgame_card_one,
+    //   cardTwo: tourgame_card_two,
+    // },
+    // Aperture: {
+    //   cardOne: aperture_card_one,
+    //   cardTwo: aperture_card_two,
+    // },
+    // "Niche Tensor": {
+    //   cardOne: niche_tensor_card_one,
+    //   cardTwo: niche_tensor_card_two,
+    // },
+    // THELASTONE: {
+    //   cardOne: thelastone_card_one,
+    //   cardTwo: thelastone_card_two,
+    // },
+  };
 
   const [slides, setSlides] = useState([]);
   const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredText, setHoveredText] = useState(null);
   const [show, setShow] = useState(true);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const hideTimeoutRef = useRef(null);
@@ -29,6 +56,7 @@ const SocialTensor = () => {
       const hoveredSlide = e.target.closest(".slider_text");
       if (hoveredSlide) {
         hoveredSlide.classList.add("hovered_position");
+        setHoveredText(e.target.textContent);
         setIsHovered(true);
         clearTimeout(hideTimeoutRef.current);
       }
@@ -42,6 +70,7 @@ const SocialTensor = () => {
         hoveredSlide.classList.remove("hovered_position");
         hideTimeoutRef.current = setTimeout(() => {
           setIsHovered(false);
+          setHoveredText(null);
         }, 200);
       }
     }
@@ -76,9 +105,11 @@ const SocialTensor = () => {
       if (!clickedInside) {
         setIsClicked(false);
         setIsHovered(false);
+        setHoveredText(null);
       }
     }
   };
+
   const getSlidesPerView = () => {
     if (typeof window !== "undefined") {
       if (window.innerHeight >= 932) return 17;
@@ -86,11 +117,12 @@ const SocialTensor = () => {
       if (window.innerHeight >= 844) return 16;
       if (window.innerHeight >= 740) return 14;
       if (window.innerHeight >= 667) return 11;
-   
+
       return 8;
     }
     return 8;
   };
+
   useEffect(() => {
     setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
     document.addEventListener("click", HANDLE_DOCUMENT_CLICK);
@@ -111,6 +143,7 @@ const SocialTensor = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <div className="position-relative">
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
@@ -156,15 +189,18 @@ const SocialTensor = () => {
           </div>
           <div className="d-none d-xl-block">
             <div
-              className={`${isHovered && "hovered_position"
-                } common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
+              className={`${isHovered && "hovered_position"} common_box bg-black common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}
             >
               <p className="common_text_transform text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                 UI UX
               </p>
               <img
                 className="social_sensor_img_w"
-                src={social_sensor}
+                src={
+                  hoveredText && images[hoveredText]
+                    ? images[hoveredText].cardOne
+                    : ''
+                }
                 alt="social_sensor"
               />
             </div>
@@ -178,7 +214,11 @@ const SocialTensor = () => {
                 </p>
                 <img
                   className="social_tensor_img_w"
-                  src={social_tensor}
+                  src={
+                    hoveredText && images[hoveredText]
+                      ? images[hoveredText].cardTwo
+                      : ''
+                  }
                   alt="social_tensor"
                 />
               </div>
@@ -186,9 +226,7 @@ const SocialTensor = () => {
           </div>
         </div>
         <div className="d-flex d-xl-none justify-content-center z-3">
-          <div
-            className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}
-          >
+          <div className={`${show ? "card_hidden" : "card_visible"} responsive_box_pos`}>
             <div className="d-flex flex-column align-items-end mx_30">
               <div
                 onClick={HANDLE_HIDE}
@@ -198,7 +236,7 @@ const SocialTensor = () => {
               </div>
               <div className="responsive_box grey">
                 <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="ui_ux_text_transform mb-0 textnowrap text-white fw-normal fst-italic text_sm lh_16">
+                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                     UI UX
                   </p>
                     <img
