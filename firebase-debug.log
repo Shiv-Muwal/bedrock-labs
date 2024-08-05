@@ -1,0 +1,32 @@
+[debug] [2024-08-05T10:13:27.637Z] ----------------------------------------------------------------------
+[debug] [2024-08-05T10:13:27.640Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anjal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-05T10:13:27.641Z] CLI Version:   11.1.0
+[debug] [2024-08-05T10:13:27.641Z] Platform:      win32
+[debug] [2024-08-05T10:13:27.641Z] Node Version:  v21.7.3
+[debug] [2024-08-05T10:13:27.641Z] Time:          Mon Aug 05 2024 15:43:27 GMT+0530 (India Standard Time)
+[debug] [2024-08-05T10:13:27.642Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-05T10:13:27.708Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-05T10:13:27.709Z] > authorizing via signed-in user (anjalichanda2019@gmail.com)
+[debug] [2024-08-05T10:13:27.709Z] [iam] checking project bed-rocks-react for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-05T10:13:27.710Z] > refreshing access token with scopes: []
+[debug] [2024-08-05T10:13:27.712Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-05T10:13:27.712Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-05T10:13:28.045Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-08-05T10:13:28.046Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-05T10:13:28.053Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bed-rocks-react:testIamPermissions [none]
+[debug] [2024-08-05T10:13:28.054Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bed-rocks-react:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-05T10:13:29.575Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bed-rocks-react:testIamPermissions 200
+[debug] [2024-08-05T10:13:29.575Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bed-rocks-react:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-05T10:13:29.576Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bed-rocks-react [none]
+[debug] [2024-08-05T10:13:30.268Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bed-rocks-react 200
+[debug] [2024-08-05T10:13:30.269Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bed-rocks-react {"projectId":"bed-rocks-react","projectNumber":"298453911236","displayName":"bed-rocks-react","name":"projects/bed-rocks-react","resources":{"hostingSite":"bed-rocks-react"},"state":"ACTIVE","etag":"1_f8076b08-510d-4ada-befa-482ce320e85f"}
+[info] 
+[info] === Deploying to 'bed-rocks-react'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-08-05T10:13:30.272Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bed-rocks-react [none]
+[debug] [2024-08-05T10:13:30.655Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bed-rocks-react 200
+[debug] [2024-08-05T10:13:30.655Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bed-rocks-react {"projectId":"bed-rocks-react","projectNumber":"298453911236","displayName":"bed-rocks-react","name":"projects/bed-rocks-react","resources":{"hostingSite":"bed-rocks-react"},"state":"ACTIVE","etag":"1_f8076b08-510d-4ada-befa-482ce320e85f"}
+[debug] [2024-08-05T10:13:30.658Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/298453911236/sites/bed-rocks-react/versions [none]
+[debug] [2024-08-05T10:13:30.658Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/298453911236/sites/bed-rocks-react/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
