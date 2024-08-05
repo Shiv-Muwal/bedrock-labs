@@ -5,7 +5,7 @@ import Header from "../common/Header";
 
 function Future() {
   return (
-    <div className="bg-black d-flex flex-column min-vh-100">
+    <div className="bg-black d-flex flex-column vh_100">
       <div className="d-none logo_spacing d-sm-block ">
         <a href="/">
           <img src={logo_nav} alt="nav_logo" />

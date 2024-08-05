@@ -6,10 +6,13 @@
   text-decoration: none !important;
   font-family: "Gilroy_SemiBoldItalic";
 }
-.min-vh-100 {
-  min-height: 100dvh !important;
+.vh_100 {
+  height: 100dvh !important;
 }
-
+html,
+body {
+  overflow: hidden;
+}
 @font-face {
   font-family: Acumin_Pro_Wide;
   src: url("./assets/fonts/Acumin_Pro_Wide.otf");

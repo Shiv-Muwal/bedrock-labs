@@ -22,7 +22,15 @@ export const SLIDER_LIST = [
   "Niche Tensor",
   "THELASTONE",
   "CyberConnect",
-  "Link3"
+  "Link3",
+  "INFINI",
+  "TourGame",
+  "Aperture",
+  "Social Tensor",
+  "Niche Tensor",
+  "THELASTONE",
+  "CyberConnect",
+  "Link3",
 ];
 export const NAV_ITEMS = [
   { name: "BEDROCK LABS", href: "#" },
