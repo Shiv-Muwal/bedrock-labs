@@ -42,7 +42,6 @@ const SocialTensor = () => {
         hoveredSlide.classList.remove("hovered_position");
         hideTimeoutRef.current = setTimeout(() => {
           setIsHovered(false);
-          // setHoveredText(null);
         }, 200);
       }
     }
@@ -77,7 +76,6 @@ const SocialTensor = () => {
       if (!clickedInside) {
         setIsClicked(false);
         setIsHovered(false);
-        // setHoveredText(null);
       }
     }
   };

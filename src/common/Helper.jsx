@@ -13,6 +13,7 @@ import cyber_branding from "../assets/images/webp/cyber-connect-branding.png";
 import cyber_ui from "../assets/images/webp/cyber-connect-ui.png";
 import link_branding from "../assets/images/webp/link-branding.png";
 import link_ui from "../assets/images/webp/link-ui.png";
+
 export const SLIDER_LIST = [
   "INFINI",
   "TourGame",
@@ -42,10 +43,6 @@ export const CONTINUE_SLIDER = [
     images: { cardOne: aperture_ui, cardTwo: aperture_branding },
   },
   {
-    text: "Aperture",
-    images: { cardOne: aperture_ui, cardTwo: aperture_branding },
-  },
-  {
     text: "Social Tensor",
     images: { cardOne: social_sensor, cardTwo: social_tensor },
   },
@@ -73,10 +70,6 @@ export const CONTINUE_SLIDER = [
     images: { cardOne: aperture_ui, cardTwo: aperture_branding },
   },
   {
-    text: "Aperture",
-    images: { cardOne: aperture_ui, cardTwo: aperture_branding },
-  },
-  {
     text: "Social Tensor",
     images: { cardOne: social_sensor, cardTwo: social_tensor },
   },
@@ -98,10 +91,6 @@ export const CONTINUE_SLIDER = [
   {
     text: "TourGame",
     images: { cardOne: tour_game_ui, cardTwo: tour_branding },
-  },
-  {
-    text: "Aperture",
-    images: { cardOne: aperture_ui, cardTwo: aperture_branding },
   },
   {
     text: "Aperture",
