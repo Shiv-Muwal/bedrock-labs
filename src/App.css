@@ -269,6 +269,7 @@ ul {
 @media (max-width: 768px) {
   .social_sensor_img_w {
     width: 284px;
+    max-width: calc(100% - 26px) !important;
   }
 }
 
