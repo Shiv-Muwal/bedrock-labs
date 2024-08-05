@@ -8,6 +8,7 @@ export const SLIDER_LIST = [
   "THELASTONE",
   "INFINI",
 ];
+
 export const NAV_ITEMS = [
   { name: "BEDROCK LABS", href: "#" },
   { name: "ABOUT", href: "#about" },
@@ -15,6 +16,7 @@ export const NAV_ITEMS = [
   { name: "MEDIA", href: "#media" },
   { name: "CONTACT", href: "#contact" },
 ];
+
 export const CONTINUE_SLIDER = [
   { text: "Social Tensor" },
   { text: "INFINI" },
