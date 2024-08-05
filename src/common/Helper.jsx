@@ -1,28 +1,28 @@
 import social_sensor from "../assets/images/webp/social-sensor.webp";
 import social_tensor from "../assets/images/webp/social-tensor.webp";
 import niche_branding from "../assets/images/webp/niche-tensor-branding.png";
-import niche_ui from "../assets/images/webp/niche-tensor-ui.png";
+import niche_ui from "../assets/images/webp/niche-tensor-ui.webp";
 import aperture_branding from "../assets/images/webp/aperture-branding.png";
-import aperture_ui from "../assets/images/webp/aperture-ui.png";
+import aperture_ui from "../assets/images/webp/aperture-ui.webp";
 import thelastone_branding from "../assets/images/webp/thelastone.png";
 import infini_branding from "../assets/images/webp/infini-branding.png";
-import infini_ui from "../assets/images/webp/infini-ui.png";
-import tour_game_ui from "../assets/images/webp/tour-game-ui.png";
+import infini_ui from "../assets/images/webp/infini-ui.webp";
+import tour_game_ui from "../assets/images/webp/tour-game-ui.webp";
 import tour_branding from "../assets/images/webp/tour-branding.png";
 import cyber_branding from "../assets/images/webp/cyber-connect-branding.png";
-import cyber_ui from "../assets/images/webp/cyber-connect-ui.png";
+import cyber_ui from "../assets/images/webp/cyber-connect-ui.webp";
 import link_branding from "../assets/images/webp/link-branding.png";
-import link_ui from "../assets/images/webp/link-ui.png";
+import link_ui from "../assets/images/webp/link-ui.webp";
 
 export const SLIDER_LIST = [
   "INFINI",
   "TourGame",
   "Aperture",
-  "Aperture",
   "Social Tensor",
   "Niche Tensor",
   "THELASTONE",
-  "INFINI",
+  "CyberConnect",
+  "Link3"
 ];
 export const NAV_ITEMS = [
   { name: "BEDROCK LABS", href: "#" },
