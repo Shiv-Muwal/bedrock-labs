@@ -74,7 +74,7 @@ ul {
 }
 
 .card_mobile_spacing {
-  margin:0px 20px;
+  margin: 0px 20px;
 }
 
 .responsive_box {
@@ -96,7 +96,7 @@ ul {
   width: 100%;
 }
 
-.sensor_second_img{
+.sensor_second_img {
   height: 160px;
 }
 
@@ -260,6 +260,10 @@ ul {
   }
 }
 
+.pointer_event_none {
+  pointer-events: none;
+}
+
 @media (min-width: 576px) {
   .icons_gap {
     gap: 19px;
@@ -331,6 +335,7 @@ ul {
   .social_sensor_img_w {
     max-width: 416.75px;
   }
+
   .social_tensor_img_w {
     max-width: 401px;
   }
@@ -407,9 +412,11 @@ ul {
     right: 0;
   }
 }
+
 .trx_full {
   transform: translate(-100%, 0%) !important;
 }
+
 .trx_0 {
   transform: translate(0, 0) !important;
 }

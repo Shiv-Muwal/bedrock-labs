@@ -160,19 +160,17 @@ const SocialTensor = () => {
           </div>
           <div className="d-none d-xl-block">
             <div
-              className={`${
-                hoveredText &&
+              className={`${hoveredText &&
                 CONTINUE_SLIDER.find((item) => item.text === hoveredText)
                   ?.images?.cardOne &&
                 isHovered &&
                 "hovered_position"
-              } common_box bg-black ${
-                hoveredText &&
-                CONTINUE_SLIDER.find((item) => item.text === hoveredText)
-                  ?.images?.cardTwo
+                } common_box bg-black ${hoveredText &&
+                  CONTINUE_SLIDER.find((item) => item.text === hoveredText)
+                    ?.images?.cardTwo
                   ? ""
                   : "trx_0"
-              } trx_full common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}>
+                } trx_full common_box_position common_box_position_transform_1 d-flex align-items-end justify-content-between`}>
               <p className="common_text_transform text-nowrap text-white fw-normal fst-italic text_sm lh_16">
                 UI UX
               </p>
@@ -181,23 +179,22 @@ const SocialTensor = () => {
                 className="social_sensor_img_w"
                 src={
                   hoveredText &&
-                  CONTINUE_SLIDER.find((item) => item.text === hoveredText)
-                    ?.images?.cardOne
+                    CONTINUE_SLIDER.find((item) => item.text === hoveredText)
+                      ?.images?.cardOne
                     ? CONTINUE_SLIDER.find((item) => item.text === hoveredText)
-                        ?.images.cardOne
+                      ?.images.cardOne
                     : ""
                 }
                 alt="social_sensor"
               />
             </div>
             <div
-              className={`${
-                hoveredText &&
+              className={`${hoveredText &&
                 CONTINUE_SLIDER.find((item) => item.text === hoveredText)
                   ?.images?.cardTwo &&
                 isHovered &&
                 "hovered_position"
-              } common_box bg-black common_box_position social_tensor_transition_2`}>
+                } common_box bg-black common_box_position social_tensor_transition_2`}>
               <div className="position-relative d-flex justify-content-end">
                 <p className="common_text_transform branding_text_pos mb-4 text-white fw-normal fst-italic text_sm lh_16">
                   Branding
@@ -207,11 +204,11 @@ const SocialTensor = () => {
                   className="social_sensor_img_w"
                   src={
                     hoveredText &&
-                    CONTINUE_SLIDER.find((item) => item.text === hoveredText)
-                      ?.images?.cardTwo
+                      CONTINUE_SLIDER.find((item) => item.text === hoveredText)
+                        ?.images?.cardTwo
                       ? CONTINUE_SLIDER.find(
-                          (item) => item.text === hoveredText
-                        )?.images.cardTwo
+                        (item) => item.text === hoveredText
+                      )?.images.cardTwo
                       : ""
                   }
                   alt="social_tensor"
@@ -227,9 +224,8 @@ const SocialTensor = () => {
               className="position-absolute top-0 start-0 bg-black z-3 opacity-75 h-100 w-100"></div>
           )}
           <div
-            className={`${
-              show ? "card_hidden" : "card_visible"
-            } responsive_box_pos z-3`}>
+            className={`${show ? "card_hidden" : "card_visible"
+              } responsive_box_pos z-3`}>
             <div className="d-flex flex-column align-items-end card_mobile_spacing">
               <div
                 onClick={HANDLE_HIDE}
@@ -246,11 +242,11 @@ const SocialTensor = () => {
                     className="social_sensor_img_w"
                     src={
                       clickedText &&
-                      CONTINUE_SLIDER.find((item) => item.text === clickedText)
-                        ?.images?.cardOne
+                        CONTINUE_SLIDER.find((item) => item.text === clickedText)
+                          ?.images?.cardOne
                         ? CONTINUE_SLIDER.find(
-                            (item) => item.text === clickedText
-                          )?.images.cardOne
+                          (item) => item.text === clickedText
+                        )?.images.cardOne
                         : social_sensor_responsive
                     }
                     alt="sensor"
@@ -265,11 +261,11 @@ const SocialTensor = () => {
                     className="social_sensor_img_w sensor_second_img"
                     src={
                       clickedText &&
-                      CONTINUE_SLIDER.find((item) => item.text === clickedText)
-                        ?.images?.cardTwo
+                        CONTINUE_SLIDER.find((item) => item.text === clickedText)
+                          ?.images?.cardTwo
                         ? CONTINUE_SLIDER.find(
-                            (item) => item.text === clickedText
-                          )?.images.cardTwo
+                          (item) => item.text === clickedText
+                        )?.images.cardTwo
                         : social_tensor
                     }
                     alt="tensor"
@@ -286,8 +282,7 @@ const SocialTensor = () => {
             ref={swiperRef}
             direction="vertical"
             slidesPerView={getSlidesPerView()}
-            freeMode={true}
-            // grabCursor={true}
+            freeMode={{ enabled: true, sticky: false, momentumBounce: false }}
             centeredSlides={true}
             keyboard={{ enabled: true }}
             speed={500}
@@ -298,6 +293,7 @@ const SocialTensor = () => {
             className="h-100 w-100 d-md-none">
             {slides.map((slide, index) => (
               <SwiperSlide
+                onClick={() => setClickedText(slide)}
                 key={index}
                 className="d-flex align-items-center justify-content-center "
                 style={{ height: "24px" }}>
@@ -305,7 +301,6 @@ const SocialTensor = () => {
                   className={`slide_content d-flex align-items-center justify-content-center`}>
                   <span
                     onClick={(e) => {
-                      HANDLE_CLICK(e);
                       HANDLE_SHOW(e);
                     }}
                     className={`${"text_xl cursor_pointer active_slide  px-2 px-sm-4 "} fst-italic opacity_20 hover_opacity_1`}>
