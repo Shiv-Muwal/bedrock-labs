@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
-import social_tensor from '../assets/images/webp/social-tensor.webp'
+import social_tensor from "../assets/images/webp/social-tensor.webp";
 import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
@@ -21,6 +21,7 @@ const SocialTensor = () => {
   const [hoveredText, setHoveredText] = useState("TourGame");
   const [show, setShow] = useState(true);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [clickedText, setClickedText] = useState("TourGame");
   const hideTimeoutRef = useRef(null);
 
   const HANDLE_MOUSE_OVER = (e) => {
@@ -48,10 +49,12 @@ const SocialTensor = () => {
   };
 
   const HANDLE_CLICK = (e) => {
-    if (screenWidth < 1200) {
-      const centerSlide = e.target.closest(".active_slide");
-      if (centerSlide) {
+    const clickedSlide = e.target.closest(".slider_text");
+    if (clickedSlide) {
+      setClickedText(clickedSlide.textContent);
+      if (screenWidth < 1200) {
         setIsClicked(!isClicked);
+        setShow(false);
       }
     }
   };
@@ -118,7 +121,7 @@ const SocialTensor = () => {
     <div className="position-relative">
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
-          <img src={logo} alt="logo" />
+          <img loading="preload" src={logo} alt="logo" />
         </a>
       </div>
       <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
@@ -174,6 +177,7 @@ const SocialTensor = () => {
                 UI UX
               </p>
               <img
+                loading="preload"
                 className="social_sensor_img_w"
                 src={
                   hoveredText &&
@@ -199,7 +203,8 @@ const SocialTensor = () => {
                   Branding
                 </p>
                 <img
-                  className="social_tensor_img_w"
+                  loading="preload"
+                  className="social_sensor_img_w"
                   src={
                     hoveredText &&
                     CONTINUE_SLIDER.find((item) => item.text === hoveredText)
@@ -216,11 +221,16 @@ const SocialTensor = () => {
           </div>
         </div>
         <div className="d-flex d-xl-none justify-content-center z-3">
+          {!show && (
+            <div
+              onClick={() => setShow(!show)}
+              className="position-absolute top-0 start-0 bg-black z-3 opacity-75 h-100 w-100"></div>
+          )}
           <div
             className={`${
               show ? "card_hidden" : "card_visible"
-            } responsive_box_pos`}>
-            <div className="d-flex flex-column align-items-end mx_30">
+            } responsive_box_pos z-3`}>
+            <div className="d-flex flex-column align-items-end card_mobile_spacing">
               <div
                 onClick={HANDLE_HIDE}
                 className="d-flex justify-content-center cross_icon_box align-items-center">
@@ -232,8 +242,17 @@ const SocialTensor = () => {
                     UI UX
                   </p>
                   <img
+                    loading="preload"
                     className="social_sensor_img_w"
-                    src={social_sensor_responsive}
+                    src={
+                      clickedText &&
+                      CONTINUE_SLIDER.find((item) => item.text === clickedText)
+                        ?.images?.cardOne
+                        ? CONTINUE_SLIDER.find(
+                            (item) => item.text === clickedText
+                          )?.images.cardOne
+                        : social_sensor_responsive
+                    }
                     alt="sensor"
                   />
                 </div>
@@ -242,8 +261,17 @@ const SocialTensor = () => {
                     Branding
                   </p>
                   <img
-                    className="social_sensor_img_w"
-                    src={social_tensor}
+                    loading="preload"
+                    className="social_sensor_img_w sensor_second_img"
+                    src={
+                      clickedText &&
+                      CONTINUE_SLIDER.find((item) => item.text === clickedText)
+                        ?.images?.cardTwo
+                        ? CONTINUE_SLIDER.find(
+                            (item) => item.text === clickedText
+                          )?.images.cardTwo
+                        : social_tensor
+                    }
                     alt="tensor"
                   />
                 </div>
@@ -259,6 +287,7 @@ const SocialTensor = () => {
             direction="vertical"
             slidesPerView={getSlidesPerView()}
             freeMode={true}
+            // grabCursor={true}
             centeredSlides={true}
             keyboard={{ enabled: true }}
             speed={500}
@@ -272,23 +301,17 @@ const SocialTensor = () => {
                 key={index}
                 className="d-flex align-items-center justify-content-center "
                 style={{ height: "24px" }}>
-                {({ isActive }) => (
-                  <div
-                    className={`slide_content d-flex align-items-center justify-content-center`}>
-                    <span
-                      onClick={(e) => {
-                        HANDLE_CLICK(e);
-                        HANDLE_SHOW(e);
-                      }}
-                      className={`${
-                        isActive
-                          ? "text_xl cursor_pointer active_slide px-2 px-sm-4 "
-                          : "text_xl px-2 px-sm-4 opacity_20"
-                      } fst-italic`}>
-                      {slide}
-                    </span>
-                  </div>
-                )}
+                <div
+                  className={`slide_content d-flex align-items-center justify-content-center`}>
+                  <span
+                    onClick={(e) => {
+                      HANDLE_CLICK(e);
+                      HANDLE_SHOW(e);
+                    }}
+                    className={`${"text_xl cursor_pointer active_slide  px-2 px-sm-4 "} fst-italic opacity_20 hover_opacity_1`}>
+                    {slide}
+                  </span>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
