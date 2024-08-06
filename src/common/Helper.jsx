@@ -34,11 +34,11 @@ export const SLIDER_LIST = [
 ];
 
 export const NAV_ITEMS = [
-  { name: "BEDROCK LABS", href: "#" },
-  { name: "ABOUT", href: "#about" },
-  { name: "CASES", href: "#cases" },
-  { name: "MEDIA", href: "#media" },
-  { name: "CONTACT", href: "#contact" },
+  { name: "BEDROCK LABS", href: "/" },
+  { name: "ABOUT", href: "/about" },
+  { name: "CASES", href: "/cases" },
+  { name: "MEDIA", href: "/media" },
+  { name: "CONTACT", href: "/media" },
 ];
 
 export const CONTINUE_SLIDER = [
