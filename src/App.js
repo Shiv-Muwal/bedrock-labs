@@ -13,9 +13,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<BedRocks />} />
-          <Route exact path="/future" element={<Future />} />
-          <Route exact path="/social-tensor" element={<SocialTensor />} />
-          <Route exact path="/bedrock-icon" element={<BedRockIcons />} />
+          <Route exact path="/about" element={<Future />} />
+          <Route exact path="/cases" element={<SocialTensor />} />
+          <Route exact path="/media" element={<BedRockIcons />} />
         </Routes>
       </BrowserRouter>
     </div>

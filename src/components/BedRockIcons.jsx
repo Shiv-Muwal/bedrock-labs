@@ -9,7 +9,7 @@ import Header from "../common/Header";
 
 const BedRockIcons = () => {
   return (
-    <div className="bg-black d-flex flex-column min-vh-100">
+    <div className="bg-black d-flex flex-column vh_100">
       <a href="/" className="d-none logo_spacing d-sm-block">
         <img src={logo_nav} alt="logo-nav" />
       </a>
@@ -23,8 +23,7 @@ const BedRockIcons = () => {
           <li>
             <a
               href="https://discord.com/channels/984345847628181504/999268522427437086"
-              target="_blank"
-            >
+              target="_blank">
               <img className="social_links" src={discord} alt="discord" />
             </a>
           </li>
