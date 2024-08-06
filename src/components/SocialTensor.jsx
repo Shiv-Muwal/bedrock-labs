@@ -21,6 +21,7 @@ const SocialTensor = () => {
   const [hoveredText, setHoveredText] = useState("TourGame");
   const [show, setShow] = useState(true);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [clickedText, setClickedText] = useState("TourGame");
   const hideTimeoutRef = useRef(null);
 
   const HANDLE_MOUSE_OVER = (e) => {
@@ -48,10 +49,12 @@ const SocialTensor = () => {
   };
 
   const HANDLE_CLICK = (e) => {
-    if (screenWidth < 1200) {
-      const centerSlide = e.target.closest(".active_slide");
-      if (centerSlide) {
+    const clickedSlide = e.target.closest(".slider_text");
+    if (clickedSlide) {
+      setClickedText(clickedSlide.textContent);
+      if (screenWidth < 1200) {
         setIsClicked(!isClicked);
+        setShow(false);
       }
     }
   };
@@ -201,7 +204,7 @@ const SocialTensor = () => {
                 </p>
                 <img
                   loading="preload"
-                  className="social_tensor_img_w"
+                  className="social_sensor_img_w"
                   src={
                     hoveredText &&
                     CONTINUE_SLIDER.find((item) => item.text === hoveredText)
@@ -241,7 +244,15 @@ const SocialTensor = () => {
                   <img
                     loading="preload"
                     className="social_sensor_img_w"
-                    src={social_sensor_responsive}
+                    src={
+                      clickedText &&
+                      CONTINUE_SLIDER.find((item) => item.text === clickedText)
+                        ?.images?.cardOne
+                        ? CONTINUE_SLIDER.find(
+                            (item) => item.text === clickedText
+                          )?.images.cardOne
+                        : social_sensor_responsive
+                    }
                     alt="sensor"
                   />
                 </div>
@@ -252,7 +263,15 @@ const SocialTensor = () => {
                   <img
                     loading="preload"
                     className="social_sensor_img_w sensor_second_img"
-                    src={social_tensor}
+                    src={
+                      clickedText &&
+                      CONTINUE_SLIDER.find((item) => item.text === clickedText)
+                        ?.images?.cardTwo
+                        ? CONTINUE_SLIDER.find(
+                            (item) => item.text === clickedText
+                          )?.images.cardTwo
+                        : social_tensor
+                    }
                     alt="tensor"
                   />
                 </div>
