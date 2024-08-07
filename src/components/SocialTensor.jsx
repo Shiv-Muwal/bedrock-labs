@@ -3,11 +3,6 @@ import logo from "../assets/images/svg/logo-nav.svg";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
 import { CONTINUE_SLIDER } from "../common/Helper";
-import "swiper/css";
-import "swiper/css/mousewheel";
-import "swiper/css/keyboard";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const SocialTensor = () => {
   const [isClicked, setIsClicked] = useState(false);
