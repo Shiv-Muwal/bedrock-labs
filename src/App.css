@@ -323,6 +323,24 @@ ul {
 }
 
 @media (max-width: 575.98px) {
+  .nav_link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    border-radius: 10px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav_link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
   .video_width {
     max-width: 302px;
   }
