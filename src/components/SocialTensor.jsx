@@ -270,7 +270,7 @@ const SocialTensor = () => {
             ref={swiperRef}
             direction="vertical"
             slidesPerView={getSlidesPerView()}
-            freeMode={true}
+            freeMode={{ enabled: true, sticky: false, momentumBounce: false }}
             centeredSlides={true}
             keyboard={{ enabled: true }}
             speed={100}
