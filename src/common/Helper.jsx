@@ -54,6 +54,7 @@ export const SLIDER_LIST = [
 export const NAV_ITEMS = [
   { name: "BEDROCK LABS", href: "/" },
   { name: "ABOUT", href: "/about" },
+  { name: "OUR STORY", href: "https://inquisitive-wildflower-b20.notion.site/Bedrock-Labs-44aaf74111a1423e95fb7b790860b3df" },
   { name: "CASES", href: "/cases" },
   { name: "MEDIA", href: "/media" },
   { name: "CONTACT", href: "/media" },
