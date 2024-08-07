@@ -213,7 +213,7 @@ const SocialTensor = () => {
             </div>
           )}
         </div>
-        <div className=" d-flex d-md-none flex-column gap-4 align-items-center justify-content-center py-4 scroll_height">
+        <div className=" d-flex d-md-none flex-column gap-4 align-items-center justify-content-center pt_85 pb_65 p-md-0 scroll_height">
         {CONTINUE_SLIDER.map((obj, i) => (
                 <span
                   onClick={(e) => {

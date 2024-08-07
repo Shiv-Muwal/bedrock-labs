@@ -4,6 +4,13 @@
   background-color: #ffffff4d;
 }
 
+.pt_85{
+  padding-top: 85px;
+}
+
+.pb_65{
+  padding-bottom: 65px;
+}
 .rotate_divide_line {
   transform: rotate(9deg);
 }
