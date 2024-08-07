@@ -47,6 +47,7 @@ function Header() {
               onClick={toggleMenuHandler}
               className="font_acumin_pro_wide text-nowrap nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
               href={item.href}
+              target={item.target ? item.target : '_self'}
             >
               {item.name}
             </a>
