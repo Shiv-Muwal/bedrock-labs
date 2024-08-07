@@ -117,6 +117,8 @@ const SocialTensor = () => {
 
   const clickedItem = CONTINUE_SLIDER.find((item) => item.text === clickedText);
 
+  const hasImages = clickedItem?.images?.cardOne || clickedItem?.images?.cardTwo;
+
   return (
     <div className="position-relative">
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
@@ -218,54 +220,54 @@ const SocialTensor = () => {
           </div>
         </div>
         <div className="d-flex d-xl-none justify-content-center z-3">
-          {!show && (
+          {!show && hasImages && (
             <div
               onClick={() => setShow(!show)}
               className="position-absolute top-0 start-0 bg-black z-3 opacity-75 h-100 w-100"></div>
           )}
-          <div
-            className={`${show ? "card_hidden" : "card_visible"
-              } responsive_box_pos z-3`}>
-            <div className="d-flex flex-column align-items-end card_mobile_spacing">
-              <div
-                onClick={HANDLE_HIDE}
-                className="d-flex justify-content-center cross_icon_box align-items-center">
-                <Icons icon="Cross_Icon" className="cursor_pointer" />
-              </div>
-              <div className="responsive_box grey d-flex flex-column gap_20">
-                {clickedItem?.images?.cardOne && (
-                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                    <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
-                      UI UX
-                    </p>
-                    <img
-                      loading="preload"
-                      className="social_sensor_img_w"
-                      src={clickedItem.images.cardOne}
-                      alt="sensor"
-                    />
-                  </div>
-                )}
-                {clickedItem?.images?.cardTwo && (
-                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                    <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
-                      Branding
-                    </p>
-                    <img
-                      loading="preload"
-                      className="social_sensor_img_w sensor_second_img"
-                      src={clickedItem.images.cardTwo}
-                      alt="tensor"
-                    />
-                  </div>
-                )}
+          {hasImages && (
+            <div
+              className={`${show ? "card_hidden" : "card_visible"
+                } responsive_box_pos z-3`}>
+              <div className="d-flex flex-column align-items-end card_mobile_spacing">
+                <div
+                  onClick={HANDLE_HIDE}
+                  className="d-flex justify-content-center cross_icon_box align-items-center">
+                  <Icons icon="Cross_Icon" className="cursor_pointer" />
+                </div>
+                <div className="responsive_box grey d-flex flex-column gap_20">
+                  {clickedItem?.images?.cardOne && (
+                    <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                      <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
+                        UI UX
+                      </p>
+                      <img
+                        loading="preload"
+                        className="social_sensor_img_w"
+                        src={clickedItem.images.cardOne}
+                        alt="sensor"
+                      />
+                    </div>
+                  )}
+                  {clickedItem?.images?.cardTwo && (
+                    <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                      <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
+                        Branding
+                      </p>
+                      <img
+                        loading="preload"
+                        className="social_sensor_img_w sensor_second_img"
+                        src={clickedItem.images.cardTwo}
+                        alt="tensor"
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
-        <div
-          className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width"
-          style={{ perspective: "1000px" }}>
+        <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width" style={{ perspective: "1000px" }}>
           <Swiper
             ref={swiperRef}
             direction="vertical"
