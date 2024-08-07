@@ -77,7 +77,7 @@ const SocialTensor = () => {
           <img loading="preload" src={logo} alt="logo" />
         </a>
       </div>
-      <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll smooth_scroll">
+      <div className="slider_height pt-5 pt-md-0 w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll">
         <div className="d-flex flex-column w-100 d-none d-md-block">
           <div className="slider_container">
             <div className="slider_parent">
@@ -218,7 +218,7 @@ const SocialTensor = () => {
             </div>
           )}
         </div>
-        <div className=" d-flex d-md-none flex-column gap-4 align-items-center justify-content-center">
+        <div className=" d-flex d-md-none flex-column gap-4 align-items-center justify-content-center py-4 scroll_height">
         {CONTINUE_SLIDER.map((obj, i) => (
                 <span
                   onClick={(e) => {
