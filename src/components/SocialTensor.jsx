@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
-import social_tensor from "../assets/images/webp/social-tensor.webp";
-import social_sensor_responsive from "../assets/images/webp/social-sensor-responsive.webp";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
 import { CONTINUE_SLIDER, SLIDER_LIST } from "../common/Helper";
@@ -116,6 +114,8 @@ const SocialTensor = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const clickedItem = CONTINUE_SLIDER.find((item) => item.text === clickedText);
 
   return (
     <div className="position-relative">
@@ -232,45 +232,33 @@ const SocialTensor = () => {
                 className="d-flex justify-content-center cross_icon_box align-items-center">
                 <Icons icon="Cross_Icon" className="cursor_pointer" />
               </div>
-              <div className="responsive_box grey">
-                <div className="position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
-                    UI UX
-                  </p>
-                  <img
-                    loading="preload"
-                    className="social_sensor_img_w"
-                    src={
-                      clickedText &&
-                        CONTINUE_SLIDER.find((item) => item.text === clickedText)
-                          ?.images?.cardOne
-                        ? CONTINUE_SLIDER.find(
-                          (item) => item.text === clickedText
-                        )?.images.cardOne
-                        : social_sensor_responsive
-                    }
-                    alt="sensor"
-                  />
-                </div>
-                <div className="branding_card position-relative justify-content-end d-flex gap_12 w-100">
-                  <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
-                    Branding
-                  </p>
-                  <img
-                    loading="preload"
-                    className="social_sensor_img_w sensor_second_img"
-                    src={
-                      clickedText &&
-                        CONTINUE_SLIDER.find((item) => item.text === clickedText)
-                          ?.images?.cardTwo
-                        ? CONTINUE_SLIDER.find(
-                          (item) => item.text === clickedText
-                        )?.images.cardTwo
-                        : social_tensor
-                    }
-                    alt="tensor"
-                  />
-                </div>
+              <div className="responsive_box grey d-flex flex-column gap_20">
+                {clickedItem?.images?.cardOne && (
+                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                    <p className="ui_ux_text_transform mb-0 text-nowrap text-white fw-normal fst-italic text_sm lh_16">
+                      UI UX
+                    </p>
+                    <img
+                      loading="preload"
+                      className="social_sensor_img_w"
+                      src={clickedItem.images.cardOne}
+                      alt="sensor"
+                    />
+                  </div>
+                )}
+                {clickedItem?.images?.cardTwo && (
+                  <div className="position-relative justify-content-end d-flex gap_12 w-100">
+                    <p className="branding_text_transform text-nowrap mb-0 text-white fw-normal fst-italic text_sm lh_16">
+                      Branding
+                    </p>
+                    <img
+                      loading="preload"
+                      className="social_sensor_img_w sensor_second_img"
+                      src={clickedItem.images.cardTwo}
+                      alt="tensor"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>

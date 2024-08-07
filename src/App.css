@@ -100,8 +100,8 @@ ul {
   gap: 12px;
 }
 
-.branding_card {
-  margin-top: 20px;
+.gap_20 {
+  gap: 20px;
 }
 
 .branding_text_transform {
