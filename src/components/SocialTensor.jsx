@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
-import { CONTINUE_SLIDER, SLIDER_LIST } from "../common/Helper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Keyboard, Virtual } from "swiper/modules";
+import { CONTINUE_SLIDER } from "../common/Helper";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/keyboard";
@@ -12,8 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const SocialTensor = () => {
-  const [slides, setSlides] = useState([]);
-  const swiperRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredText, setHoveredText] = useState("TourGame");
@@ -70,63 +66,18 @@ const SocialTensor = () => {
     setShow(true);
   };
 
-  const HANDLE_DOCUMENT_CLICK = (e) => {
-    if (screenWidth > 1200) {
-      const clickedInside =
-        e.target.closest(".active_slide") || e.target.closest(".common_box");
-      if (!clickedInside) {
-        setIsClicked(false);
-        setIsHovered(false);
-      }
-    }
-  };
-
-  const getSlidesPerView = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerHeight >= 932) return 17;
-      if (window.innerHeight >= 895) return 15;
-      if (window.innerHeight >= 844) return 16;
-      if (window.innerHeight >= 740) return 14;
-      if (window.innerHeight >= 667) return 11;
-
-      return 8;
-    }
-    return 8;
-  };
-
-  useEffect(() => {
-    setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
-    document.addEventListener("click", HANDLE_DOCUMENT_CLICK);
-    return () => {
-      document.removeEventListener("click", HANDLE_DOCUMENT_CLICK);
-    };
-  }, [screenWidth]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const clickedItem = CONTINUE_SLIDER.find((item) => item.text === clickedText);
 
   const hasImages = clickedItem?.images?.cardOne || clickedItem?.images?.cardTwo;
 
   return (
-    <div className="position-relative">
+    <div className="position-relative overflow-hidden">
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
           <img loading="preload" src={logo} alt="logo" />
         </a>
       </div>
-      <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-hidden">
+      <div className="slider_height w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll smooth_scroll">
         <div className="d-flex flex-column w-100 d-none d-md-block">
           <div className="slider_container">
             <div className="slider_parent">
@@ -267,39 +218,20 @@ const SocialTensor = () => {
             </div>
           )}
         </div>
-        <div className="d-flex align-items-center justify-content-center h-100 w-100 mx-auto slider_width" style={{ perspective: "1000px" }}>
-          <Swiper
-            ref={swiperRef}
-            direction="vertical"
-            slidesPerView={getSlidesPerView()}
-            freeMode={{ enabled: true, sticky: false, momentumBounce: false }}
-            centeredSlides={true}
-            keyboard={{ enabled: true }}
-            speed={100}
-            modules={[Mousewheel, Keyboard, Virtual]}
-            loop={true}
-            mousewheel={{ releaseOnEdges: true }}
-            loopAdditionalSlides={SLIDER_LIST.length}
-            className="h-100 w-100 d-md-none">
-            {slides.map((slide, index) => (
-              <SwiperSlide
-                onClick={() => setClickedText(slide)}
-                key={index}
-                className="d-flex align-items-center justify-content-center "
-                style={{ height: "24px" }}>
-                <div
-                  className={`slide_content d-flex align-items-center justify-content-center`}>
-                  <span
-                    onClick={(e) => {
-                      HANDLE_SHOW(e);
-                    }}
-                    className={`${"text_xl cursor_pointer active_slide  px-2 px-sm-4 "} fst-italic opacity_20 hover_opacity_1`}>
-                    {slide}
-                  </span>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className=" d-flex d-md-none flex-column gap-4 align-items-center justify-content-center">
+        {CONTINUE_SLIDER.map((obj, i) => (
+                <span
+                  onClick={(e) => {
+                    HANDLE_CLICK(e);
+                    HANDLE_SHOW(e);
+                  }}
+                  onMouseEnter={HANDLE_MOUSE_OVER}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
+                  className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
+                  key={i}>
+                  {obj.text}
+                </span>
+              ))}
         </div>
         <div className="position-absolute bottom-0 z-3 flex-column w-100 justify-content-center slider_gradient">
           <Header />
