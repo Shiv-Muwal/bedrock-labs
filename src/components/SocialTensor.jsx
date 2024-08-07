@@ -283,7 +283,6 @@ const SocialTensor = () => {
             direction="vertical"
             slidesPerView={getSlidesPerView()}
             freeMode={true}
-            // grabCursor={true}
             centeredSlides={true}
             keyboard={{ enabled: true }}
             speed={100}
