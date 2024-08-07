@@ -45,7 +45,7 @@ function Header() {
           <li key={index} className="ms-4 ps-2 ms-sm-0 ps-sm-0">
             <a
               onClick={toggleMenuHandler}
-              className="font_acumin_pro_wide nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
+              className="font_acumin_pro_wide text-nowrap nav_link position-relative lts_1 fw-bold text_md lh_16 text-white"
               href={item.href}
             >
               {item.name}
