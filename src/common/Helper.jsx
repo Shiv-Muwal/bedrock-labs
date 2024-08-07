@@ -11,7 +11,7 @@ import cyber_branding from "../assets/images/png/cyber-connect-branding.png";
 import cyber_ui from "../assets/images/webp/cyber-connect-ui.webp";
 import link_branding from "../assets/images/png/link-branding.png";
 import link_ui from "../assets/images/webp/link-ui.webp";
-import tensor_market_ui from '../assets/images/png/tensor-market-ui.png'
+import tensor_market_brand from '../assets/images/png/tensor-market-ui.png'
 import base_brand from '../assets/images/png/base-perp-brand.png'
 import base_ui from '../assets/images/png/base-perp-ui.png'
 import syntheia_ui from '../assets/images/png/syntheia-ui.png'
@@ -67,7 +67,7 @@ export const CONTINUE_SLIDER = [
   },
   {
     text: "TensorMarket",
-    images: { cardOne: tensor_market_ui, cardTwo: '' }
+    images: { cardOne: '', cardTwo: tensor_market_brand }
   },
   {
     text: "Niche Tensor",
@@ -141,7 +141,7 @@ export const CONTINUE_SLIDER = [
   },
   {
     text: "TensorMarket",
-    images: { cardOne: tensor_market_ui, cardTwo: '' }
+    images: { cardOne:'' , cardTwo: tensor_market_brand }
   },
   {
     text: "Niche Tensor",
