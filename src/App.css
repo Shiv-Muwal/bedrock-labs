@@ -3,15 +3,17 @@
   height: 12px;
   background-color: #ffffff4d;
 }
-
-.pt_85{
+::-webkit-scrollbar {
+  width: 0;
+}
+.pt_85 {
   padding-top: 85px;
 }
 .social_tensor_img_w {
   max-width: 401.02px;
   width: 100%;
 }
- .slider_width {
+.slider_width {
   max-width: 100%;
 }
 
@@ -107,7 +109,7 @@ ul {
 }
 
 .social_tensor_transition_2 {
-  transition: all linear 1000ms !important;
+  transition: all linear 1000ms, width 400ms linear !important;
 }
 
 .gap_12 {
@@ -276,7 +278,6 @@ ul {
 }
 
 @media (min-width: 768px) {
-
   .common_box {
     height: 246px;
   }
@@ -294,14 +295,16 @@ ul {
     width: auto;
   }
 }
-
+.expand_single_card {
+  width: 78.5% !important;
+}
 @media (min-width: 1200px) {
   .common_box {
     height: 246px;
   }
- .pointer_event_none {
-  pointer-events: none;
-}
+  .pointer_event_none {
+    pointer-events: none;
+  }
   .common_box_position {
     top: -100%;
   }
@@ -320,10 +323,13 @@ ul {
 }
 
 @media (min-width: 1400px) {
+  .expand_single_card {
+    width: 81.5% !important;
+  }
   .social_sensor_img_w {
     max-width: 416.75px;
   }
-    .social_tensor_img_w {
+  .social_tensor_img_w {
     max-width: 401px;
   }
 }
