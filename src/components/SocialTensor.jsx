@@ -73,7 +73,6 @@ const SocialTensor = () => {
     }
   };
 
-
   useEffect(() => {
     setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
     document.addEventListener("click", HANDLE_DOCUMENT_CLICK);
@@ -100,13 +99,13 @@ const SocialTensor = () => {
     clickedItem?.images?.cardOne || clickedItem?.images?.cardTwo;
 
   return (
-    <div className="position-relative overflow-hidden" style={{height :"100vh"}}>
+    <div className="position-relative overflow-hidden" style={{ height: "100vh" }}>
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
           <img loading="preload" src={logo} alt="logo" />
         </a>
       </div>
-      <div className="w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll scroll_height" style={{height :"100%"}}>
+      <div className="w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll" style={{ height: "100%" }}>
         <div className="d-flex flex-column w-100 d-none d-md-block slider_p_hover">
           <div className="slider_container">
             <div className="slider_parent">
@@ -284,21 +283,21 @@ const SocialTensor = () => {
           )}
         </div>
         <div className="d-flex d-md-none flex-column gap-4 align-items-center justify-content-center">
-        {SLIDER_LIST.map((obj, i) => (
-                <span
-                  onClick={(e) => {
-                    HANDLE_CLICK(e);
-                    HANDLE_SHOW(e);
-                  }}
-                  onMouseEnter={HANDLE_MOUSE_OVER}
-                  onMouseLeave={HANDLE_MOUSE_OUT}
-                  className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
-                  key={i}>
-                  {obj.text}
-                </span>
-              ))}
+          {SLIDER_LIST.map((obj, i) => (
+            <span
+              onClick={(e) => {
+                HANDLE_CLICK(e);
+                HANDLE_SHOW(e);
+              }}
+              onMouseEnter={HANDLE_MOUSE_OVER}
+              onMouseLeave={HANDLE_MOUSE_OUT}
+              className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
+              key={i}>
+              {obj.text}
+            </span>
+          ))}
         </div>
-        <div className="position-absolute bottom-0 z-3 flex-column w-100 justify-content-center slider_gradient">
+        <div className="position-absolute bottom-0 z-3 flex-column w-100 justify-content-center">
           <Header />
         </div>
       </div>

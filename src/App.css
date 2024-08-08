@@ -147,8 +147,9 @@ ul {
 }
 
 /* SLIDER CSS CODE HERE */
-.slider_height {
-  min-height: calc(100vh - 140px);
+.scroll_height {
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .hovered_position {
