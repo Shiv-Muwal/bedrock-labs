@@ -26,7 +26,28 @@ import ontology_brand from '../assets/images/png/ontology-brand.png'
 import ontology_ui from '../assets/images/png/ontology-ui.png'
 import open_ocean_brand from '../assets/images/png/open-ocean-brand.png'
 import open_ocean_ui from '../assets/images/png/open-ocean-ui.png'
-
+export const SLIDER = [
+  "INFINI",
+  "TourGame",
+  "Aperture",
+  "Social Tensor",
+  "Niche Tensor",
+  "CyberConnect",
+  "Link3",
+  "TensorMarket",
+  "BasePerp",
+  "Syntheia",
+  "L.CASH",
+  "TABI",
+  "TreasureLand",
+  "NFTBlockchain",
+  "Ontology",
+  "OpenOcean",
+  "BingX",
+  "Binance",
+  "Huobi",
+  "Microsoft",
+];
 export const NAV_ITEMS = [
   { name: "BEDROCK LABS", href: "/" },
   { name: "ABOUT", href: "/about" },

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
@@ -6,6 +6,7 @@ import { CONTINUE_SLIDER, SLIDER_LIST } from "../common/Helper";
 
 const SocialTensor = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [slides, setSlides] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredText, setHoveredText] = useState("TourGame");
   const [show, setShow] = useState(true);
@@ -61,19 +62,51 @@ const SocialTensor = () => {
     setShow(true);
   };
 
+  const HANDLE_DOCUMENT_CLICK = (e) => {
+    if (screenWidth > 1200) {
+      const clickedInside =
+        e.target.closest(".active_slide") || e.target.closest(".common_box");
+      if (!clickedInside) {
+        setIsClicked(false);
+        setIsHovered(false);
+      }
+    }
+  };
+
+
+  useEffect(() => {
+    setSlides([...SLIDER_LIST, ...SLIDER_LIST, ...SLIDER_LIST]);
+    document.addEventListener("click", HANDLE_DOCUMENT_CLICK);
+    return () => {
+      document.removeEventListener("click", HANDLE_DOCUMENT_CLICK);
+    };
+  }, [screenWidth]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const clickedItem = CONTINUE_SLIDER.find((item) => item.text === clickedText);
 
   const hasImages =
     clickedItem?.images?.cardOne || clickedItem?.images?.cardTwo;
 
   return (
-    <div className="position-relative overflow-hidden">
+    <div className="position-relative overflow-hidden" style={{height :"100vh"}}>
       <div className="d-sm-block d-none branding_padding position-absolute z-3">
         <a href="/">
           <img loading="preload" src={logo} alt="logo" />
         </a>
       </div>
-      <div className="slider_height pt-5 pt-md-0 w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll">
+      <div className="w-100 bg-black d-flex align-items-center justify-content-center overflow-y-scroll scroll_height" style={{height :"100%"}}>
         <div className="d-flex flex-column w-100 d-none d-md-block slider_p_hover">
           <div className="slider_container">
             <div className="slider_parent">
@@ -250,7 +283,7 @@ const SocialTensor = () => {
             </div>
           )}
         </div>
-        <div className="d-flex d-md-none flex-column gap-4 align-items-center justify-content-center pt_85 pb_65 p-md-0">
+        <div className="d-flex d-md-none flex-column gap-4 align-items-center justify-content-center">
         {SLIDER_LIST.map((obj, i) => (
                 <span
                   onClick={(e) => {

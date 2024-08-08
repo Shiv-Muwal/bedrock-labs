@@ -7,6 +7,21 @@
 .pt_85{
   padding-top: 85px;
 }
+.social_tensor_img_w {
+  max-width: 401.02px;
+  width: 100%;
+}
+ .slider_width {
+  max-width: 100%;
+}
+
+.slide_content {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  color: white;
+}
 
 .rotate_divide_line {
   transform: rotate(9deg);
@@ -133,7 +148,7 @@ ul {
 
 /* SLIDER CSS CODE HERE */
 .slider_height {
-  height: 100vh;
+  min-height: calc(100vh - 140px);
 }
 
 .hovered_position {
@@ -283,7 +298,9 @@ ul {
   .common_box {
     height: 246px;
   }
-
+ .pointer_event_none {
+  pointer-events: none;
+}
   .common_box_position {
     top: -100%;
   }
@@ -304,6 +321,9 @@ ul {
 @media (min-width: 1400px) {
   .social_sensor_img_w {
     max-width: 416.75px;
+  }
+    .social_tensor_img_w {
+    max-width: 401px;
   }
 }
 
