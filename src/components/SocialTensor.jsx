@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import logo from "../assets/images/svg/logo-nav.svg";
 import Icons from "../common/Icons";
 import Header from "../common/Header";
-import { CONTINUE_SLIDER } from "../common/Helper";
+import { CONTINUE_SLIDER, SLIDER_LIST } from "../common/Helper";
 
 const SocialTensor = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -250,8 +250,8 @@ const SocialTensor = () => {
             </div>
           )}
         </div>
-   <div className="d-flex d-md-none flex-column gap-4 align-items-center justify-content-center pt_85 pb_65 p-md-0">
-        {CONTINUE_SLIDER.map((obj, i) => (
+        <div className="d-flex d-md-none flex-column gap-4 align-items-center justify-content-center pt_85 pb_65 p-md-0">
+        {SLIDER_LIST.map((obj, i) => (
                 <span
                   onClick={(e) => {
                     HANDLE_CLICK(e);

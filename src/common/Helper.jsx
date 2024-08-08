@@ -36,6 +36,99 @@ export const NAV_ITEMS = [
   { name: "CONTACT", href: "/media" },
 ];
 
+export const SLIDER_LIST = [
+  {
+    text: "TourGame",
+    images: { cardOne: tour_game_ui, cardTwo: tour_branding },
+  },
+  {
+    text: "TourGame",
+    images: { cardOne: tour_game_ui, cardTwo: tour_branding },
+  },
+  {
+    text: "TourGame",
+    images: { cardOne: tour_game_ui, cardTwo: tour_branding },
+  },
+  {
+    text: "TensorMarket",
+    images: { cardOne: '', cardTwo: tensor_market_brand }
+  },
+  {
+    text: "TourGame",
+    images: { cardOne: tour_game_ui, cardTwo: tour_branding },
+  },
+  {
+    text: "TensorMarket",
+    images: { cardOne: '', cardTwo: tensor_market_brand }
+  },
+  {
+    text: "Niche Tensor",
+    images: { cardOne: niche_ui, cardTwo: niche_branding },
+  },
+  { text: "INFINI", images: { cardOne: '', cardTwo: infini_branding } },
+  { text: "Link3", images: { cardOne: link_ui, cardTwo: link_branding } },
+  {
+    text: "CyberConnect",
+    images: { cardOne: cyber_ui, cardTwo: cyber_branding },
+  },
+  {
+    text: "Aperture",
+    images: { cardOne: aperture_ui, cardTwo: aperture_branding },
+  },
+  {
+    text: "Social Tensor",
+    images: { cardOne: social_sensor, cardTwo: social_tensor },
+  },
+  {
+    text: "BasePerp",
+    images: { cardOne: base_ui, cardTwo: base_brand },
+  },
+  {
+    text: "Syntheia",
+    images: { cardOne: syntheia_ui, cardTwo: syntheia_brand },
+  },
+  {
+    text: "L.CASH",
+    images: { cardOne: lcash_ui, cardTwo: lcash_brand },
+  },
+  {
+    text: "TABI",
+    images: { cardOne: '', cardTwo: tabi_brand },
+  },
+  {
+    text: "TreasureLand",
+    images: { cardOne: '', cardTwo: tensure_land_brand },
+  },
+  {
+    text: "NFTBlockchain",
+    images: { cardOne: nft_ui, cardTwo: nft_brand },
+  },
+  {
+    text: "Ontology",
+    images: { cardOne: ontology_ui, cardTwo: ontology_brand },
+  },
+  {
+    text: "OpenOcean",
+    images: { cardOne: open_ocean_ui, cardTwo: open_ocean_brand },
+  },
+  {
+    text: "BingX",
+    images: { cardOne: '', cardTwo: '' },
+  },
+  {
+    text: "Binance",
+    images: { cardOne: '', cardTwo: '' },
+  },
+  {
+    text: "Huobi",
+    images: { cardOne: '', cardTwo: '' },
+  },
+  {
+    text: "Microsoft",
+    images: { cardOne: '', cardTwo: '' },
+  },
+  
+]
 export const CONTINUE_SLIDER = [
   {
     text: "TourGame",
