@@ -120,7 +120,7 @@ const SocialTensor = () => {
                     HANDLE_SHOW(e);
                   }}
                   onMouseEnter={HANDLE_MOUSE_OVER}
-                  // onMouseLeave={HANDLE_MOUSE_OUT}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
                   className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
                   key={i}>
                   {obj.text}
@@ -135,7 +135,7 @@ const SocialTensor = () => {
                     HANDLE_SHOW(e);
                   }}
                   onMouseEnter={HANDLE_MOUSE_OVER}
-                  // onMouseLeave={HANDLE_MOUSE_OUT}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
                   className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
                   key={i}>
                   {obj.text}
@@ -152,7 +152,7 @@ const SocialTensor = () => {
                     HANDLE_SHOW(e);
                   }}
                   onMouseEnter={HANDLE_MOUSE_OVER}
-                  // onMouseLeave={HANDLE_MOUSE_OUT}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
                   className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
                   key={i}>
                   {obj.text}
@@ -167,7 +167,7 @@ const SocialTensor = () => {
                     HANDLE_SHOW(e);
                   }}
                   onMouseEnter={HANDLE_MOUSE_OVER}
-                  // onMouseLeave={HANDLE_MOUSE_OUT}
+                  onMouseLeave={HANDLE_MOUSE_OUT}
                   className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
                   key={i}>
                   {obj.text}
@@ -300,7 +300,7 @@ const SocialTensor = () => {
                 HANDLE_SHOW(e);
               }}
               onMouseEnter={HANDLE_MOUSE_OVER}
-              // onMouseLeave={HANDLE_MOUSE_OUT}
+              onMouseLeave={HANDLE_MOUSE_OUT}
               className="slider_item active_slide mb-0 text_lg opacity_20 text-white text-center text-nowrap slider_text cursor_pointer fst-italic"
               key={i}>
               {obj.text}

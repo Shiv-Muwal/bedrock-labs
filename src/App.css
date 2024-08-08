@@ -3,7 +3,9 @@
   height: 12px;
   background-color: #ffffff4d;
 }
-
+::-webkit-scrollbar {
+  width: 0;
+}
 .pt_85 {
   padding-top: 85px;
 }
