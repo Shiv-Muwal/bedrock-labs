@@ -38,7 +38,7 @@ export const NAV_ITEMS = [
 
 export const SLIDER_LIST = [
   {
-    text: "TourGame",
+    text: "TourGames",
     images: { cardOne: tour_game_ui, cardTwo: tour_branding },
   },
   {
@@ -115,7 +115,7 @@ export const SLIDER_LIST = [
 ]
 export const CONTINUE_SLIDER = [
   {
-    text: "TourGame",
+    text: "TourGames",
     images: { cardOne: tour_game_ui, cardTwo: tour_branding },
   },
   {
@@ -189,7 +189,7 @@ export const CONTINUE_SLIDER = [
     images: { cardOne: '', cardTwo: '' },
   },
   {
-    text: "TourGame",
+    text: "TourGames",
     images: { cardOne: tour_game_ui, cardTwo: tour_branding },
   },
   {
